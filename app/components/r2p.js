@@ -20,13 +20,14 @@ app.controller("R2pController", function ($log, $http, $filter) {
             .get(`https://geocoder.api.here.com/6.2/geocode.json`,
                 {params: {app_id: 'pD7XVGLybCvWiNxfjZqC', app_code: 'Ig88nkteu746bX8mElp77A', city: 'Vienna', street: this.punkt1}})
             .then(response => {
+                $log.debug(response);
                 this.geoPunkt1 = 'geo!'
                     + response.data.Response.View[0].Result[0].Location.DisplayPosition.Latitude
                     + ','
                     + response.data.Response.View[0].Result[0].Location.DisplayPosition.Longitude;
 
                 return $http
-                    .get(`https://geocoder.api.here.com/6.2/geocode.json`,
+                    .get(`https://geocoder.api.here.com/6.2/geocode.jsonxxx`,
                     {params: {app_id: 'pD7XVGLybCvWiNxfjZqC', app_code: 'Ig88nkteu746bX8mElp77A',
                         city: 'Vienna', street: this.punkt2}});
 
@@ -36,8 +37,6 @@ app.controller("R2pController", function ($log, $http, $filter) {
                     + response.data.Response.View[0].Result[0].Location.DisplayPosition.Latitude
                     + ','
                     + response.data.Response.View[0].Result[0].Location.DisplayPosition.Longitude;
-
-                $log.debug(this.geoPunkt1, this.geoPunkt2);
 
 
                 return $http.get('https://route.api.here.com/routing/7.2/calculateroute.json',
@@ -53,13 +52,7 @@ app.controller("R2pController", function ($log, $http, $filter) {
                 $log.debug("Distanz: ", this.dauer);
             })
             .catch(response => {
-                $log.error("Etwas hat nicht funktioniert");
-
-                let nummer = response.data.code || response.data.status || response.data.cod;
-                let text = response.data.message || response.data.statusText;
-
-                $log.debug("Fehler Nummer: ", nummer);
-                $log.debug("Fehler Text: ", text);
+                $log.error("Ooops, da gabs wohl nen Fehler! Schau ihn dir an: ", response);
             });
 
     };
