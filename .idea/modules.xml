@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/angularjs-vorlage.iml" filepath="$PROJECT_DIR$/.idea/angularjs-vorlage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Travel-App-AngularJS.iml" filepath="$PROJECT_DIR$/.idea/Travel-App-AngularJS.iml" />
     </modules>
   </component>
 </project>
