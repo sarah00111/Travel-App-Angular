@@ -1,0 +1,37 @@
+<div layout="column" style="height:100vh;">
+    <md-toolbar>
+        <div class="md-toolbar-tools" layout-align="center center" style="background-color:#176CBE; ">
+            <h2 md-truncate style="font-family: 'Segoe UI'; font-size: 20px;">TravelApp</h2>
+        </div>
+    </md-toolbar>
+
+    <div layout-wrap="true" style="font-size: 20px; width: 80%; margin-top:30%; margin-left: 30px;" layout-margin layout-align="center center" >
+        Bitte geben Sie Ihre gewünschte Adresse ein.
+    </div>
+
+    <md-content layout-margin layout="column" layout-align="center center" style="height:100vh;">
+        <div style="width: 90%;" layout-margin>
+            <md-input-container
+                    style="width:80%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
+                <label style="padding:10px 0px 0px 20px;">Straße, Hausnummer, Stiege</label>
+                <input ng-model="$ctrl.strasse">
+            </md-input-container>
+        </div>
+
+        <div layout="row" layout-margin  layout-align="center center">
+            <md-input-container
+                    style="width: 42%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
+                <label style="padding:10px 0px 0px 20px;">PLZ</label>
+                <input ng-model="$ctrl.plz">
+            </md-input-container>
+            <md-input-container
+                    style="width: 40%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
+                <label style="padding:10px 0px 0px 20px;">Ort</label>
+                <input ng-model="$ctrl.ort">
+            </md-input-container>
+        </div>
+    </md-content>
+    <section layout="row" layout-align="end end" layout-wrap style="margin-top: 60%">
+        <md-button flex="30" style="background-color:#176CBE; color:white;">Bestätigen</md-button>
+    </section>
+</div>
