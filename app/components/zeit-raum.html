@@ -28,13 +28,12 @@
                        placeholder="HH:mm:ss"
                        min="00:00:00"
                        max="24:00:00"
-                       ng-change="$ctrl.givetime()"
                        required>
             </md-input-container>
         </div>
         <div style="margin-left: 20px;">
             <!--hier wird die Differenz zwischen der Endzeit und der Anfangszeit wird ausgerechnet und in hier ausgegeben-->
-            {{(($ctrl.ende - $ctrl.anfang) | date: "shortTime")}}
+            {{($ctrl.ende - $ctrl.anfang) | date: "shortTime" : "UTC"}}
         </div>
     </md-content>
     <section layout="row" layout-align="end end" layout-wrap >

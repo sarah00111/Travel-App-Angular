@@ -22,16 +22,6 @@ app.controller("ZeitRaumController", function ($log, $filter) {
 
     $log.debug("ZeitRaumController()");
 
-    //this.ende => endzeit => HH:MM
-    //this.anfang => anfangszeit => HH:MM
-    this.changeTime = () => {
-        this.anfang = $filter('date')(this.anfang, "shortTime", "UTC");
-        this.ende = $filter('date')(this.ende, "shortTime", "UTC");
-    }
 
-    this.bestaetigen = () => {
-        console.log($filter('date')(this.anfang, "shortTime", "UTC"));
-        console.log($filter('date')(this.ende, "shortTime", "UTC"));
-    }
 
 });
