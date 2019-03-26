@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ff41d3a-4a7b-4f90-9238-42f57ddbedc2" name="Default" comment="AngularJS 1.7.2, UI-Router 1.0.18, Material 1.1.10.">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/components/zeit-raum.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/components/zeit-raum.js" afterDir="false" />
@@ -12,6 +13,18 @@
     <manually-removed-from-ignored>
       <directory path="$PROJECT_DIR$/tmp/" />
       <directory path="$PROJECT_DIR$/temp/" />
+=======
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/components/address.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/components/address.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/components/addressausgabe.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/components/addressausgabe.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <ignored path="node_modules/" />
+    <manually-removed-from-ignored>
+      <directory path="$PROJECT_DIR$/temp/" />
+      <directory path="$PROJECT_DIR$/tmp/" />
+>>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
       <directory path="$PROJECT_DIR$/.tmp/" />
     </manually-removed-from-ignored>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -159,8 +172,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="510">
               <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+=======
+            <state relative-caret-position="105">
+              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding />
+>>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
             </state>
           </provider>
         </entry>
@@ -168,8 +187,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/components/zeit-raum.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="420">
               <caret line="28" column="65" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
+=======
+            <state relative-caret-position="510">
+              <caret line="34" column="42" lean-forward="false" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+              <folding />
+>>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
             </state>
           </provider>
         </entry>
@@ -196,15 +221,42 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/resources/zeitraum.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="300">
               <caret line="20" column="33" lean-forward="true" selection-end-line="32" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+=======
+            <state relative-caret-position="870">
+              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="dauer-filter.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/filters/dauer-filter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="72" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="address.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/components/address.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+>>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/components/r2p.js">
           <provider selected="true" editor-type-id="text-editor" />
@@ -215,6 +267,48 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="29" selection-start-column="29" selection-end-column="29" />
+=======
+      <file leaf-file-name="addressausgabe.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/components/addressausgabe.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="3" lean-forward="false" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addressausgabe.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/components/addressausgabe.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adresse.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/adresse.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="r2p.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/components/r2p.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+              <folding />
+>>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
             </state>
           </provider>
         </entry>
@@ -228,9 +322,12 @@
         <option value="AngularJS-Service-Test" />
         <option value="AngularJS-Filter-Test" />
         <option value="AngularJS-Controller-Test" />
-        <option value="AngularJS-Factory" />
-        <option value="AngularJS-Service" />
         <option value="AngularJS-Komponente" />
+<<<<<<< HEAD
+=======
+        <option value="AngularJS-Service" />
+        <option value="AngularJS-Factory" />
+>>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
         <option value="AngularJS-Komponente mit Routing" />
         <option value="HTML File" />
         <option value="AngularJS-Filter" />
@@ -305,10 +402,18 @@
         <option value="$PROJECT_DIR$/app/profilseite.html" />
         <option value="$PROJECT_DIR$/app/style.css" />
         <option value="$PROJECT_DIR$/app/components/r2p.html" />
+        <option value="$PROJECT_DIR$/app/components/r2p.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/filters/zeit.js" />
         <option value="$PROJECT_DIR$/app/components/zeit-raum.js" />
         <option value="$PROJECT_DIR$/app/components/zeit-raum.html" />
+=======
+        <option value="$PROJECT_DIR$/app/filters/dauer-filter.js" />
+        <option value="$PROJECT_DIR$/app/models/adresse.js" />
+        <option value="$PROJECT_DIR$/app/components/addressausgabe.js" />
+        <option value="$PROJECT_DIR$/app/components/addressausgabe.html" />
+>>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
       </list>
     </option>
   </component>
@@ -331,7 +436,11 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+=======
+  <component name="ProjectFrameBounds" fullScreen="true">
+>>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1938" />
@@ -346,6 +455,10 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+<<<<<<< HEAD
+=======
+      <pane id="Scratches" />
+>>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -402,17 +515,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\Documents\SCHULE\Angela_Amacna4AI\ITP\Projekt Sportfest\Angular\rgb_slider\app\fonts" />
-      <recent name="$PROJECT_DIR$/app/services" />
-      <recent name="$PROJECT_DIR$/app/models" />
-      <recent name="$PROJECT_DIR$/app/filters" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\rgb_slider\app" />
       <recent name="D:\rgb_slider\app\components" />
       <recent name="$PROJECT_DIR$/app/vendor" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/components" />
+      <recent name="C:\Users\User\Documents\SCHULE\Angela_Amacna4AI\ITP\Projekt Sportfest\Angular\rgb_slider\app\fonts" />
+      <recent name="$PROJECT_DIR$/app/services" />
+      <recent name="$PROJECT_DIR$/app/models" />
+      <recent name="$PROJECT_DIR$/app/filters" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -428,6 +541,7 @@
     </option>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
+<<<<<<< HEAD
     <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/rgb_slider/app/index.html">
       <method v="2" />
     </configuration>
@@ -444,6 +558,71 @@
       <item itemvalue="Karma.Unit-Tests" />
       <item itemvalue="Protractor.E2E-Tests" />
       <item itemvalue="JavaScript Debug.index.html" />
+=======
+    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/rgb_slider/app/index.html" />
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Karma.Unit-Tests" />
+      <item index="1" class="java.lang.String" itemvalue="Protractor.E2E-Tests" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+>>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
     </list>
     <recent_temporary>
       <list>
@@ -554,7 +733,12 @@
       <workItem from="1542031139739" duration="1598000" />
       <workItem from="1546972608202" duration="222000" />
       <workItem from="1553370043455" duration="91000" />
+<<<<<<< HEAD
       <workItem from="1553521627802" duration="6549000" />
+=======
+      <workItem from="1553525238394" duration="1102000" />
+      <workItem from="1553526930175" duration="123000" />
+>>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
     </task>
     <task id="LOCAL-00001" summary="AngularJS 1.6.9, Angular Material 1.1.7, UI Router 1.0.8.">
       <created>1524918032174</created>
@@ -662,7 +846,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="100660000" />
+=======
+    <option name="totallyTimeSpent" value="95336000" />
+>>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -674,6 +862,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
     <layout>
       <window_info id="npm" order="0" side_tool="true" />
@@ -695,6 +884,30 @@
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+=======
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25274727" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39956093" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
     </layout>
     <layout-to-restore>
       <window_info id="npm" order="0" side_tool="true" />
@@ -755,6 +968,58 @@
     <option name="LAST_COMMIT_MESSAGE" value="AngularJS 1.7.2, UI-Router 1.0.18, Material 1.1.10." />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/app/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1869">
+          <caret line="89" column="28" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1869">
+          <caret line="89" column="28" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/rgb-slider.html" />
+    <entry file="file://$PROJECT_DIR$/app/temp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2482">
+          <caret line="146" column="24" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/mein-slider.js" />
+    <entry file="file://$PROJECT_DIR$/app/components/mein-slider.html" />
+    <entry file="file://$PROJECT_DIR$/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/rgb-slider.js" />
+>>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
     <entry file="file://$PROJECT_DIR$/app/components/test.js" />
     <entry file="file://$PROJECT_DIR$/package.json" />
     <entry file="file://$PROJECT_DIR$/app/vendor/angular-material-1.1.7/angular-material.min.js" />
@@ -769,7 +1034,11 @@
     <entry file="file://$PROJECT_DIR$/e2e-tests/protractor.conf.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
+<<<<<<< HEAD
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+=======
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+>>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
         </state>
       </provider>
     </entry>
@@ -843,7 +1112,21 @@
     <entry file="file://$PROJECT_DIR$/app/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
+<<<<<<< HEAD
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+=======
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+>>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/filters/dauerFilter.js" />
+    <entry file="file://$PROJECT_DIR$/app/components/r2p.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -852,6 +1135,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/r2p.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state>
           <caret column="29" selection-start-column="29" selection-end-column="29" />
         </state>
@@ -863,14 +1147,63 @@
           <caret line="20" column="33" lean-forward="true" selection-end-line="32" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+=======
+        <state relative-caret-position="870">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/address.js" />
+    <entry file="file://$PROJECT_DIR$/app/models/adresse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/filters/dauer-filter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="72" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/addressausgabe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="3" lean-forward="false" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/addressausgabe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="true" />
+>>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/filters/zeit.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/components/address.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+>>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
         </state>
       </provider>
     </entry>
@@ -880,6 +1213,7 @@
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
+<<<<<<< HEAD
           <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
         </state>
       </provider>
@@ -900,6 +1234,10 @@
             <element signature="n#style#0;n#div#2;n#md-content#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#md-button#0;n#section#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+=======
+          <caret line="34" column="42" lean-forward="false" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+          <folding />
+>>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
         </state>
       </provider>
     </entry>
