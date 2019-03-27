@@ -15,6 +15,7 @@
                        placeholder="HH:mm:ss"
                        min="00:00:00"
                        max="24:00:00"
+                       ng-change="$ctrl.berechneDauer()"
                        required />
             </md-input-container>
         </div>
@@ -28,6 +29,7 @@
                        placeholder="HH:mm:ss"
                        min="00:00:00"
                        max="24:00:00"
+                       ng-change="$ctrl.berechneDauer()"
                        required>
             </md-input-container>
         </div>
@@ -37,7 +39,7 @@
         </div>
     </md-content>
     <section layout="row" layout-align="end end" layout-wrap >
-        <md-button flex="30" style="background-color:#176CBE; color:white;" ng-click="$ctrl.bestaetigen()">Bestätigen</md-button>
+        <md-button flex="30" style="background-color:#176CBE; color:white;" ng-click="$ctrl.bestaetigen()" ui-sref="next-zeitraum({ dauer: $ctrl.dauer})">Editor</md-button>
     </section>
 
 </div>

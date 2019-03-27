@@ -14,7 +14,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         component: "zeitRaum"
     });
 
-    // $urlRouterProvider.otherwise("/zeit-raum");
+    $urlRouterProvider.otherwise("/zeit-raum");
 });
 
 
