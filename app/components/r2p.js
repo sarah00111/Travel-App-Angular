@@ -17,7 +17,6 @@ app.controller("R2pController", function ($log, $http, ApiService) {
     this.punkt2 = "Rennweg 89b";
 
     this.routeBerechnen = () => {
-
         $http
             .get('https://geocoder.api.here.com/6.2/geocode.json',
                 {params: {app_id: ApiService.getAppId(), app_code: ApiService.getAppCode(), city: 'Vienna', street: this.punkt1}})
@@ -29,7 +28,7 @@ app.controller("R2pController", function ($log, $http, ApiService) {
 
         return $http
             .get('https://geocoder.api.here.com/6.2/geocode.json',
-                {params: {app_id: app_id, app_code: app_code, city: 'Vienna', street: this.punkt2}});
+                {params: {app_id: ApiService.getAppId(), app_code: ApiService.getAppCode(), city: 'Vienna', street: this.punkt2}});
 
     })
     .then(response => {
@@ -40,7 +39,7 @@ app.controller("R2pController", function ($log, $http, ApiService) {
 
 
         return $http.get('https://route.api.here.com/routing/7.2/calculateroute.json',
-            {params: {app_id: app_id, app_code: app_code,
+            {params: {app_id: ApiService.getAppId(), app_code: ApiService.getAppCode(),
                 waypoint0: this.geoPunkt1, waypoint1: this.geoPunkt2, mode: 'fastest;pedestrian'}});
     })
     .then(response => {
