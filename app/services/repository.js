@@ -8,14 +8,14 @@ app.service("RespositoryService", function ($log) {
 
     $log.debug("RespositoryService()");
 
-    this.rep = [];
+    let rep = [];
 
-    function getRep() {
-        return this.rep;
+    this.getRep = () => {
+        return rep;
     }
 
-    function newEintrag(param) {
-        this.push(param);
+    this.newRoute = (param) => {
+        rep.push(param);
     }
 
 });

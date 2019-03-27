@@ -1,33 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ff41d3a-4a7b-4f90-9238-42f57ddbedc2" name="Default" comment="AngularJS 1.7.2, UI-Router 1.0.18, Material 1.1.10.">
-<<<<<<< HEAD
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/zeit-raum.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/zeit-raum.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
+    <list default="true" id="00a7c4b3-d268-4845-a3b0-86e2efcabb90" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/components/addressausgabe.html" afterPath="$PROJECT_DIR$/app/components/ausgabe.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/components/addressausgabe.js" afterPath="$PROJECT_DIR$/app/components/ausgabe.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/address.html" afterPath="$PROJECT_DIR$/app/components/address.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/address.js" afterPath="$PROJECT_DIR$/app/components/address.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/zeit-raum.html" afterPath="$PROJECT_DIR$/app/components/zeit-raum.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/zeit-raum.js" afterPath="$PROJECT_DIR$/app/components/zeit-raum.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/repository.js" afterPath="$PROJECT_DIR$/app/services/repository.js" />
     </list>
-    <ignored path="node_modules/" />
-    <manually-removed-from-ignored>
-      <directory path="$PROJECT_DIR$/tmp/" />
-      <directory path="$PROJECT_DIR$/temp/" />
-=======
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/components/address.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/components/address.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/components/addressausgabe.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/components/addressausgabe.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
-    <ignored path="node_modules/" />
-    <manually-removed-from-ignored>
-      <directory path="$PROJECT_DIR$/temp/" />
-      <directory path="$PROJECT_DIR$/tmp/" />
->>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
-      <directory path="$PROJECT_DIR$/.tmp/" />
-    </manually-removed-from-ignored>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,210 +27,56 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1181022244">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="23" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.12" value="3" />
-          <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.18" value="1" />
-          <entry key="project.open.time.20" value="1" />
-          <entry key="project.open.time.22" value="1" />
-          <entry key="project.open.time.5" value="8" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.7" value="3" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="23" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="gitignore" value="1" />
-          <entry key="js" value="4" />
-          <entry key="json" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="3" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Scratch" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-989514638">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="18" />
-          <entry key="project.open.time.10" value="5" />
-          <entry key="project.open.time.11" value="2" />
-          <entry key="project.open.time.12" value="2" />
-          <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.17" value="1" />
-          <entry key="project.open.time.18" value="1" />
-          <entry key="project.open.time.22" value="1" />
-          <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="18" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-251678015">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.16" value="1" />
-          <entry key="project.opened" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="html" value="2" />
-          <entry key="js" value="2" />
-          <entry key="temp" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="HTML" value="2" />
-          <entry key="JavaScript" value="2" />
-          <entry key="PLAIN_TEXT" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="html" value="1045" />
-          <entry key="js" value="1568" />
-          <entry key="temp" value="60" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="HTML" value="1045" />
-          <entry key="JavaScript" value="1568" />
-          <entry key="PLAIN_TEXT" value="60" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="324506705">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="html" value="2" />
-          <entry key="js" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="HTML" value="2" />
-          <entry key="JavaScript" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="html" value="356" />
-          <entry key="js" value="351" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="HTML" value="354" />
-          <entry key="JavaScript" value="353" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="rgb_slider" />
-  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="510">
-              <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
-=======
-            <state relative-caret-position="105">
-              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            <state relative-caret-position="317">
+              <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
               <folding />
->>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/zeit-raum.js">
+      <file leaf-file-name="ausgabe.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/components/ausgabe.js">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="420">
-              <caret line="28" column="65" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
-=======
-            <state relative-caret-position="510">
-              <caret line="34" column="42" lean-forward="false" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+            <state relative-caret-position="317">
+              <caret line="22" column="52" lean-forward="false" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
               <folding />
->>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/components/zeit-raum.html">
+      <file leaf-file-name="ausgabe.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/components/ausgabe.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#md-content#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-button#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/resources/zeitraum.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/resources/zeitraum.html">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="300">
-              <caret line="20" column="33" lean-forward="true" selection-end-line="32" selection-end-column="6" />
+            <state relative-caret-position="154">
+              <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
-=======
-            <state relative-caret-position="870">
-              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="repository.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/services/repository.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dauer-filter.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/filters/dauer-filter.js">
+      <file leaf-file-name="route.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/route.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="72" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="72" />
+            <state relative-caret-position="220">
+              <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -248,67 +85,22 @@
       <file leaf-file-name="address.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/components/address.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
->>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/r2p.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/r2p.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="29" selection-start-column="29" selection-end-column="29" />
-=======
-      <file leaf-file-name="addressausgabe.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/addressausgabe.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="3" lean-forward="false" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addressausgabe.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/addressausgabe.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+            <state relative-caret-position="351">
+              <caret line="50" column="61" lean-forward="false" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="61" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#div#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#section#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adresse.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/adresse.js">
+      <file leaf-file-name="address.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/components/address.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="286">
+              <caret line="28" column="46" lean-forward="false" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="r2p.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/r2p.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-              <folding />
->>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
             </state>
           </provider>
         </entry>
@@ -318,57 +110,19 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="AngularJS-Factory-Test" />
-        <option value="AngularJS-Service-Test" />
-        <option value="AngularJS-Filter-Test" />
-        <option value="AngularJS-Controller-Test" />
-        <option value="AngularJS-Komponente" />
-<<<<<<< HEAD
-=======
+        <option value="JavaScript File" />
         <option value="AngularJS-Service" />
         <option value="AngularJS-Factory" />
->>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
-        <option value="AngularJS-Komponente mit Routing" />
-        <option value="HTML File" />
-        <option value="AngularJS-Filter" />
       </list>
     </option>
     <option name="SCHEME" value="Project" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>angularjs-1.6.6</find>
-      <find>D:</find>
-      <find>1.6.9</find>
-      <find>^</find>
-      <find>1.1.7</find>
-      <find>^(\S+)\s+(#[A-F0-9]{6}).*</find>
-      <find>md-raised</find>
-      <find>orange</find>
-      <find>blue</find>
-      <find>aend</find>
-      <find>pp</find>
-      <find>white</find>
-      <find>img</find>
-      <find>info</find>
-      <find>sportartTE</find>
-      <find>name</find>
-      <find>hallo</find>
-      <find>class=&quot;name</find>
-      <find>md-rais</find>
-      <find>h3</find>
+      <find>ui</find>
+      <find>besta</find>
+      <find>$log</find>
     </findStrings>
-    <replaceStrings>
-      <replace>angularjs-1.6.9</replace>
-      <replace>.</replace>
-      <replace>1.7.2</replace>
-      <replace>1.1.10</replace>
-      <replace>&quot;$2&quot;: &quot;$1&quot;,</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/app</dir>
-      <dir>$PROJECT_DIR$/node_modules/protractor</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -376,190 +130,177 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/e2e-tests/protractor.conf.js" />
-        <option value="$PROJECT_DIR$/karma.conf.js" />
-        <option value="$PROJECT_DIR$/app/vendor/angular-material-1.1.5/angular-material.min.js" />
-        <option value="$PROJECT_DIR$/app/vendor/angular-material-1.1.5/angular-material.min.css" />
-        <option value="$PROJECT_DIR$/app/components/xx.html" />
-        <option value="$PROJECT_DIR$/app/components/liste.js" />
-        <option value="$PROJECT_DIR$/app/models/mein-produkt.js" />
-        <option value="$PROJECT_DIR$/app/filters/filter-mich.js" />
-        <option value="$PROJECT_DIR$/app/components/mein-artikel.js" />
-        <option value="$PROJECT_DIR$/app/models/artikel.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/e2e-tests/scenarios.js" />
-        <option value="$PROJECT_DIR$/node_modules/protractor/package.json" />
-        <option value="$PROJECT_DIR$/app/vendor/angular-ui-router-1.0.18/angular-ui-router.min.js" />
-        <option value="$PROJECT_DIR$/app/vendor/moment.js-2.21.0/moment.min.js" />
-        <option value="$PROJECT_DIR$/app/vendor/moment.js-2.21.0/moment-with-locales.min.js" />
-        <option value="$PROJECT_DIR$/app/components/mein-slider.js" />
-        <option value="$PROJECT_DIR$/app/components/mein-slider.html" />
-        <option value="$PROJECT_DIR$/app/temp" />
-        <option value="$PROJECT_DIR$/app/components/rgb-slider.html" />
-        <option value="$PROJECT_DIR$/app/components/rgb-slider.js" />
-        <option value="$PROJECT_DIR$/app/app.js" />
-        <option value="$PROJECT_DIR$/app/profilseite.html" />
-        <option value="$PROJECT_DIR$/app/style.css" />
-        <option value="$PROJECT_DIR$/app/components/r2p.html" />
-        <option value="$PROJECT_DIR$/app/components/r2p.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/app/filters/zeit.js" />
+        <option value="$PROJECT_DIR$/Travel-App-AngularJS/app/components/r2p.html" />
+        <option value="$PROJECT_DIR$/Travel-App-AngularJS/app/services/repository.js" />
+        <option value="$PROJECT_DIR$/Travel-App-AngularJS/app/services/api-service.js" />
+        <option value="$PROJECT_DIR$/Travel-App-AngularJS/app/services/api.js" />
+        <option value="$PROJECT_DIR$/Travel-App-AngularJS/app/index.html" />
+        <option value="$PROJECT_DIR$/Travel-App-AngularJS/app/components/r2p.js" />
+        <option value="$PROJECT_DIR$/Travel-App-AngularJS/app/components/address.html" />
+        <option value="$PROJECT_DIR$/Travel-App-AngularJS/app/components/address.js" />
+        <option value="$PROJECT_DIR$/Travel-App-AngularJS/app/models/route.js" />
+        <option value="$PROJECT_DIR$/app/models/route.js" />
+        <option value="$PROJECT_DIR$/app/services/repository.js" />
         <option value="$PROJECT_DIR$/app/components/zeit-raum.js" />
-        <option value="$PROJECT_DIR$/app/components/zeit-raum.html" />
-=======
-        <option value="$PROJECT_DIR$/app/filters/dauer-filter.js" />
-        <option value="$PROJECT_DIR$/app/models/adresse.js" />
         <option value="$PROJECT_DIR$/app/components/addressausgabe.js" />
-        <option value="$PROJECT_DIR$/app/components/addressausgabe.html" />
->>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
+        <option value="$PROJECT_DIR$/app/components/zeit-raum.html" />
+        <option value="$PROJECT_DIR$/app/components/ausgabe.html" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/components/ausgabe.js" />
+        <option value="$PROJECT_DIR$/app/components/address.html" />
+        <option value="$PROJECT_DIR$/app/components/address.js" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
-    <package-json value="$PROJECT_DIR$/package.json" />
-  </component>
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsFlowSettings">
-    <service-enabled>true</service-enabled>
+    <service-enabled>false</service-enabled>
     <exe-path />
-    <other-services-enabled>true</other-services-enabled>
-    <auto-save>true</auto-save>
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/package.json" />
-    </packageJsonPaths>
-  </component>
-<<<<<<< HEAD
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-=======
-  <component name="ProjectFrameBounds" fullScreen="true">
->>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
+  <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1938" />
     <option name="height" value="1048" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-<<<<<<< HEAD
-=======
       <pane id="Scratches" />
->>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
-          <expand>
-            <path>
-              <item name="Travel-App-AngularJS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Travel-App-AngularJS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Travel-App-AngularJS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Travel-App-AngularJS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Travel-App-AngularJS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Travel-App-AngularJS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Travel-App-AngularJS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Travel-App-AngularJS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="filters" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Travel-App-AngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Travel-App-AngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Travel-App-AngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Travel-App-AngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Travel-App-AngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Travel-App-AngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Travel-App-AngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Travel-App-AngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Travel-App-AngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Travel-App-AngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Travel-App-AngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Travel-App-AngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="git&#9;ACTION&#9;Git.Init" />
-    <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="javascript.karma.karma_node_package_dir" value="$PROJECT_DIR$/node_modules/karma" />
-    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="js.eslint.eslintPackage" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.prettier" value="true" />
-    <property name="node.js.path.for.package.prettier" value="project" />
-    <property name="node.js.selected.package.prettier" value="" />
-    <property name="nodejs.cucumber.cucumber_node_package_dir" value="" />
-    <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/node_modules/protractor" />
-    <property name="nodejs_interpreter_path" value="node" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="settings.editor.selected.configurable" value="application.passwordSafe" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\rgb_slider\app" />
-      <recent name="D:\rgb_slider\app\components" />
-      <recent name="$PROJECT_DIR$/app/vendor" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/components" />
-      <recent name="C:\Users\User\Documents\SCHULE\Angela_Amacna4AI\ITP\Projekt Sportfest\Angular\rgb_slider\app\fonts" />
-      <recent name="$PROJECT_DIR$/app/services" />
-      <recent name="$PROJECT_DIR$/app/models" />
-      <recent name="$PROJECT_DIR$/app/filters" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
-<<<<<<< HEAD
-    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/rgb_slider/app/index.html">
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Karma.Unit-Tests" />
-      <item itemvalue="Protractor.E2E-Tests" />
-      <item itemvalue="JavaScript Debug.index.html" />
-=======
-    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/rgb_slider/app/index.html" />
+  <component name="RunManager" selected="Protractor.E2E-Tests">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
@@ -590,6 +331,15 @@
       <option name="filePath" />
       <method />
     </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run" />
       <scripts />
@@ -610,247 +360,34 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-    </configuration>
-    <list size="3">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Karma.Unit-Tests" />
       <item index="1" class="java.lang.String" itemvalue="Protractor.E2E-Tests" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
->>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JavaScript Debug.index.html" />
-      </list>
-    </recent_temporary>
   </component>
-  <component name="SvnConfiguration">
-    <configuration>$USER_HOME$/.subversion</configuration>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1ff41d3a-4a7b-4f90-9238-42f57ddbedc2" name="Default" comment="" />
-      <created>1508763579209</created>
+      <changelist id="00a7c4b3-d268-4845-a3b0-86e2efcabb90" name="Default" comment="" />
+      <created>1553673252546</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1508763579209</updated>
-      <workItem from="1508763582995" duration="377000" />
-      <workItem from="1508779163018" duration="3664000" />
-      <workItem from="1508854000408" duration="25000" />
-      <workItem from="1508854491654" duration="22000" />
-      <workItem from="1513599862400" duration="27000" />
-      <workItem from="1521109592247" duration="1658000" />
-      <workItem from="1521114690099" duration="577000" />
-      <workItem from="1523434079516" duration="4376000" />
-      <workItem from="1523438464306" duration="758000" />
-      <workItem from="1523439235830" duration="29000" />
-      <workItem from="1523440484952" duration="1337000" />
-      <workItem from="1523559256589" duration="110000" />
-      <workItem from="1524031875891" duration="878000" />
-      <workItem from="1524050054035" duration="6000" />
-      <workItem from="1524051583555" duration="1392000" />
-      <workItem from="1524858555668" duration="620000" />
-      <workItem from="1524917672456" duration="396000" />
-      <workItem from="1524918096448" duration="810000" />
-      <workItem from="1525202690799" duration="68000" />
-      <workItem from="1525325013720" duration="207000" />
-      <workItem from="1525328192086" duration="1451000" />
-      <workItem from="1525329843583" duration="126000" />
-      <workItem from="1527170664015" duration="88000" />
-      <workItem from="1527661963089" duration="1047000" />
-      <workItem from="1527678839853" duration="852000" />
-      <workItem from="1527680319019" duration="4078000" />
-      <workItem from="1527834594284" duration="4487000" />
-      <workItem from="1527846706415" duration="20000" />
-      <workItem from="1527846756946" duration="221000" />
-      <workItem from="1527847401770" duration="365000" />
-      <workItem from="1527847798675" duration="63000" />
-      <workItem from="1527932960343" duration="23000" />
-      <workItem from="1528266785962" duration="1059000" />
-      <workItem from="1528282216494" duration="12000" />
-      <workItem from="1531385057341" duration="1918000" />
-      <workItem from="1531761472255" duration="122000" />
-      <workItem from="1532162773403" duration="22000" />
-      <workItem from="1532348259154" duration="8000" />
-      <workItem from="1532526280043" duration="22000" />
-      <workItem from="1532543092811" duration="775000" />
-      <workItem from="1532550274286" duration="409000" />
-      <workItem from="1532550900551" duration="63000" />
-      <workItem from="1532553443883" duration="425000" />
-      <workItem from="1532674720086" duration="59000" />
-      <workItem from="1532674800339" duration="80000" />
-      <workItem from="1532795959839" duration="210000" />
-      <workItem from="1533194942984" duration="37000" />
-      <workItem from="1533196305771" duration="418000" />
-      <workItem from="1533386093649" duration="1068000" />
-      <workItem from="1533388052570" duration="59000" />
-      <workItem from="1533389061490" duration="35000" />
-      <workItem from="1533389201279" duration="12000" />
-      <workItem from="1533389304705" duration="23000" />
-      <workItem from="1533389465901" duration="141000" />
-      <workItem from="1533389663395" duration="53000" />
-      <workItem from="1533500386823" duration="102000" />
-      <workItem from="1533640747175" duration="20000" />
-      <workItem from="1533659911152" duration="13000" />
-      <workItem from="1533663575870" duration="722000" />
-      <workItem from="1533669814466" duration="59000" />
-      <workItem from="1533720732444" duration="28000" />
-      <workItem from="1533720930966" duration="272000" />
-      <workItem from="1533721294042" duration="27000" />
-      <workItem from="1533725595746" duration="12000" />
-      <workItem from="1533726354807" duration="34000" />
-      <workItem from="1533751966858" duration="92000" />
-      <workItem from="1533839341727" duration="871000" />
-      <workItem from="1533844048445" duration="7000" />
-      <workItem from="1533844407900" duration="75000" />
-      <workItem from="1533846284059" duration="56000" />
-      <workItem from="1533927642556" duration="28000" />
-      <workItem from="1533927726273" duration="75000" />
-      <workItem from="1534142777639" duration="96000" />
-      <workItem from="1534449968042" duration="25000" />
-      <workItem from="1534450273088" duration="99000" />
-      <workItem from="1534451156518" duration="480000" />
-      <workItem from="1534971893629" duration="62000" />
-      <workItem from="1535278482692" duration="250000" />
-      <workItem from="1535365391335" duration="46000" />
-      <workItem from="1535618019017" duration="38000" />
-      <workItem from="1535648196228" duration="408000" />
-      <workItem from="1537351534067" duration="58000" />
-      <workItem from="1538720321489" duration="275000" />
-      <workItem from="1539766619397" duration="6059000" />
-      <workItem from="1539929407545" duration="4126000" />
-      <workItem from="1540372626639" duration="3627000" />
-      <workItem from="1541424714137" duration="11229000" />
-      <workItem from="1541525258538" duration="24000" />
-      <workItem from="1541766323589" duration="25027000" />
-      <workItem from="1542012627265" duration="590000" />
-      <workItem from="1542031139739" duration="1598000" />
-      <workItem from="1546972608202" duration="222000" />
-      <workItem from="1553370043455" duration="91000" />
-<<<<<<< HEAD
-      <workItem from="1553521627802" duration="6549000" />
-=======
-      <workItem from="1553525238394" duration="1102000" />
-      <workItem from="1553526930175" duration="123000" />
->>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
+      <updated>1553673252546</updated>
+      <workItem from="1553673254143" duration="14000" />
+      <workItem from="1553673282274" duration="1076000" />
+      <workItem from="1553677429340" duration="2637000" />
+      <workItem from="1553685752101" duration="45000" />
+      <workItem from="1553685873565" duration="54000" />
+      <workItem from="1553685954740" duration="5177000" />
+      <workItem from="1553712804228" duration="2040000" />
+      <workItem from="1553717259745" duration="4059000" />
     </task>
-    <task id="LOCAL-00001" summary="AngularJS 1.6.9, Angular Material 1.1.7, UI Router 1.0.8.">
-      <created>1524918032174</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1524918032174</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Fix: moment.js in Tests eingebunden.">
-      <created>1525325105929</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1525325105929</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Jasmine-Testvorlage verbessert.">
-      <created>1525325141626</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1525325141626</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Versehentliche &quot;breaking updates&quot; der node_modules verhindern.">
-      <created>1525325195179</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1525325195179</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Schreibweise der Dateinamen überprüfen.">
-      <created>1527846865419</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1527846865419</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Vorlagen für Unit-Tests erstellen.">
-      <created>1527846894292</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1527846894292</updated>
-    </task>
-    <task id="LOCAL-00007" summary="npm update ermöglichen.">
-      <created>1527847737723</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1527847737723</updated>
-    </task>
-    <task id="LOCAL-00008" summary="AngularJS 1.7.2, UI-Router 1.0.18, Material 1.1.10.">
-      <created>1531386902627</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1531386902627</updated>
-    </task>
-    <task id="LOCAL-00009" summary="AngularJS 1.7.2, UI-Router 1.0.18, Material 1.1.10.">
-      <created>1532543864416</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1532543864416</updated>
-    </task>
-    <task id="LOCAL-00010" summary="AngularJS 1.7.2, UI-Router 1.0.18, Material 1.1.10.">
-      <created>1533196707398</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1533196707398</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="E2E-Tests - 2018.06.06 at 08h 33m 20s.xml">
-      <configuration name="E2E-Tests" configurationId="JavaScriptTestRunnerProtractor" />
-    </history-entry>
-    <history-entry file="E2E-Tests - 2018.07.25 at 20h 26m 49s.xml">
-      <configuration name="E2E-Tests" configurationId="JavaScriptTestRunnerProtractor" />
-    </history-entry>
-    <history-entry file="E2E-Tests - 2018.07.25 at 20h 29m 30s.xml">
-      <configuration name="E2E-Tests" configurationId="JavaScriptTestRunnerProtractor" />
-    </history-entry>
-    <history-entry file="Unit-Tests - 2018.07.28 at 18h 42m 01s.xml">
-      <configuration name="Unit-Tests" configurationId="JavaScriptTestRunnerKarma" />
-    </history-entry>
-    <history-entry file="E2E-Tests - 2018.07.28 at 18h 42m 26s.xml">
-      <configuration name="E2E-Tests" configurationId="JavaScriptTestRunnerProtractor" />
-    </history-entry>
-    <history-entry file="Unit-Tests - 2018.08.26 at 12h 18m 01s.xml">
-      <configuration name="Unit-Tests" configurationId="JavaScriptTestRunnerKarma" />
-    </history-entry>
-    <history-entry file="E2E-Tests - 2018.08.26 at 12h 18m 17s.xml">
-      <configuration name="E2E-Tests" configurationId="JavaScriptTestRunnerProtractor" />
-    </history-entry>
-    <history-entry file="Unit-Tests - 2018.08.30 at 18h 58m 05s.xml">
-      <configuration name="Unit-Tests" configurationId="JavaScriptTestRunnerKarma" />
-    </history-entry>
-    <history-entry file="E2E-Tests - 2018.08.30 at 18h 59m 31s.xml">
-      <configuration name="E2E-Tests" configurationId="JavaScriptTestRunnerProtractor" />
-    </history-entry>
-    <history-entry file="E2E-Tests - 2018.08.30 at 19h 01m 49s.xml">
-      <configuration name="E2E-Tests" configurationId="JavaScriptTestRunnerProtractor" />
-    </history-entry>
-  </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="100660000" />
-=======
-    <option name="totallyTimeSpent" value="95336000" />
->>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
+    <option name="totallyTimeSpent" value="15102000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -862,382 +399,181 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-<<<<<<< HEAD
-    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
-    <layout>
-      <window_info id="npm" order="0" side_tool="true" />
-      <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info id="Structure" order="2" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.25274727" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="2" />
-      <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="bottom" id="Run" order="5" />
-      <window_info anchor="bottom" id="Debug" order="6" weight="0.39956093" />
-      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="9" />
-      <window_info anchor="right" id="Remote Host" order="0" />
-      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-=======
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25274727" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39956093" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
->>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25264272" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="npm" order="0" side_tool="true" />
-      <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info id="Structure" order="2" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.25" />
-      <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="2" />
-      <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="bottom" id="Run" order="5" />
-      <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="9" />
-      <window_info anchor="right" id="Remote Host" order="0" />
-      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25317124" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
+    <option name="processedProjectFiles" value="true" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="AngularJS 1.6.9, Angular Material 1.1.7, UI Router 1.0.8." />
-    <MESSAGE value="Fix: moment.js in Tests eingebunden." />
-    <MESSAGE value="Jasmine-Testvorlage verbessert." />
-    <MESSAGE value="Versehentliche &quot;breaking updates&quot; der node_modules verhindern." />
-    <MESSAGE value="Schreibweise der Dateinamen überprüfen." />
-    <MESSAGE value="Vorlagen für Unit-Tests erstellen." />
-    <MESSAGE value="npm update ermöglichen." />
-    <MESSAGE value="AngularJS 1.7.2, UI-Router 1.0.18, Material 1.1.10." />
-    <option name="LAST_COMMIT_MESSAGE" value="AngularJS 1.7.2, UI-Router 1.0.18, Material 1.1.10." />
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
-=======
-    <entry file="file://$PROJECT_DIR$/app/style.css">
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/r2p.js" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/r2p.html" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/zeit-raum.html" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/addressausgabe.js" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/addressausgabe.html" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/address.html" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/address.js" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/services/repository.js" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/index.html" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/services/api.js" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/r2p.js" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/r2p.html" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/zeit-raum.html" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/addressausgabe.js" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/addressausgabe.html" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/address.html" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/address.js" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/services/repository.js" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/r2p.js" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/r2p.html" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/index.html" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/zeit-raum.js" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/zeit-raum.html" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/addressausgabe.js" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/addressausgabe.html" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/address.html" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/address.js" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/zeit-raum.js" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/addressausgabe.js" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/index.html" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/app.css" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/zeit-raum.html" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/r2p.html" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/address.html" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/address.js" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/addressausgabe.html" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/r2p.js" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/services/api.js" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/services/repository.js" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/models/adresse.js" />
+    <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/models/route.js" />
+    <entry file="file://$PROJECT_DIR$/app/models/route.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1869">
-          <caret line="89" column="28" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+        <state relative-caret-position="220">
+          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1869">
-          <caret line="89" column="28" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/rgb-slider.html" />
-    <entry file="file://$PROJECT_DIR$/app/temp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2482">
-          <caret line="146" column="24" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/mein-slider.js" />
-    <entry file="file://$PROJECT_DIR$/app/components/mein-slider.html" />
-    <entry file="file://$PROJECT_DIR$/app/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/rgb-slider.js" />
->>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
-    <entry file="file://$PROJECT_DIR$/app/components/test.js" />
-    <entry file="file://$PROJECT_DIR$/package.json" />
-    <entry file="file://$PROJECT_DIR$/app/vendor/angular-material-1.1.7/angular-material.min.js" />
-    <entry file="file://$PROJECT_DIR$/app/vendor/angular-material-1.1.7/angular-material.min.css" />
-    <entry file="file://$PROJECT_DIR$/app/components/a-b.js" />
-    <entry file="file://$PROJECT_DIR$/app/components/xx.html" />
-    <entry file="file://$PROJECT_DIR$/app/components/liste.js" />
-    <entry file="file://$PROJECT_DIR$/app/models/mein-produkt.js" />
-    <entry file="file://$PROJECT_DIR$/app/filters/filter-mich.js" />
-    <entry file="file://$PROJECT_DIR$/app/components/mein-artikel.js" />
-    <entry file="file://$PROJECT_DIR$/app/models/artikel.js" />
-    <entry file="file://$PROJECT_DIR$/e2e-tests/protractor.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-<<<<<<< HEAD
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-=======
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
->>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/protractor/package.json" />
-    <entry file="file://$PROJECT_DIR$/app/models/test-fact.spec.js" />
-    <entry file="file://$PROJECT_DIR$/app/vendor/angular-ui-router-1.0.18/angular-ui-router.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/vendor/moment.js-2.22.2/moment.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret column="51679" selection-start-column="51679" selection-end-column="51679" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts" />
-    <entry file="file://$PROJECT_DIR$/app/vendor/moment.js-2.22.2/moment-with-locales.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret column="326657" selection-start-column="326657" selection-end-column="326657" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/ide/ide-scripting.js" />
-    <entry file="file://$PROJECT_DIR$/karma.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/e2e-tests/scenarios.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/mein-slider.js" />
-    <entry file="file://$PROJECT_DIR$/app/temp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2482">
-          <caret line="146" column="24" selection-end-line="147" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/rgb-slider.html" />
-    <entry file="file://$PROJECT_DIR$/app/components/rgb-slider.js" />
-    <entry file="file://$PROJECT_DIR$/app/app.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/mein-slider.html" />
-    <entry file="file://$PROJECT_DIR$/app/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-<<<<<<< HEAD
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-=======
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
->>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/filters/dauerFilter.js" />
-    <entry file="file://$PROJECT_DIR$/app/components/r2p.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/r2p.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/r2p.html">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state>
-          <caret column="29" selection-start-column="29" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/resources/zeitraum.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="33" lean-forward="true" selection-end-line="32" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-=======
-        <state relative-caret-position="870">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/address.js" />
     <entry file="file://$PROJECT_DIR$/app/models/adresse.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/filters/dauer-filter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="72" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/addressausgabe.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="3" lean-forward="false" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/addressausgabe.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#md-toolbar#0;n#div#0;n#!!top" expanded="true" />
->>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/app/filters/zeit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
-=======
-    <entry file="file://$PROJECT_DIR$/app/components/address.html">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
->>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/resources/zeitraum.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-<<<<<<< HEAD
-          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/zeit-raum.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="65" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
+        <state relative-caret-position="339">
+          <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/zeit-raum.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+        <state relative-caret-position="329">
+          <caret line="43" column="35" lean-forward="false" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#md-content#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-button#0;n#section#0;n#div#0;n#!!top" expanded="true" />
           </folding>
-=======
-          <caret line="34" column="42" lean-forward="false" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/repository.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding />
->>>>>>> 11fe8c8ccfbfe78f35520a40bf7c630391632562
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/ausgabe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="22" column="52" lean-forward="false" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/ausgabe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/address.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="50" column="61" lean-forward="false" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="61" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/address.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="28" column="46" lean-forward="false" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>

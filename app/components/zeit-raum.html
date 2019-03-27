@@ -35,11 +35,13 @@
         </div>
         <div style="margin-left: 20px;">
             <!--hier wird die Differenz zwischen der Endzeit und der Anfangszeit wird ausgerechnet und in hier ausgegeben-->
-            {{($ctrl.ende - $ctrl.anfang) | date: "shortTime" : "UTC"}}
+            {{$ctrl.berechneDauer() | date: "shortTime" : "UTC"}}
         </div>
     </md-content>
     <section layout="row" layout-align="end end" layout-wrap >
-        <md-button flex="30" style="background-color:#176CBE; color:white;" ng-click="$ctrl.bestaetigen()" ui-sref="next-zeitraum({ dauer: $ctrl.dauer})">Editor</md-button>
+        <md-button flex="30"
+                   style="background-color:#176CBE; color:white;"
+                   ui-sref="address({ zeitraum: $ctrl.berechneDauer()})">Adresse eingeben</md-button>
     </section>
 
 </div>

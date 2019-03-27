@@ -10,32 +10,44 @@ app.component("address", {
 app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state({
         name: "address",
-        url: "/address",
+        params: {zeitraum: 0, adressen: []},
         component: "address"
     });
 
-    $urlRouterProvider.otherwise("/address");
+    /*$urlRouterProvider.otherwise("/address");*/
 });
 
 
-app.controller("AddressController", function ($log, $http, ApiService) {
+app.controller("AddressController", function ($log, $http, ApiService, Adresse, $stateParams) {
+
+
+    this.$onInit = () => {
+        $log.debug("stateparams zeitraum: ", $stateParams.zeitraum);
+    }
+    this.paramsVorbereiten = () => {
+        this.bestaetigen();
+        this.zeitraum = $stateParams.zeitraum;
+        this.adressenAry = $stateParams.adressen.push(new Adresse(this.strasse, this.hausnummer, this.plz, this.ort));
+    }
+
 
     this.bestaetigen = () => {
         $http
             .get('https://geocoder.api.here.com/6.2/geocode.json',
                 {params: {app_id: ApiService.getAppId(), app_code: ApiService.getAppCode(),
-                    searchtext: this.strasse + this.hausnummer + ", " + this.plz + this.ort}})
+                    street: this.strasse +this.hausnummer, city: this.city}})
             .then(response => {
-                var strasseAPI = response.data.Response.View[0].Result[0].Location.Address.Street;
-                var landAPI = response.data.Response.View[0].Result[0].Location.Address.Country;
-                var stadtAPI = response.data.Response.View[0].Result[0].Location.Address.City;
-                var plzAPI = response.data.Response.View[0].Result[0].Location.Address.PostalCode;
-                var hausNrAPI = response.data.Response.View[0].Result[0].Location.Address.HouseNumber;
+                $log.debug(response);
+                this.strasseAPI = response.data.Response.View[0].Result[0].Location.Address.Street;
+                this.landAPI = response.data.Response.View[0].Result[0].Location.Address.Country;
+                this.stadtAPI = response.data.Response.View[0].Result[0].Location.Address.City;
+                this.plzAPI = response.data.Response.View[0].Result[0].Location.Address.PostalCode;
+                this.hausNrAPI = response.data.Response.View[0].Result[0].Location.Address.HouseNumber;
 
-                if(this.plz == plzAPI) {
-                    if (this.ort == stadtAPI) {
-                        console.log("Land: " + landAPI + "\nStraße: " + strasseAPI + "\nHausnummer: " + hausNrAPI + "\nStadt: " + stadtAPI +
-                            "\nPLZ: " + plzAPI);
+                if(this.plz == this.plzAPI) {
+                    if (this.ort == this.stadtAPI) {
+                        console.log("Land: " + this.landAPI + "\nStraße: " + this.strasseAPI + "\nHausnummer: " + this.hausNrAPI + "\nStadt: " + this.stadtAPI +
+                            "\nPLZ: " + this.plzAPI);
                     } else {
                         console.log("Ihre Adresse stimmt nicht mit dem angegebenen Ort überein.")
                     }

@@ -14,7 +14,8 @@
             <md-input-container
                     style="width: 42%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
                 <label style="padding:10px 0px 0px 20px;">Straße</label>
-                <input ng-model="$ctrl.strasse">
+                <input ng-model="$ctrl.strasse"
+                       required>
             </md-input-container>
             <md-input-container
                     style="width: 40%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
@@ -27,16 +28,26 @@
             <md-input-container
                     style="width: 42%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
                 <label style="padding:10px 0px 0px 20px;">PLZ</label>
-                <input ng-model="$ctrl.plz">
+                <input ng-model="$ctrl.plz"
+                       required>
             </md-input-container>
             <md-input-container
                     style="width: 40%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
                 <label style="padding:10px 0px 0px 20px;">Ort</label>
-                <input ng-model="$ctrl.ort">
+                <input ng-model="$ctrl.ort"
+                       required>
             </md-input-container>
         </div>
     </md-content>
     <section layout="row" layout-align="end end" layout-wrap style="margin-top: 60%">
-        <md-button flex="30" style="background-color:#176CBE; color:white;" ng-click="$ctrl.bestaetigen()">Bestätigen</md-button>
+        <md-button class="md-fab md-mini md-primary"
+                   ng-click="$ctrl.paramsVorbereiten()"
+                   ui-sref="address({ zeitraum: $ctrl.zeitraum, adressen: $ctrl.adressenAry})">
+            <md-icon md-font-icon="material-icons">add_location</md-icon>
+        </md-button>
+        <md-button flex="30"
+                   style="background-color:#176CBE; color:white;"
+                   ng-click="$ctrl.paramsVorbereiten()"
+                   ui-sref="ausgabe({zeitraum: $ctrl.zeitraum, adressen: $ctrl.adressenAry})">Anzeige</md-button>
     </section>
 </div>

@@ -18,10 +18,13 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 });
 
 
-app.controller("ZeitRaumController", function ($log, $filter) {
+app.controller("ZeitRaumController", function ($log, RespositoryService, Route) {
 
     $log.debug("ZeitRaumController()");
 
 
+    this.berechneDauer = () => {
+        return this.ende - this.anfang;
+    }
 
 });
