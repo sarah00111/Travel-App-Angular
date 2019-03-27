@@ -4,7 +4,7 @@
 
 "use strict";
 
-app.service("RespositoryService", function ($log, Farbe) {
+app.service("RespositoryService", function ($log) {
 
     $log.debug("RespositoryService()");
 

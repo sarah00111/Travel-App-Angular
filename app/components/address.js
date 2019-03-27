@@ -18,11 +18,13 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 });
 
 
-app.controller("AddressController", function ($log, $http) {
+app.controller("AddressController", function ($log, $http, ApiService) {
 
     this.bestaetigen = () => {
         $http
-            .get(`https://geocoder.api.here.com/6.2/geocode.json?app_id=PrMutQw0GYIzmsPoWwSV&app_code=_P73etTNPxern4N6HV69tA&searchtext=${this.strasse} ${this.hausnummer}, ${this.plz} ${this.ort}`)
+            .get('https://geocoder.api.here.com/6.2/geocode.json',
+                {params: {app_id: ApiService.getAppId(), app_code: ApiService.getAppCode(),
+                    searchtext: this.strasse + this.hausnummer + ", " + this.plz + this.ort}})
             .then(response => {
                 var strasseAPI = response.data.Response.View[0].Result[0].Location.Address.Street;
                 var landAPI = response.data.Response.View[0].Result[0].Location.Address.Country;
