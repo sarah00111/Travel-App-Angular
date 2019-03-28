@@ -35,7 +35,7 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
         $http
             .get('https://geocoder.api.here.com/6.2/geocode.json',
                 {params: {app_id: ApiService.getAppId(), app_code: ApiService.getAppCode(),
-                    street: this.strasse +this.hausnummer, city: this.city}})
+                    street: this.strasse + " " + this.hausnummer, city: this.ort}})
             .then(response => {
                 $log.debug(response);
                 this.strasseAPI = response.data.Response.View[0].Result[0].Location.Address.Street;
