@@ -21,6 +21,7 @@ app.controller("AusgabeController", function ($log, $stateParams) {
     this.$onInit = () => {
         $log.debug("oninit");
         $log.debug("zeitraum", $stateParams.zeitraum);
+        $log.debug("adresse", $stateParams.adressen[0]);
     }
 
     this.zeitraum = $stateParams.zeitraum;
