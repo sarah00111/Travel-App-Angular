@@ -1,0 +1,494 @@
+{
+    "response": {
+        "metaInfo": {
+            "timestamp": "2019-03-27T13:10:37Z",
+            "mapVersion": "8.30.94.154",
+            "moduleVersion": "7.2.201912-2654",
+            "interfaceVersion": "2.6.53",
+            "availableMapVersion": [
+                "8.30.94.154"
+            ]
+        },
+        "route": [
+            {
+                "waypoint": [
+                    {
+                        "linkId": "+55868577",
+                        "mappedPosition": {
+                            "latitude": 48.1906626,
+                            "longitude": 16.3972136
+                        },
+                        "originalPosition": {
+                            "latitude": 48.19066,
+                            "longitude": 16.39721
+                        },
+                        "type": "stopOver",
+                        "spot": 0.60199,
+                        "sideOfStreet": "neither",
+                        "mappedRoadName": "Rennweg",
+                        "label": "Rennweg",
+                        "shapeIndex": 0
+                    },
+                    {
+                        "linkId": "-55873861",
+                        "mappedPosition": {
+                            "latitude": 48.1526363,
+                            "longitude": 16.4561355
+                        },
+                        "originalPosition": {
+                            "latitude": 48.1530841,
+                            "longitude": 16.456535
+                        },
+                        "type": "stopOver",
+                        "spot": 0,
+                        "sideOfStreet": "left",
+                        "mappedRoadName": "Roschègasse",
+                        "label": "Roschègasse",
+                        "shapeIndex": 60
+                    },
+                    {
+                        "linkId": "-62763922",
+                        "mappedPosition": {
+                            "latitude": 48.2099698,
+                            "longitude": 16.2104981
+                        },
+                        "originalPosition": {
+                            "latitude": 48.2100341,
+                            "longitude": 16.210453
+                        },
+                        "type": "stopOver",
+                        "spot": 0.4512195,
+                        "sideOfStreet": "right",
+                        "mappedRoadName": "",
+                        "label": "",
+                        "shapeIndex": 336
+                    }
+                ],
+                "mode": {
+                    "type": "fastest",
+                    "transportModes": [
+                        "car"
+                    ],
+                    "trafficMode": "disabled",
+                    "feature": []
+                },
+                "leg": [
+                    {
+                        "start": {
+                            "linkId": "+55868577",
+                            "mappedPosition": {
+                                "latitude": 48.1906626,
+                                "longitude": 16.3972136
+                            },
+                            "originalPosition": {
+                                "latitude": 48.19066,
+                                "longitude": 16.39721
+                            },
+                            "type": "stopOver",
+                            "spot": 0.60199,
+                            "sideOfStreet": "neither",
+                            "mappedRoadName": "Rennweg",
+                            "label": "Rennweg",
+                            "shapeIndex": 0
+                        },
+                        "end": {
+                            "linkId": "-55873861",
+                            "mappedPosition": {
+                                "latitude": 48.1526363,
+                                "longitude": 16.4561355
+                            },
+                            "originalPosition": {
+                                "latitude": 48.1530841,
+                                "longitude": 16.456535
+                            },
+                            "type": "stopOver",
+                            "spot": 0,
+                            "sideOfStreet": "left",
+                            "mappedRoadName": "Roschègasse",
+                            "label": "Roschègasse",
+                            "shapeIndex": 60
+                        },
+                        "length": 7431,
+                        "travelTime": 875,
+                        "maneuver": [
+                            {
+                                "position": {
+                                    "latitude": 48.1906626,
+                                    "longitude": 16.3972136
+                                },
+                                "instruction": "Head toward <span class=\"toward_street\">Oberzellergasse</span> on <span class=\"street\">Rennweg</span>. <span class=\"distance-description\">Go for <span class=\"length\">475 m</span>.</span>",
+                                "travelTime": 60,
+                                "length": 475,
+                                "id": "M1",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1931913,
+                                    "longitude": 16.3920844
+                                },
+                                "instruction": "Make a U-Turn at <span class=\"cross_street\">Eslarngasse</span> onto <span class=\"next-street\">Rennweg</span>. <span class=\"distance-description\">Go for <span class=\"length\">1.2 km</span>.</span>",
+                                "travelTime": 161,
+                                "length": 1248,
+                                "id": "M2",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.18537,
+                                    "longitude": 16.4037466
+                                },
+                                "instruction": "Continue on <span class=\"next-street\">Simmeringer Hauptstraße</span>. <span class=\"distance-description\">Go for <span class=\"length\">3.6 km</span>.</span>",
+                                "travelTime": 404,
+                                "length": 3595,
+                                "id": "M3",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1595671,
+                                    "longitude": 16.4327145
+                                },
+                                "instruction": "Continue on <span class=\"next-street\">Simmeringer Hauptstraße</span> <span class=\"number\">(B225)</span>. <span class=\"distance-description\">Go for <span class=\"length\">1.5 km</span>.</span>",
+                                "travelTime": 142,
+                                "length": 1477,
+                                "id": "M4",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1525826,
+                                    "longitude": 16.4493763
+                                },
+                                "instruction": "Turn <span class=\"direction\">left</span> onto <span class=\"next-street\">Thürnlhofstraße</span>. <span class=\"distance-description\">Go for <span class=\"length\">179 m</span>.</span>",
+                                "travelTime": 32,
+                                "length": 179,
+                                "id": "M5",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1540525,
+                                    "longitude": 16.4503527
+                                },
+                                "instruction": "Turn <span class=\"direction\">right</span> onto <span class=\"next-street\">Roschègasse</span>. <span class=\"distance-description\">Go for <span class=\"length\">457 m</span>.</span>",
+                                "travelTime": 76,
+                                "length": 457,
+                                "id": "M6",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1526363,
+                                    "longitude": 16.4561355
+                                },
+                                "instruction": "Arrive at <span class=\"street\">Roschègasse</span>. Your destination is on the left.",
+                                "travelTime": 0,
+                                "length": 0,
+                                "id": "M7",
+                                "_type": "PrivateTransportManeuverType"
+                            }
+                        ]
+                    },
+                    {
+                        "start": {
+                            "linkId": "-55873861",
+                            "mappedPosition": {
+                                "latitude": 48.1526363,
+                                "longitude": 16.4561355
+                            },
+                            "originalPosition": {
+                                "latitude": 48.1530841,
+                                "longitude": 16.456535
+                            },
+                            "type": "stopOver",
+                            "spot": 0,
+                            "sideOfStreet": "left",
+                            "mappedRoadName": "Roschègasse",
+                            "label": "Roschègasse",
+                            "shapeIndex": 60
+                        },
+                        "end": {
+                            "linkId": "-62763922",
+                            "mappedPosition": {
+                                "latitude": 48.2099698,
+                                "longitude": 16.2104981
+                            },
+                            "originalPosition": {
+                                "latitude": 48.2100341,
+                                "longitude": 16.210453
+                            },
+                            "type": "stopOver",
+                            "spot": 0.4512195,
+                            "sideOfStreet": "right",
+                            "mappedRoadName": "",
+                            "label": "",
+                            "shapeIndex": 336
+                        },
+                        "length": 22448,
+                        "travelTime": 2220,
+                        "maneuver": [
+                            {
+                                "position": {
+                                    "latitude": 48.1526363,
+                                    "longitude": 16.4561355
+                                },
+                                "instruction": "Head toward <span class=\"toward_street\">Pantucekgasse</span> on <span class=\"street\">Roschègasse</span>. <span class=\"distance-description\">Go for <span class=\"length\">151 m</span>.</span>",
+                                "travelTime": 36,
+                                "length": 151,
+                                "id": "M8",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1531191,
+                                    "longitude": 16.4542258
+                                },
+                                "instruction": "Turn <span class=\"direction\">left</span> onto <span class=\"next-street\">Pantucekgasse</span>. <span class=\"distance-description\">Go for <span class=\"length\">191 m</span>.</span>",
+                                "travelTime": 40,
+                                "length": 191,
+                                "id": "M9",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1515098,
+                                    "longitude": 16.4533353
+                                },
+                                "instruction": "Turn <span class=\"direction\">right</span> onto <span class=\"next-street\">Simmeringer Hauptstraße</span> <span class=\"number\">(B225)</span>. <span class=\"distance-description\">Go for <span class=\"length\">1.8 km</span>.</span>",
+                                "travelTime": 164,
+                                "length": 1794,
+                                "id": "M10",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1595671,
+                                    "longitude": 16.4327145
+                                },
+                                "instruction": "Continue on <span class=\"next-street\">Simmeringer Hauptstraße</span>. <span class=\"distance-description\">Go for <span class=\"length\">3.6 km</span>.</span>",
+                                "travelTime": 410,
+                                "length": 3593,
+                                "id": "M11",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1854343,
+                                    "longitude": 16.4039075
+                                },
+                                "instruction": "Continue on <span class=\"next-street\">Rennweg</span>. <span class=\"distance-description\">Go for <span class=\"length\">237 m</span>.</span>",
+                                "travelTime": 33,
+                                "length": 237,
+                                "id": "M12",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.187108,
+                                    "longitude": 16.4019549
+                                },
+                                "instruction": "Turn <span class=\"direction\">left</span> onto <span class=\"next-street\">Grasbergergasse</span> toward <span class=\"sign\"><span lang=\"de\">Gürtel</span>/<span lang=\"de\">St.Marxer Friedhof</span></span>. <span class=\"distance-description\">Go for <span class=\"length\">82 m</span>.</span>",
+                                "travelTime": 17,
+                                "length": 82,
+                                "id": "M13",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1867218,
+                                    "longitude": 16.4010108
+                                },
+                                "instruction": "Take the <span class=\"exit\">1st exit</span> from roundabout onto <span class=\"next-street\">Leberstraße</span>. <span class=\"distance-description\">Go for <span class=\"length\">192 m</span>.</span>",
+                                "travelTime": 31,
+                                "length": 192,
+                                "id": "M14",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1878912,
+                                    "longitude": 16.3991654
+                                },
+                                "instruction": "Continue on <span class=\"next-street\">Leberstraße</span>. <span class=\"distance-description\">Go for <span class=\"length\">28 m</span>.</span>",
+                                "travelTime": 15,
+                                "length": 28,
+                                "id": "M15",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.18802,
+                                    "longitude": 16.3988543
+                                },
+                                "instruction": "Turn <span class=\"direction\">left</span> onto <span class=\"next-street\">Landstraßer Hauptstraße</span> <span class=\"number\">(B221)</span>. <span class=\"distance-description\">Go for <span class=\"length\">232 m</span>.</span>",
+                                "travelTime": 22,
+                                "length": 232,
+                                "id": "M16",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1864321,
+                                    "longitude": 16.396805
+                                },
+                                "instruction": "Take ramp onto <span class=\"next-street\">Landstraßer Gürtel</span> <span class=\"number\">(B221)</span> toward <span class=\"sign\"><span lang=\"de\">Hauptbahnhof</span></span>. <span class=\"distance-description\">Go for <span class=\"length\">513 m</span>.</span>",
+                                "travelTime": 61,
+                                "length": 513,
+                                "id": "M17",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1880951,
+                                    "longitude": 16.3909149
+                                },
+                                "instruction": "Continue on <span class=\"next-street\">Landstraßer Gürtel</span> <span class=\"number\">(B221)</span>. <span class=\"distance-description\">Go for <span class=\"length\">1.1 km</span>.</span>",
+                                "travelTime": 118,
+                                "length": 1099,
+                                "id": "M18",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1870544,
+                                    "longitude": 16.3765812
+                                },
+                                "instruction": "Keep <span class=\"direction\">left</span> onto <span class=\"next-street\">Wiedner Gürtel</span> <span class=\"number\">(B221)</span>. <span class=\"distance-description\">Go for <span class=\"length\">1.3 km</span>.</span>",
+                                "travelTime": 111,
+                                "length": 1285,
+                                "id": "M19",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1817544,
+                                    "longitude": 16.361239
+                                },
+                                "instruction": "Keep <span class=\"direction\">left</span> onto <span class=\"next-street\">Margaretengürtel</span> <span class=\"number\">(B221)</span> toward <span class=\"sign\"><span lang=\"de\">A1</span>/<span lang=\"de\">Linz</span>/<span lang=\"de\">Gürtel-West</span></span>. <span class=\"distance-description\">Go for <span class=\"length\">853 m</span>.</span>",
+                                "travelTime": 71,
+                                "length": 853,
+                                "id": "M20",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1804669,
+                                    "longitude": 16.3503706
+                                },
+                                "instruction": "Keep <span class=\"direction\">right</span> onto <span class=\"next-street\">Margaretengürtel</span> <span class=\"number\">(B221)</span> toward <span class=\"sign\"><span lang=\"de\">A22</span>/<span lang=\"de\">Praha</span>/<span lang=\"de\">A1</span>/<span lang=\"de\">Linz</span>/<span lang=\"de\">B7</span>/<span lang=\"de\">Brno</span></span>. <span class=\"distance-description\">Go for <span class=\"length\">1.1 km</span>.</span>",
+                                "travelTime": 126,
+                                "length": 1143,
+                                "id": "M21",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1887388,
+                                    "longitude": 16.3418305
+                                },
+                                "instruction": "Continue on <span class=\"next-street\">Linke Wienzeile</span> <span class=\"number\">(B1)</span>. <span class=\"distance-description\">Go for <span class=\"length\">111 m</span>.</span>",
+                                "travelTime": 14,
+                                "length": 111,
+                                "id": "M22",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1886744,
+                                    "longitude": 16.3403392
+                                },
+                                "instruction": "Keep <span class=\"direction\">left</span> onto <span class=\"next-street\">Linke Wienzeile</span> <span class=\"number\">(B1)</span> toward <span class=\"sign\"><span lang=\"de\">Linz</span>/<span lang=\"de\">A1</span>/<span lang=\"de\">Schönbrunn</span></span>. <span class=\"distance-description\">Go for <span class=\"length\">1.1 km</span>.</span>",
+                                "travelTime": 115,
+                                "length": 1138,
+                                "id": "M23",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1839967,
+                                    "longitude": 16.3279366
+                                },
+                                "instruction": "Keep <span class=\"direction\">right</span> onto <span class=\"next-street\">Linke Wienzeile</span> <span class=\"number\">(B1)</span> toward <span class=\"sign\"><span lang=\"de\">Linz</span>/<span lang=\"de\">A1</span>/<span lang=\"de\">Schönbrunn</span></span>. <span class=\"distance-description\">Go for <span class=\"length\">7.6 km</span>.</span>",
+                                "travelTime": 619,
+                                "length": 7626,
+                                "id": "M24",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.2032549,
+                                    "longitude": 16.2324286
+                                },
+                                "instruction": "Keep <span class=\"direction\">right</span> onto <span class=\"next-street\">Wiener Bundesstraße</span> <span class=\"number\">(B1)</span> toward <span class=\"sign\"><span lang=\"de\">Tulln</span>/<span lang=\"de\">Purkersdorf</span>/<span lang=\"de\">Auhof Center</span></span>. <span class=\"distance-description\">Go for <span class=\"length\">586 m</span>.</span>",
+                                "travelTime": 38,
+                                "length": 586,
+                                "id": "M25",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.2057333,
+                                    "longitude": 16.2266886
+                                },
+                                "instruction": "Keep <span class=\"direction\">right</span> onto <span class=\"next-street\">Wientalstraße</span> <span class=\"number\">(B1)</span> toward <span class=\"sign\"><span lang=\"de\">Tulln</span>/<span lang=\"de\">Purkersdorf</span>/<span lang=\"de\">Mauerbach</span></span>. <span class=\"distance-description\">Go for <span class=\"length\">1.2 km</span>.</span>",
+                                "travelTime": 93,
+                                "length": 1157,
+                                "id": "M26",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.2092631,
+                                    "longitude": 16.2133849
+                                },
+                                "instruction": "Turn <span class=\"direction\">right</span> onto <span class=\"next-street\">Hauptstraße</span>. <span class=\"distance-description\">Go for <span class=\"length\">89 m</span>.</span>",
+                                "travelTime": 26,
+                                "length": 89,
+                                "id": "M27",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.2095206,
+                                    "longitude": 16.2144685
+                                },
+                                "instruction": "Turn <span class=\"direction\">left</span> onto <span class=\"next-street\">Herzmanskystraße</span>. <span class=\"distance-description\">Go for <span class=\"length\">340 m</span>.</span>",
+                                "travelTime": 59,
+                                "length": 340,
+                                "id": "M28",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.2099698,
+                                    "longitude": 16.2104981
+                                },
+                                "instruction": "Arrive at your destination on the right.",
+                                "travelTime": 1,
+                                "length": 8,
+                                "id": "M29",
+                                "_type": "PrivateTransportManeuverType"
+                            }
+                        ]
+                    }
+                ],
+                "summary": {
+                    "distance": 29879,
+                    "trafficTime": 3839,
+                    "baseTime": 3095,
+                    "flags": [
+                        "dirtRoad",
+                        "noThroughRoad",
+                        "builtUpArea",
+                        "park"
+                    ],
+                    "text": "The trip takes <span class=\"length\">29.9 km</span> and <span class=\"time\">52 mins</span>.",
+                    "travelTime": 3095,
+                    "_type": "RouteSummaryType"
+                }
+            }
+        ],
+        "language": "en-us"
+    }
+}

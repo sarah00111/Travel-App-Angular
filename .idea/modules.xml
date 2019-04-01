@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/Travel-App-AngularJS.iml" filepath="$PROJECT_DIR$/.idea/Travel-App-AngularJS.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/git-ta.iml" filepath="$PROJECT_DIR$/.idea/git-ta.iml" />
+>>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
     </modules>
   </component>
 </project>

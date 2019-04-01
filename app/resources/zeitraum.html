@@ -1,0 +1,33 @@
+<div layout="column" style="height:100vh;">
+    <md-toolbar>
+        <div class="md-toolbar-tools" layout-align="center center" style="background-color:#176CBE; ">
+            <h2 md-truncate style="font-family: 'Segoe UI'; font-size: 20px;">TravelApp</h2>
+        </div>
+    </md-toolbar>
+
+    <md-content layout-margin layout="column" layout-align="center start" style="height:100vh;">
+        <div style="width: 90%;" layout-margin>
+            <md-input-container
+                    style="width:80%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
+                <label style="padding:10px 0px 0px 20px;">Anfangszeit</label>
+                <input ng-model="$ctrl.anfang">
+            </md-input-container>
+        </div>
+
+        <div style="width: 90%;" layout-margin>
+            <md-input-container
+                    style="width:80%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
+                <label style="padding:10px 0px 0px 20px;">Endzeit</label>
+                <input ng-model="$ctrl.ende">
+            </md-input-container>
+        </div>
+        <div style="margin-left: 20px;">
+            <!--hier wird die Differenz zwischen der Endzeit und der Anfangszeit wird ausgerechnet und in hier ausgegeben-->
+            Dauer: xx Stunden
+        </div>
+    </md-content>
+    <section layout="row" layout-align="end end" layout-wrap >
+        <md-button flex="30" style="background-color:#176CBE; color:white;">Bestätigen</md-button>
+    </section>
+
+</div>
