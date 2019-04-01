@@ -4,18 +4,28 @@
 
 "use strict";
 
-app.service("RespositoryService", function ($log, Adresse) {
+app.service("RespositoryService", function ($log, Route) {
 
     $log.debug("RespositoryService()");
 
     //Einträge sind Objekte vom Typ Adresse
     var rep = [];
 
+    rep.push(new Route(0, 120));
+
     var id = 0;
+
+    this.rep = () => {
+        return rep;
+    }
 
     this.getId = () => {
         id++;
         return id;
+    }
+
+    this.getRoute = (id) => {
+        return rep[id];
     }
 
     //liefert der Route mit der id in dem rep-Array

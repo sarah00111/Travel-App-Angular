@@ -11,4 +11,8 @@ app.controller("RmpController", function ($log, RespositoryService) {
 
     $log.debug("RmpController()");
 
+    this.$onInit = () => {
+        $log.debug("anfang: ", RespositoryService.rep());
+    }
+
 });
