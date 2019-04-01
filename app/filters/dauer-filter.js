@@ -1,26 +1,5 @@
 "use strict";
 
-<<<<<<< HEAD
-app.filter("dauerFilter", function () {
-
-    function dauerFilter(wert) {
-        //TODO: Wieso wert undefined?
-        wert = wert / 60;
-        wert = 6624 / 60;
-
-        let test = getHours(wert, 0);
-
-        return test;
-    }
-
-    function getHours(wert, stunden) {
-        if(wert - 60 < 1) {
-            return stunden + "h " + wert + " min";
-        }
-
-        wert = Math.floor(wert);
-        return getHours(wert-60, stunden = stunden+1);
-=======
 app.filter("dauerFilter", function ($filter) {
 
     //wert ist in Sekunden
@@ -49,7 +28,6 @@ app.filter("dauerFilter", function ($filter) {
             return getHours(wert-60, stunden = stunden+1);
         }
         return;
->>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
     }
 
     return dauerFilter;
