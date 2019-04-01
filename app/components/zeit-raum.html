@@ -41,7 +41,8 @@
     <section layout="row" layout-align="end end" layout-wrap >
         <md-button flex="30"
                    style="background-color:#176CBE; color:white;"
-                   ui-sref="address({ zeitraum: $ctrl.berechneDauer()})">Adresse eingeben</md-button>
+                   ng-click="$ctrl.Route()"
+                   ui-sref="address({ id: $ctrl.berechneDauer()})">Adresse eingeben</md-button>
     </section>
 
 </div>
