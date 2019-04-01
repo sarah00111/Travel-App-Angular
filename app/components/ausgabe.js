@@ -14,13 +14,14 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 
 });
 
-app.controller("AusgabeController", function ($log, $stateParams) {
+app.controller("AusgabeController", function ($log, $stateParams, Adresse) {
 
     $log.debug("AusgabeController()");
 
     this.$onInit = () => {
         $log.debug("oninit");
         $log.debug("zeitraum", $stateParams.zeitraum);
+        $log.debug("adresse", $stateParams.adressen[1].strasse);
         $log.debug("adresse", $stateParams.adressen[0]);
     }
 

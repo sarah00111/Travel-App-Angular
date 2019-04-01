@@ -41,13 +41,11 @@
     </md-content>
     <section layout="row" layout-align="end end" layout-wrap style="margin-top: 60%">
         <md-button class="md-fab md-mini md-primary"
-                   ng-click="$ctrl.paramsVorbereiten()"
-                   ui-sref="address({ zeitraum: $ctrl.zeitraum, adressen: $ctrl.adressenAry})">
+                   ng-click="$ctrl.paramsVorbereiten()">
             <md-icon md-font-icon="material-icons">add_location</md-icon>
         </md-button>
         <md-button flex="30"
                    style="background-color:#176CBE; color:white;"
-                   ng-click="$ctrl.paramsVorbereiten()"
-                   ui-sref="ausgabe({zeitraum: $ctrl.zeitraum, adressen: $ctrl.adressenAry})">Anzeige</md-button>
+                   ng-click="$ctrl.paramsVorbereiten()">Anzeige</md-button>
     </section>
 </div>

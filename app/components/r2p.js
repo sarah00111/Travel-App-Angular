@@ -47,7 +47,7 @@ app.controller("R2pController", function ($log, $http, ApiService) {
     });
 
         this.showErgebnis = true;
-        
+
 
     };
 

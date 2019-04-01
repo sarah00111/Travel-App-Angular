@@ -18,17 +18,17 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 });
 
 
-app.controller("AddressController", function ($log, $http, ApiService, Adresse, $stateParams) {
+app.controller("AddressController", function ($log, $http, ApiService, Adresse, $stateParams, $state) {
 
 
     this.$onInit = () => {
         $log.debug("stateparams zeitraum: ", $stateParams.zeitraum);
-        this.zeitraum = $stateParams.zeitraum;
     }
     this.paramsVorbereiten = () => {
         this.bestaetigen();
-        this.zeitraum = $stateParams.zeitraum;t
+        this.zeitraum = $stateParams.zeitraum;
         this.adressenAry = $stateParams.adressen.push(new Adresse(this.strasse, this.hausnummer, this.plz, this.ort));
+        $state.go("ausgabe", {zeitraum: this.zeitraum, adressen: this.adressenAry});
     }
 
 
