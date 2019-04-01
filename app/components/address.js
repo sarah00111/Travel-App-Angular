@@ -10,7 +10,7 @@ app.component("address", {
 app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state({
         name: "address",
-        params: {zeitraum: 0, adressen: []},
+        params: {id: 0},
         component: "address"
     });
 
@@ -18,7 +18,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 });
 
 
-app.controller("AddressController", function ($log, $http, ApiService, Adresse, $stateParams, $state) {
+app.controller("AddressController", function ($log, $http, ApiService, Adresse, $stateParams, $state, Route) {
 
 
     this.$onInit = () => {
@@ -26,9 +26,8 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
     }
     this.paramsVorbereiten = () => {
         this.bestaetigen();
-        this.zeitraum = $stateParams.zeitraum;
-        this.adressenAry = $stateParams.adressen.push(new Adresse(this.strasse, this.hausnummer, this.plz, this.ort));
-        $state.go("ausgabe", {zeitraum: this.zeitraum, adressen: this.adressenAry});
+        addAddress();
+        $state.go("ausgabe", {id: $stateParams.id});
     }
 
 

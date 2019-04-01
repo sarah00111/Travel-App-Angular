@@ -14,7 +14,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 
 });
 
-app.controller("AusgabeController", function ($log, $stateParams, Adresse) {
+app.controller("AusgabeController", function ($log, $stateParams, Adresse, Route) {
 
     $log.debug("AusgabeController()");
 

@@ -4,7 +4,7 @@
 
 "use strict";
 
-app.service("RespositoryService", function ($log) {
+app.service("RespositoryService", function ($log, Adresse) {
 
     $log.debug("RespositoryService()");
 
@@ -21,10 +21,11 @@ app.service("RespositoryService", function ($log) {
         return rep;
     }
 
-    this.newRoute = (param) => {
-        rep.push(param);
+    this.newRoute = (id, zeitraum) => {
+        rep.push(new Route(id, zeitraum));
     }
 
+    //params ... Typ von Adresse
     this.newAddressForRoute = (id, params) => {
         let index;
         for(let i = 0; i < rep.length; i++) {
