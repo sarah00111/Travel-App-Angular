@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="1ff41d3a-4a7b-4f90-9238-42f57ddbedc2" name="Default" comment="AngularJS 1.7.2, UI-Router 1.0.18, Material 1.1.10.">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <ignored path="node_modules/" />
+    <manually-removed-from-ignored>
+      <directory path="$PROJECT_DIR$/tmp/" />
+      <directory path="$PROJECT_DIR$/temp/" />
+      <directory path="$PROJECT_DIR$/.tmp/" />
+    </manually-removed-from-ignored>
+=======
     <list default="true" id="00a7c4b3-d268-4845-a3b0-86e2efcabb90" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/address.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/address.js" afterDir="false" />
@@ -9,6 +21,7 @@
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
+>>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +65,25 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="324506705">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+=======
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
@@ -69,11 +99,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
               <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+>>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/app/components/r2p.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+=======
         <entry file="file://$PROJECT_DIR$/app/components/zeit-raum.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="645">
@@ -87,10 +124,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
               <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+>>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/components/r2p.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="693">
+              <caret line="50" column="52" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
+=======
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/components/address.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -99,6 +144,7 @@
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+>>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
             </state>
           </provider>
         </entry>
@@ -136,19 +182,59 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+<<<<<<< HEAD
+        <option value="AngularJS-Komponente mit Routing" />
+        <option value="AngularJS-Factory-Test" />
+        <option value="AngularJS-Service-Test" />
+        <option value="AngularJS-Filter-Test" />
+        <option value="AngularJS-Controller-Test" />
+        <option value="AngularJS-Factory" />
+        <option value="AngularJS-Service" />
+        <option value="AngularJS-Komponente" />
+        <option value="HTML File" />
+        <option value="AngularJS-Filter" />
+=======
         <option value="JavaScript File" />
         <option value="AngularJS-Service" />
         <option value="AngularJS-Factory" />
+>>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
       </list>
     </option>
     <option name="SCHEME" value="Project" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+<<<<<<< HEAD
+      <find>angularjs-1.6.6</find>
+      <find>D:</find>
+      <find>1.6.9</find>
+      <find>^</find>
+      <find>1.1.7</find>
+      <find>^(\S+)\s+(#[A-F0-9]{6}).*</find>
+      <find>md-raised</find>
+      <find>orange</find>
+      <find>blue</find>
+      <find>aend</find>
+      <find>pp</find>
+      <find>white</find>
+      <find>img</find>
+      <find>info</find>
+      <find>sportartTE</find>
+      <find>name</find>
+      <find>hallo</find>
+      <find>class=&quot;name</find>
+      <find>md-rais</find>
+      <find>h3</find>
+      <find>dauer</find>
+=======
       <find>ui</find>
       <find>besta</find>
       <find>$log</find>
+>>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -156,6 +242,37 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/e2e-tests/protractor.conf.js" />
+        <option value="$PROJECT_DIR$/karma.conf.js" />
+        <option value="$PROJECT_DIR$/app/vendor/angular-material-1.1.5/angular-material.min.js" />
+        <option value="$PROJECT_DIR$/app/vendor/angular-material-1.1.5/angular-material.min.css" />
+        <option value="$PROJECT_DIR$/app/components/xx.html" />
+        <option value="$PROJECT_DIR$/app/components/liste.js" />
+        <option value="$PROJECT_DIR$/app/models/mein-produkt.js" />
+        <option value="$PROJECT_DIR$/app/filters/filter-mich.js" />
+        <option value="$PROJECT_DIR$/app/components/mein-artikel.js" />
+        <option value="$PROJECT_DIR$/app/models/artikel.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/e2e-tests/scenarios.js" />
+        <option value="$PROJECT_DIR$/node_modules/protractor/package.json" />
+        <option value="$PROJECT_DIR$/app/vendor/angular-ui-router-1.0.18/angular-ui-router.min.js" />
+        <option value="$PROJECT_DIR$/app/vendor/moment.js-2.21.0/moment.min.js" />
+        <option value="$PROJECT_DIR$/app/vendor/moment.js-2.21.0/moment-with-locales.min.js" />
+        <option value="$PROJECT_DIR$/app/components/mein-slider.js" />
+        <option value="$PROJECT_DIR$/app/components/mein-slider.html" />
+        <option value="$PROJECT_DIR$/app/temp" />
+        <option value="$PROJECT_DIR$/app/components/rgb-slider.html" />
+        <option value="$PROJECT_DIR$/app/components/rgb-slider.js" />
+        <option value="$PROJECT_DIR$/app/app.js" />
+        <option value="$PROJECT_DIR$/app/profilseite.html" />
+        <option value="$PROJECT_DIR$/app/style.css" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/filters/dauer-filter.js" />
+        <option value="$PROJECT_DIR$/app/components/r2p.html" />
+        <option value="$PROJECT_DIR$/app/components/r2p.js" />
+=======
         <option value="$PROJECT_DIR$/Travel-App-AngularJS/app/components/r2p.html" />
         <option value="$PROJECT_DIR$/Travel-App-AngularJS/app/services/repository.js" />
         <option value="$PROJECT_DIR$/Travel-App-AngularJS/app/services/api-service.js" />
@@ -175,6 +292,7 @@
         <option value="$PROJECT_DIR$/app/components/address.html" />
         <option value="$PROJECT_DIR$/app/components/ausgabe.js" />
         <option value="$PROJECT_DIR$/app/components/address.js" />
+>>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
       </list>
     </option>
   </component>
@@ -195,7 +313,11 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
+<<<<<<< HEAD
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+=======
   <component name="ProjectFrameBounds" fullScreen="true">
+>>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1938" />
@@ -224,12 +346,15 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
+=======
             <path>
               <item name="Travel-App-AngularJS" type="b2602c69:ProjectViewProjectNode" />
               <item name="Travel-App-AngularJS" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
+>>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
           </expand>
           <select />
         </subPane>
@@ -240,6 +365,42 @@
   <component name="PropertiesComponent">
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+<<<<<<< HEAD
+    <property name="SearchEverywhereHistoryKey" value="git&#9;ACTION&#9;Git.Init" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="javascript.karma.karma_node_package_dir" value="$PROJECT_DIR$/node_modules/karma" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.prettier" value="true" />
+    <property name="node.js.path.for.package.prettier" value="project" />
+    <property name="node.js.selected.package.prettier" value="" />
+    <property name="nodejs.cucumber.cucumber_node_package_dir" value="" />
+    <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/node_modules/protractor" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\SCHULE\Angela_Amacna4AI\ITP\Projekt Sportfest\Angular\rgb_slider\app\fonts" />
+      <recent name="$PROJECT_DIR$/app/services" />
+      <recent name="$PROJECT_DIR$/app/models" />
+      <recent name="$PROJECT_DIR$/app/filters" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\rgb_slider\app" />
+      <recent name="D:\rgb_slider\app\components" />
+      <recent name="$PROJECT_DIR$/app/vendor" />
+    </key>
+=======
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -247,6 +408,7 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="application.passwordSafe" />
+>>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -260,7 +422,14 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/rgb_slider/app/index.html">
+      <method v="2" />
+    </configuration>
+=======
   <component name="RunManager" selected="Protractor.E2E-Tests">
+>>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -273,7 +442,17 @@
     <list>
       <item itemvalue="Karma.Unit-Tests" />
       <item itemvalue="Protractor.E2E-Tests" />
+<<<<<<< HEAD
+      <item itemvalue="JavaScript Debug.index.html" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+=======
+    </list>
+>>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -284,6 +463,160 @@
       <created>1553673252546</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< HEAD
+      <updated>1508763579209</updated>
+      <workItem from="1508763582995" duration="377000" />
+      <workItem from="1508779163018" duration="3664000" />
+      <workItem from="1508854000408" duration="25000" />
+      <workItem from="1508854491654" duration="22000" />
+      <workItem from="1513599862400" duration="27000" />
+      <workItem from="1521109592247" duration="1658000" />
+      <workItem from="1521114690099" duration="577000" />
+      <workItem from="1523434079516" duration="4376000" />
+      <workItem from="1523438464306" duration="758000" />
+      <workItem from="1523439235830" duration="29000" />
+      <workItem from="1523440484952" duration="1337000" />
+      <workItem from="1523559256589" duration="110000" />
+      <workItem from="1524031875891" duration="878000" />
+      <workItem from="1524050054035" duration="6000" />
+      <workItem from="1524051583555" duration="1392000" />
+      <workItem from="1524858555668" duration="620000" />
+      <workItem from="1524917672456" duration="396000" />
+      <workItem from="1524918096448" duration="810000" />
+      <workItem from="1525202690799" duration="68000" />
+      <workItem from="1525325013720" duration="207000" />
+      <workItem from="1525328192086" duration="1451000" />
+      <workItem from="1525329843583" duration="126000" />
+      <workItem from="1527170664015" duration="88000" />
+      <workItem from="1527661963089" duration="1047000" />
+      <workItem from="1527678839853" duration="852000" />
+      <workItem from="1527680319019" duration="4078000" />
+      <workItem from="1527834594284" duration="4487000" />
+      <workItem from="1527846706415" duration="20000" />
+      <workItem from="1527846756946" duration="221000" />
+      <workItem from="1527847401770" duration="365000" />
+      <workItem from="1527847798675" duration="63000" />
+      <workItem from="1527932960343" duration="23000" />
+      <workItem from="1528266785962" duration="1059000" />
+      <workItem from="1528282216494" duration="12000" />
+      <workItem from="1531385057341" duration="1918000" />
+      <workItem from="1531761472255" duration="122000" />
+      <workItem from="1532162773403" duration="22000" />
+      <workItem from="1532348259154" duration="8000" />
+      <workItem from="1532526280043" duration="22000" />
+      <workItem from="1532543092811" duration="775000" />
+      <workItem from="1532550274286" duration="409000" />
+      <workItem from="1532550900551" duration="63000" />
+      <workItem from="1532553443883" duration="425000" />
+      <workItem from="1532674720086" duration="59000" />
+      <workItem from="1532674800339" duration="80000" />
+      <workItem from="1532795959839" duration="210000" />
+      <workItem from="1533194942984" duration="37000" />
+      <workItem from="1533196305771" duration="418000" />
+      <workItem from="1533386093649" duration="1068000" />
+      <workItem from="1533388052570" duration="59000" />
+      <workItem from="1533389061490" duration="35000" />
+      <workItem from="1533389201279" duration="12000" />
+      <workItem from="1533389304705" duration="23000" />
+      <workItem from="1533389465901" duration="141000" />
+      <workItem from="1533389663395" duration="53000" />
+      <workItem from="1533500386823" duration="102000" />
+      <workItem from="1533640747175" duration="20000" />
+      <workItem from="1533659911152" duration="13000" />
+      <workItem from="1533663575870" duration="722000" />
+      <workItem from="1533669814466" duration="59000" />
+      <workItem from="1533720732444" duration="28000" />
+      <workItem from="1533720930966" duration="272000" />
+      <workItem from="1533721294042" duration="27000" />
+      <workItem from="1533725595746" duration="12000" />
+      <workItem from="1533726354807" duration="34000" />
+      <workItem from="1533751966858" duration="92000" />
+      <workItem from="1533839341727" duration="871000" />
+      <workItem from="1533844048445" duration="7000" />
+      <workItem from="1533844407900" duration="75000" />
+      <workItem from="1533846284059" duration="56000" />
+      <workItem from="1533927642556" duration="28000" />
+      <workItem from="1533927726273" duration="75000" />
+      <workItem from="1534142777639" duration="96000" />
+      <workItem from="1534449968042" duration="25000" />
+      <workItem from="1534450273088" duration="99000" />
+      <workItem from="1534451156518" duration="480000" />
+      <workItem from="1534971893629" duration="62000" />
+      <workItem from="1535278482692" duration="250000" />
+      <workItem from="1535365391335" duration="46000" />
+      <workItem from="1535618019017" duration="38000" />
+      <workItem from="1535648196228" duration="408000" />
+      <workItem from="1537351534067" duration="58000" />
+      <workItem from="1538720321489" duration="275000" />
+      <workItem from="1539766619397" duration="6059000" />
+      <workItem from="1539929407545" duration="4126000" />
+      <workItem from="1540372626639" duration="3627000" />
+      <workItem from="1541424714137" duration="11229000" />
+      <workItem from="1541525258538" duration="24000" />
+      <workItem from="1541766323589" duration="25027000" />
+      <workItem from="1542012627265" duration="590000" />
+      <workItem from="1542031139739" duration="1598000" />
+      <workItem from="1546972608202" duration="222000" />
+      <workItem from="1553370043455" duration="3204000" />
+      <workItem from="1553447386552" duration="3195000" />
+      <workItem from="1554126065819" duration="116000" />
+    </task>
+    <task id="LOCAL-00001" summary="AngularJS 1.6.9, Angular Material 1.1.7, UI Router 1.0.8.">
+      <created>1524918032174</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1524918032174</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fix: moment.js in Tests eingebunden.">
+      <created>1525325105929</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1525325105929</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Jasmine-Testvorlage verbessert.">
+      <created>1525325141626</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1525325141626</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Versehentliche &quot;breaking updates&quot; der node_modules verhindern.">
+      <created>1525325195179</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1525325195179</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Schreibweise der Dateinamen überprüfen.">
+      <created>1527846865419</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1527846865419</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Vorlagen für Unit-Tests erstellen.">
+      <created>1527846894292</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1527846894292</updated>
+    </task>
+    <task id="LOCAL-00007" summary="npm update ermöglichen.">
+      <created>1527847737723</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1527847737723</updated>
+    </task>
+    <task id="LOCAL-00008" summary="AngularJS 1.7.2, UI-Router 1.0.18, Material 1.1.10.">
+      <created>1531386902627</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1531386902627</updated>
+=======
       <updated>1553673252546</updated>
       <workItem from="1553673254143" duration="14000" />
       <workItem from="1553673282274" duration="1076000" />
@@ -300,15 +633,20 @@
 =======
       <workItem from="1553717259745" duration="4353000" />
 >>>>>>> e6913282c19c638a17e039aef50fc8cecea0f67d
+>>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+    <option name="totallyTimeSpent" value="100535000" />
+=======
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="17130000" />
 =======
     <option name="totallyTimeSpent" value="15396000" />
 >>>>>>> e6913282c19c638a17e039aef50fc8cecea0f67d
+>>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -323,6 +661,47 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
+      <window_info id="npm" order="0" side_tool="true" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info id="Structure" order="2" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.25274727" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="2" />
+      <window_info anchor="bottom" id="Message" order="3" />
+      <window_info anchor="bottom" id="Find" order="4" />
+      <window_info anchor="bottom" id="Run" order="5" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.39956093" />
+      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="9" />
+      <window_info anchor="right" id="Remote Host" order="0" />
+      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="npm" order="0" side_tool="true" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info id="Structure" order="2" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="2" />
+      <window_info anchor="bottom" id="Message" order="3" />
+      <window_info anchor="bottom" id="Find" order="4" />
+      <window_info anchor="bottom" id="Run" order="5" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="9" />
+      <window_info anchor="right" id="Remote Host" order="0" />
+      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+=======
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25256178" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -358,14 +737,91 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+>>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+<<<<<<< HEAD
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+=======
+>>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+<<<<<<< HEAD
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="AngularJS 1.6.9, Angular Material 1.1.7, UI Router 1.0.8." />
+    <MESSAGE value="Fix: moment.js in Tests eingebunden." />
+    <MESSAGE value="Jasmine-Testvorlage verbessert." />
+    <MESSAGE value="Versehentliche &quot;breaking updates&quot; der node_modules verhindern." />
+    <MESSAGE value="Schreibweise der Dateinamen überprüfen." />
+    <MESSAGE value="Vorlagen für Unit-Tests erstellen." />
+    <MESSAGE value="npm update ermöglichen." />
+    <MESSAGE value="AngularJS 1.7.2, UI-Router 1.0.18, Material 1.1.10." />
+    <option name="LAST_COMMIT_MESSAGE" value="AngularJS 1.7.2, UI-Router 1.0.18, Material 1.1.10." />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/components/test.js" />
+    <entry file="file://$PROJECT_DIR$/package.json" />
+    <entry file="file://$PROJECT_DIR$/app/vendor/angular-material-1.1.7/angular-material.min.js" />
+    <entry file="file://$PROJECT_DIR$/app/vendor/angular-material-1.1.7/angular-material.min.css" />
+    <entry file="file://$PROJECT_DIR$/app/components/a-b.js" />
+    <entry file="file://$PROJECT_DIR$/app/components/xx.html" />
+    <entry file="file://$PROJECT_DIR$/app/components/liste.js" />
+    <entry file="file://$PROJECT_DIR$/app/models/mein-produkt.js" />
+    <entry file="file://$PROJECT_DIR$/app/filters/filter-mich.js" />
+    <entry file="file://$PROJECT_DIR$/app/components/mein-artikel.js" />
+    <entry file="file://$PROJECT_DIR$/app/models/artikel.js" />
+    <entry file="file://$PROJECT_DIR$/e2e-tests/protractor.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/protractor/package.json" />
+    <entry file="file://$PROJECT_DIR$/app/models/test-fact.spec.js" />
+    <entry file="file://$PROJECT_DIR$/app/vendor/angular-ui-router-1.0.18/angular-ui-router.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/moment.js-2.22.2/moment.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret column="51679" selection-start-column="51679" selection-end-column="51679" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts" />
+    <entry file="file://$PROJECT_DIR$/app/vendor/moment.js-2.22.2/moment-with-locales.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret column="326657" selection-start-column="326657" selection-end-column="326657" />
+=======
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/zeit-raum.js" />
     <entry file="file://$PROJECT_DIR$/Travel-App-AngularJS/app/components/addressausgabe.js" />
@@ -392,32 +848,84 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="51" column="7" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
+>>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/services/repository.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+=======
         <state relative-caret-position="150">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+>>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/zeit-raum.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="492">
+          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+=======
         <state relative-caret-position="645">
           <caret line="43" column="35" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="35" />
+>>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/zeit-raum.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+=======
         <state relative-caret-position="390">
           <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+>>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/address.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="2482">
+          <caret line="146" column="24" selection-end-line="147" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/rgb-slider.html" />
+    <entry file="file://$PROJECT_DIR$/app/components/rgb-slider.js" />
+    <entry file="file://$PROJECT_DIR$/app/app.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/mein-slider.html" />
+    <entry file="file://$PROJECT_DIR$/app/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+        </state>
+      </provider>
+=======
         <state relative-caret-position="750">
           <caret line="50" column="26" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="26" />
           <folding>
@@ -428,9 +936,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/r2p.js">
       <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/address.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="120">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/filters/dauer-filter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/r2p.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="50" column="52" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
+=======
         <state relative-caret-position="243">
           <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
         </state>
@@ -443,6 +970,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="56" lean-forward="true" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+>>>>>>> f567910820fd77934302f10eba96d01fca7d5d54
         </state>
       </provider>
     </entry>

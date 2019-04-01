@@ -6,7 +6,6 @@ app.component("r2p", {
     bindings: {}
 });
 
-
 app.controller("R2pController", function ($log, $http, ApiService) {
 
     $log.debug("R2pController()");
@@ -48,7 +47,7 @@ app.controller("R2pController", function ($log, $http, ApiService) {
     });
 
         this.showErgebnis = true;
-
+        
 
     };
 
