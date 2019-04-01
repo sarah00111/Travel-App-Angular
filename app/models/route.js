@@ -8,9 +8,14 @@ app.factory("Route", function () {
 
     TODO: später evtl. ergänzen um tage (für verfügbare Tage falls das implementiert wird)
      */
-    function Route(minuten, adressenArray) {
+    function Route(id, minuten) {
+        this.id = id;
         this.minuten = minuten;
-        this.adressenArray = adressenArray;
+        this.adressenArray = [];
+    }
+
+    this.addAddress = (param) => {
+        this.adressenArray.push(param);
     }
 
     return Route;
