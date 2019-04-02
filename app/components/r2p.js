@@ -44,6 +44,9 @@ app.controller("R2pController", function ($log, $http, ApiService) {
     .then(response => {
         this.distanz = response.data.response.route[0].summary.distance;
         this.dauer = response.data.response.route[0].summary.baseTime;
+    })
+    .catch(error => {
+        $log.error("Ooops, da ist wohl ein Fehler passiert...", error);
     });
 
         this.showErgebnis = true;

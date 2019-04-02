@@ -4,14 +4,20 @@
 
 "use strict";
 
-app.service("RespositoryService", function ($log, Route) {
+app.service("RespositoryService", function ($log, Route, Adresse) {
 
     $log.debug("RespositoryService()");
 
-    //Einträge sind Objekte vom Typ Adresse
+    //Einträge sind Objekte vom Typ Route
     var rep = [];
 
+    //Dummy Eintrag zum Testen von RMP Komponente
     rep.push(new Route(0, 120));
+    rep[0].start = new Adresse("Rennweg", "89b", "1030", "Wien");
+    rep[0].waypoints.push(new Adresse("Arsenalstraße", "1", "1030", "Wien"));
+    rep[0].waypoints.push(new Adresse("Bastiengasse", "38", "1180", "Wien"));
+    rep[0].waypoints.push(new Adresse("Lothringerstraße", "20", "1030", "Wien"));
+    rep[0].end = new Adresse("Rennweg", "89b", "1030", "Wien");
 
     var id = 0;
 
@@ -28,7 +34,9 @@ app.service("RespositoryService", function ($log, Route) {
         return rep[id];
     }
 
-    //liefert der Route mit der id in dem rep-Array
+    /*id... id-Attribut der gesuchten Route
+      Methode liefert den index in dem rep-Array der Route
+    */
     this.getRouteIndex = (id) => {
         let index;
         for(let i = 0; i < rep.length; i++) {
@@ -43,11 +51,11 @@ app.service("RespositoryService", function ($log, Route) {
         rep.push(new Route(id, zeitraum));
     }
 
-    //params ... Typ von Adresse
+    //params ... Objekt vom Typ Adresse
     this.newAddressForRoute = (id, params) => {
         let index = this.getRouteId(id);
         if(index) {
-            rep[index].addAddress(params);
+            rep[index].waypoints.push(params);
         }
     }
 
