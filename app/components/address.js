@@ -43,6 +43,7 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
                 this.stadtAPI = response.data.Response.View[0].Result[0].Location.Address.City;
                 this.plzAPI = response.data.Response.View[0].Result[0].Location.Address.PostalCode;
                 this.hausNrAPI = response.data.Response.View[0].Result[0].Location.Address.HouseNumber;
+                //TODO LAT LON speichern
 
                 if(this.plz == this.plzAPI) {
                     if (this.ort == this.stadtAPI) {

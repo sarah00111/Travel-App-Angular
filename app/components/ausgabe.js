@@ -14,12 +14,18 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 
 });
 
-app.controller("AusgabeController", function ($log, $stateParams, Adresse, Route) {
+app.controller("AusgabeController", function ($log, $stateParams, Adresse, Route, RespositoryService) {
 
     $log.debug("AusgabeController()");
 
+    this.id;
+    this.index;
+
     this.$onInit = () => {
         $log.debug("oninit");
+        this.id = $stateParams.id;
+        this.index = RespositoryService.getRouteIndex(this.id);
+        this.waypoint = RespositoryService.getRoute(this.index).waypoints[0];
     }
 
 

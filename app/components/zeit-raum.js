@@ -27,7 +27,6 @@ app.controller("ZeitRaumController", function ($log, RespositoryService, $state)
     this.route = () => {
         this.id = RespositoryService.getId();
         RespositoryService.newRoute(this.id, this.berechneDauer());
-
         $state.go("address", {id: this.id});
     }
 
