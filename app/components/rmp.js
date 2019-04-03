@@ -7,7 +7,7 @@ app.component("rmp", {
 });
 
 
-app.controller("RmpController", function ($log, RespositoryService, $http, GetGeoDataService) {
+app.controller("RmpController", function ($log, RespositoryService, $http) {
 
     $log.debug("RmpController()");
 
@@ -18,7 +18,6 @@ app.controller("RmpController", function ($log, RespositoryService, $http, GetGe
     this.$onInit = () => {
         $log.debug("start: ", this.start);
 
-        GetGeoDataService.getLatLon(this.start.strasse, this.start.hausnr, this.start.ort);
     }
 
 });
