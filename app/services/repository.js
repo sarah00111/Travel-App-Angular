@@ -4,6 +4,7 @@
 
 "use strict";
 
+
 app.service("RespositoryService", function ($log, Route, Adresse) {
 
     $log.debug("RespositoryService()");
@@ -30,8 +31,12 @@ app.service("RespositoryService", function ($log, Route, Adresse) {
         return id;
     }
 
+    /*
+    id... id, die beim statparams mitgeliefert wird (=id-Attribut der Route)
+     */
     this.getRoute = (id) => {
-        return rep[id];
+        let index = this.getRouteIndex(id);
+        return rep[index];
     }
 
     /*id... id-Attribut der gesuchten Route
@@ -53,7 +58,7 @@ app.service("RespositoryService", function ($log, Route, Adresse) {
 
     //params ... Objekt vom Typ Adresse
     this.newAddressForRoute = (id, params) => {
-        let index = this.getRouteId(id);
+        let index = this.getRouteIndex(id);
         if(index) {
             rep[index].waypoints.push(params);
         }

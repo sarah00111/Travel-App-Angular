@@ -8,23 +8,25 @@ app.component("ausgabe", {
 app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state({
         name: "ausgabe",
-        params: {zeitraum: 0, adressen: []},
+        params: {id: 0},
         component: "ausgabe"
     });
 
 });
 
-app.controller("AusgabeController", function ($log, $stateParams, Adresse, Route) {
+app.controller("AusgabeController", function ($log, $stateParams, Adresse, Route, RespositoryService) {
 
     $log.debug("AusgabeController()");
 
+    this.id;
+    this.index;
+
     this.$onInit = () => {
         $log.debug("oninit");
-        $log.debug("zeitraum", $stateParams.zeitraum);
-        $log.debug("adresse", $stateParams.adressen[1].strasse);
-        $log.debug("adresse", $stateParams.adressen[0]);
+        this.id = $stateParams.id;
+        this.index = RespositoryService.getRouteIndex(this.id);
+        this.waypoint = RespositoryService.getRoute(this.index).waypoints[0];
     }
 
-    this.zeitraum = $stateParams.zeitraum;
 
 });

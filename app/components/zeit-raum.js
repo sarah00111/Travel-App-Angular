@@ -18,13 +18,16 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 });
 
 
-app.controller("ZeitRaumController", function ($log, RespositoryService, Route) {
+app.controller("ZeitRaumController", function ($log, RespositoryService, $state) {
 
     $log.debug("ZeitRaumController()");
 
+    this.id;
+
     this.route = () => {
-        this.id = getId();
+        this.id = RespositoryService.getId();
         RespositoryService.newRoute(this.id, this.berechneDauer());
+        $state.go("address", {id: this.id});
     }
 
     this.berechneDauer = () => {

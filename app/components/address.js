@@ -18,15 +18,15 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 });
 
 
-app.controller("AddressController", function ($log, $http, ApiService, Adresse, $stateParams, $state, Route) {
+app.controller("AddressController", function ($log, $http, ApiService, Adresse, $stateParams, $state, RespositoryService) {
 
 
     this.$onInit = () => {
-        $log.debug("stateparams zeitraum: ", $stateParams.zeitraum);
+        $log.debug("stateparams zeitraum: ", $stateParams.id);
     }
     this.paramsVorbereiten = () => {
         this.bestaetigen();
-        addAddress();
+        RespositoryService.newAddressForRoute($stateParams.id, new Adresse(this.strasse, this.hausnummer, this.plz, this.ort));
         $state.go("ausgabe", {id: $stateParams.id});
     }
 
@@ -43,6 +43,7 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
                 this.stadtAPI = response.data.Response.View[0].Result[0].Location.Address.City;
                 this.plzAPI = response.data.Response.View[0].Result[0].Location.Address.PostalCode;
                 this.hausNrAPI = response.data.Response.View[0].Result[0].Location.Address.HouseNumber;
+                //TODO LAT LON speichern
 
                 if(this.plz == this.plzAPI) {
                     if (this.ort == this.stadtAPI) {
