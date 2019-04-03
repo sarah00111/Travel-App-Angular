@@ -18,15 +18,15 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 });
 
 
-app.controller("AddressController", function ($log, $http, ApiService, Adresse, $stateParams, $state, Route) {
+app.controller("AddressController", function ($log, $http, ApiService, Adresse, $stateParams, $state, RespositoryService) {
 
 
     this.$onInit = () => {
-        $log.debug("stateparams zeitraum: ", $stateParams.zeitraum);
+        $log.debug("stateparams zeitraum: ", $stateParams.id);
     }
     this.paramsVorbereiten = () => {
         this.bestaetigen();
-        addAddress();
+        RespositoryService.newAddressForRoute($stateParams.id, new Adresse(this.strasse, this.hausnummer, this.plz, this.ort));
         $state.go("ausgabe", {id: $stateParams.id});
     }
 
