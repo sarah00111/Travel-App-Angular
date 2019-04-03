@@ -2,14 +2,17 @@
 
 app.factory("Adresse", function () {
 
-    function Adresse(strasse, hausnr, plz, ort) {
+    function Adresse(strasse, hausnr, plz, ort, lat, lon) {
         this.strasse = strasse;
         this.hausnr = hausnr;
         this.plz = plz;
         this.ort = ort;
 
-        this.lat = 0;
-        this.lon = 0;
+        this.lat = lat;
+        this.lon = lon;
+
+        this.isStart = false;
+        this.isEnd = false;
     }
 
     return Adresse;
