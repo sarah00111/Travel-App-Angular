@@ -43,6 +43,8 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
                 this.stadtAPI = response.data.Response.View[0].Result[0].Location.Address.City;
                 this.plzAPI = response.data.Response.View[0].Result[0].Location.Address.PostalCode;
                 this.hausNrAPI = response.data.Response.View[0].Result[0].Location.Address.HouseNumber;
+                this.lon = response.data.Response.View[0].Result[0].Location.Address.HouseNumber;
+                this.lat = response.data.Response.View[0].Result[0].Location.DisplayPosition.HouseNumber;
                 //TODO LAT LON speichern
 
                 if(this.plz == this.plzAPI) {
