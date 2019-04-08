@@ -25,6 +25,4 @@ app.controller("AusgabeController", function ($log, $stateParams, Adresse, Route
         this.index = RespositoryService.getRouteIndex($stateParams.id);
         this.route = RespositoryService.getRoute(this.index);
     }
-
-
 });

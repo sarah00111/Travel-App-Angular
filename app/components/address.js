@@ -30,6 +30,12 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
         $state.go("ausgabe", {id: $stateParams.id});
     }
 
+    this.newAdress = () => {
+        this.bestaetigen();
+        RespositoryService.newAddressForRoute($stateParams.id, new Adresse(this.strasse, this.hausnummer, this.plz, this.ort, this.lat, this.lon));
+        $state.reload();
+    }
+
 
     this.bestaetigen = () => {
         $http
