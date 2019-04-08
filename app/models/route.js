@@ -19,5 +19,12 @@ app.factory("Route", function () {
         this.waypoints = [];
     }
 
+    /*newOrder... Array mit Einträgen vom Typ Adresse
+    */
+    this.changeWaypoints = (newOrder) => {
+        $log.debug("METHODE WIRD AUFGERUFEN");
+        this.waypoints = newOrder;
+    }
+
     return Route;
 });
