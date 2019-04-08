@@ -14,7 +14,7 @@ app.service("RespositoryService", function ($log, Route, Adresse) {
 
     //Dummy Eintrag zum Testen von RMP Komponente
     rep.push(new Route(0, 120));
-    rep[0].start = new Adresse("Rennweg", "89b", "1030", "Wien", 48.19072, 16.39729);
+    rep[0].start = new Adresse("Rennweg ", "89b", "1030", "Wien", 48.19072, 16.39729);
     rep[0].waypoints.push(new Adresse("Arsenalstraße", "1", "1030", "Wien", 48.18579, 16.38374));
     rep[0].waypoints.push(new Adresse("Bastiengasse", "38", "1180", "Wien", 48.2347, 16.31915));
     rep[0].waypoints.push(new Adresse("Lothringerstraße", "20", "1030", "Wien", 48.20077, 16.37719));
