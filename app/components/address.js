@@ -26,7 +26,7 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
     }
     this.paramsVorbereiten = () => {
         this.bestaetigen();
-        RespositoryService.newAddressForRoute($stateParams.id, new Adresse(this.strasse, this.hausnummer, this.plz, this.ort));
+        RespositoryService.newAddressForRoute($stateParams.id, new Adresse(this.strasse, this.hausnummer, this.plz, this.ort, this.lat, this.lon));
         $state.go("ausgabe", {id: $stateParams.id});
     }
 
@@ -43,12 +43,14 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
                 this.stadtAPI = response.data.Response.View[0].Result[0].Location.Address.City;
                 this.plzAPI = response.data.Response.View[0].Result[0].Location.Address.PostalCode;
                 this.hausNrAPI = response.data.Response.View[0].Result[0].Location.Address.HouseNumber;
+                this.lon = response.data.Response.View[0].Result[0].Location.DisplayPosition.Longitude;
+                this.lat = response.data.Response.View[0].Result[0].Location.DisplayPosition.Latitude;
                 //TODO LAT LON speichern
 
                 if(this.plz == this.plzAPI) {
                     if (this.ort == this.stadtAPI) {
                         console.log("Land: " + this.landAPI + "\nStraße: " + this.strasseAPI + "\nHausnummer: " + this.hausNrAPI + "\nStadt: " + this.stadtAPI +
-                            "\nPLZ: " + this.plzAPI);
+                            "\nPLZ: " + this.plzAPI + "\nlon: " + this.lon + "\nLat: " + this.lat);
                     } else {
                         console.log("Ihre Adresse stimmt nicht mit dem angegebenen Ort überein.")
                     }
