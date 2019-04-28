@@ -5,7 +5,10 @@
         </div>
     </md-toolbar>
 
-    <p ng-repeat="i in $ctrl.route.waypoints track by $index">{{i}}</p>
+    <p ng-repeat="i in $ctrl.route.waypoints track by $index">
+        {{i.strasse}} {{i.hausnr}} <br>
+        {{i.plz}}, {{i.ort}}
+    </p>
 
     {{$ctrl.route.minuten  | date: "shortTime" : "UTC"}}
 </div>

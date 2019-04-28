@@ -1,7 +1,8 @@
-<div>
+<div layout-padding="10">
     <h1>Test Route zw. mehreren Punkten</h1>
     <p>Lassen Sie sich die optimale Reihenfolge zwischen diesen Besichtigungspunkten berechnen</p>
     <md-button class="md-primary md-raised" ng-click="$ctrl.berechnen()">Berechnen</md-button>
+    <div>{{$ctrl.information || "Original:"}}</div>
     <ol>
         <li>{{$ctrl.start.strasse + this.start.hausnr}}</li>
         <li ng-repeat="p in $ctrl.adressen">

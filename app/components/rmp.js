@@ -40,6 +40,7 @@ app.controller("RmpController", function ($log, RespositoryService, $http, ApiSe
                 this.adressen = RespositoryService.rep()[0].waypoints;
             });
 
+        this.information = "Berechnet:";
 
     }
 
