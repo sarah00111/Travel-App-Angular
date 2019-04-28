@@ -18,7 +18,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 });
 
 
-app.controller("AddressController", function ($log, $http, ApiService, Adresse, $stateParams, $state, RespositoryService) {
+app.controller("AddressController", function ($log, $http, ApiService, Adresse, $stateParams, $state, RespositoryService, $mdToast) {
 
 
     this.$onInit = () => {
@@ -89,7 +89,20 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
                 }else {
                     RespositoryService.newAddressForRoute($stateParams.id, new Adresse(this.strasse, this.hausnummer, this.plz, this.ort, this.lat, this.lon));
 
+
                     if(newAdress) {
+                        //TODO: Toast auf einer anderen Position?
+                        $mdToast.show(
+                            $mdToast.simple()
+                                .textContent('Ihre Adress-Eingabe wurde gespeichert!')
+                                .hideDelay(3000))
+                            .then(function() {
+                                $log.log('Toast dismissed.');
+                            }).catch(function() {
+                                $log.log('Toast failed or was forced to close early by another toast.'
+                            );
+                        });
+
                         $state.reload();
                     }else {
                         $state.go("ausgabe", {id: $stateParams.id});
