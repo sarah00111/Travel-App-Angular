@@ -24,6 +24,16 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
     this.$onInit = () => {
         $log.debug("stateparams zeitraum: ", $stateParams.id);
     }
+
+    this.disableNextStep = () => {
+        if(RespositoryService.getRoute($stateParams.id).waypoints.length > 0) {
+            if(!this.formular.$invalid) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     this.paramsVorbereiten = () => {
         this.bestaetigen();
         RespositoryService.newAddressForRoute($stateParams.id, new Adresse(this.strasse, this.hausnummer, this.plz, this.ort, this.lat, this.lon));

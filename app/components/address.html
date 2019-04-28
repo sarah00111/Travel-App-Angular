@@ -9,7 +9,7 @@
         Bitte geben Sie Ihre gewünschte Adresse ein.
     </div>
 
-    <md-content layout-margin layout="column" layout-align="center center" style="height:100vh;">
+    <!--<md-content layout-margin layout="column" layout-align="center center" style="height:100vh;">
         <div layout="row" layout-margin  layout-align="center center">
             <md-input-container
                     style="width: 42%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
@@ -48,7 +48,7 @@
         <md-button flex="30"
                    style="background-color:#176CBE; color:white;"
                    ng-click="$ctrl.paramsVorbereiten()">Anzeige</md-button>
-    </section>
+    </section>-->
     <form name="$ctrl.formular" layout="column" style="height:100vh;">
         <md-content layout-margin layout="column" layout-align="center center" style="height:100vh;">
             <div layout="row" layout-margin  layout-align="center center">
@@ -58,12 +58,13 @@
                     <input ng-model="$ctrl.strasse" name="strasseinput" ng-pattern="/^[a-zA-Z][a-zA-Z0-9äöüÄÖÜß\- ]*$/" required>
                     <div ng-messages="$ctrl.formular.strasseinput.$error">
                         <div ng-message="pattern">Keine Sonderzeichen<br>Ausnahme: -</div>
+                        <div ng-message="required">Sie müssen eine Straße angeben!</div>
                     </div>
                 </md-input-container>
                 <md-input-container
                         style="width: 40%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
                     <label style="padding:10px 0px 0px 20px;">Hausnummer</label>
-                    <input ng-model="$ctrl.hausnummer" name="hausnrinput" ng-pattern="/^([a-zA-Z0-9]+\/?)+$/" required>
+                    <input ng-model="$ctrl.hausnummer" name="hausnrinput" ng-pattern="/^([a-zA-Z0-9]+\/?)+$/" >
                     <div ng-messages="$ctrl.formular.hausnrinput.$error">
                         <div ng-message="pattern">Nur Ziffern, Buchstaben und /</div>
                     </div>
@@ -76,6 +77,7 @@
                     <input ng-model="$ctrl.plz" name="plzinput" ng-pattern="/^[a-zA-Z0-9][a-zA-Z0-9\-]+$/" required>
                     <div ng-messages="$ctrl.formular.plzinput.$error">
                         <div ng-message="pattern">Nur Ziffern und Buchstaben</div>
+                        <div ng-message="required">Sie müssen eine PLZ angeben!</div>
                     </div>
                 </md-input-container>
                 <md-input-container
@@ -84,6 +86,7 @@
                     <input ng-model="$ctrl.ort"  name="ortinput" ng-pattern="/^[a-zA-Z]+[a-zA-ZäöüÄÖÜß\- ]+$/" required>
                     <div ng-messages="$ctrl.formular.ortinput.$error">
                         <div ng-message="pattern">Keine Zahlen oder Sonderzeichen</div>
+                        <div ng-message="required">Sie müssen einen Ort angeben!</div>
                     </div>
                 </md-input-container>
             </div>
@@ -91,11 +94,13 @@
         <section layout="row" layout-align="end end" layout-wrap style="margin-top: 60%">
             <md-button class="md-fab md-mini"
                        style="background-color:white; border:2px solid #E1E1E1; box-shadow: none;"
-                       ng-click="$ctrl.paramsVorbereiten()">
+                       ng-click="$ctrl.newAdress()">
                 <md-icon md-font-icon="material-icons" style="color: #176CBE;">add</md-icon>
             </md-button>
+            <!--style="background-color:#176CBE; color:white;"-->
             <md-button flex="30"
-                       style="background-color:#176CBE; color:white;"
+                       ng-disabled="$ctrl.disableNextStep()"
+                       class="md-primary md-raised"
                        ng-click="$ctrl.paramsVorbereiten()">Anzeige</md-button>
         </section>
     </form>
