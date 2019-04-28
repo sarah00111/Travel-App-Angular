@@ -91,17 +91,21 @@
                 </md-input-container>
             </div>
         </md-content>
+        <div ng-bind-html="$ctrl.fehlermeldungen">
+        </div>
         <section layout="row" layout-align="end end" layout-wrap style="margin-top: 60%">
+            <!--style="background-color:white; border:2px solid #E1E1E1; box-shadow: none;"-->
             <md-button class="md-fab md-mini"
-                       style="background-color:white; border:2px solid #E1E1E1; box-shadow: none;"
-                       ng-click="$ctrl.newAdress()">
-                <md-icon md-font-icon="material-icons" style="color: #176CBE;">add</md-icon>
+                       ng-disabled="$ctrl.formular.$invalid"
+                       class="md-raised md-primary"
+                       ng-click="$ctrl.bestaetigen(true)">
+                <md-icon md-font-icon="material-icons">add</md-icon>
             </md-button>
             <!--style="background-color:#176CBE; color:white;"-->
             <md-button flex="30"
                        ng-disabled="$ctrl.disableNextStep()"
                        class="md-primary md-raised"
-                       ng-click="$ctrl.paramsVorbereiten()">Anzeige</md-button>
+                       ng-click="$ctrl.bestaetigen(false)">Anzeige</md-button>
         </section>
     </form>
 </div>

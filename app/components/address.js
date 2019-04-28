@@ -34,20 +34,21 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
         return true;
     }
 
-    this.paramsVorbereiten = () => {
+    /*this.paramsVorbereiten = () => {
         this.bestaetigen();
         RespositoryService.newAddressForRoute($stateParams.id, new Adresse(this.strasse, this.hausnummer, this.plz, this.ort, this.lat, this.lon));
-        $state.go("ausgabe", {id: $stateParams.id});
+
     }
 
     this.newAdress = () => {
         this.bestaetigen();
         RespositoryService.newAddressForRoute($stateParams.id, new Adresse(this.strasse, this.hausnummer, this.plz, this.ort, this.lat, this.lon));
         $state.reload();
-    }
+    }*/
 
 
-    this.bestaetigen = () => {
+    this.bestaetigen = (newAdress) => {
+        this.fehlermeldungen = "";
         $http
             .get('https://geocoder.api.here.com/6.2/geocode.json',
                 {params: {app_id: ApiService.getAppId(), app_code: ApiService.getAppCode(),
@@ -73,11 +74,36 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
                     console.log("Ihre Adresse stimmt nicht mit der angegebenen PLZ überein");
                 }
 
+                $log.debug("response: ", response);
+                if(!this.lon){
+                    this.fehlermeldungen = "<p>Die von Ihnen angegebene Adresse kann nicht gefunden werden.</p>"
+                    this.fehlermeldungen += "<p><b>Bitte prüfen Sie ihre gesamte Eingabe!</b></p>"
+                }else if(this.ort != this.stadtAPI) {
+                    this.fehlermeldungen = "<p>Die von Ihnen eingegebene Straße wurde nicht in dem von Ihnen angegebenen Ort gefunden. </p>"
+                    this.fehlermeldungen += "<p>Meinten Sie den Ort " + this.stadtAPI + "? </p>";
+                    this.fehlermeldungen += "<p>Wenn ja korrigieren Sie Ihre Eingabe und bestätigen Sie erneut!</p>";
+                }else if(this.plz != this.plzAPI) {
+                    this.fehlermeldungen = "<p>Die von Ihnen eingegebene Straße wurde nicht in der von Ihnen angegebenen PLZ gefunden. </p>"
+                    this.fehlermeldungen += "<p>Meinten Sie die PLZ " + this.plzAPI + "? </p>";
+                    this.fehlermeldungen += "<p>Wenn ja korrigieren Sie Ihre Eingabe und bestätigen Sie erneut!</p>";
+                }else {
+                    RespositoryService.newAddressForRoute($stateParams.id, new Adresse(this.strasse, this.hausnummer, this.plz, this.ort, this.lat, this.lon));
+
+                    if(newAdress) {
+                        $state.reload();
+                    }else {
+                        $state.go("ausgabe", {id: $stateParams.id});
+                    }
+
+                }
+
                 //console.log(response);
             })
             .catch(response => {
                 $log.error("Fehler: " + response);
                 console.log("Die Adresse ergibt keine Rückgabe. Bitte kontrollieren sie Ihre eingabe.");
+                this.fehlermeldungen = "<p>Die von Ihnen angegebene Adresse kann nicht gefunden werden.Wahrscheinlich ist der von Ihnen angegebene Ort nicht korrekt.</p>"
+                this.fehlermeldungen += "<p><b>Bitte prüfen Sie ihre gesamte Eingabe!</b></p>"
             });
         this.ausgabe= this.strasse + " " + this.plz + " " + this.ort;
     }
