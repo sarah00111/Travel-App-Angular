@@ -27,8 +27,8 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
     }
 
     this.disableNextStep = () => {
-        if(RespositoryService.getRoute($stateParams.id).waypoints.length > 0) {
-            if(!this.formular.$invalid) {
+        if (RespositoryService.getRoute($stateParams.id).waypoints.length > 0) {
+            if (!this.formular.$invalid) {
                 return false;
             }
         }
@@ -36,24 +36,28 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
     }
 
     /*this.paramsVorbereiten = () => {
-        this.bestaetigen();
-        RespositoryService.newAddressForRoute($stateParams.id, new Adresse(this.strasse, this.hausnummer, this.plz, this.ort, this.lat, this.lon));
+     this.bestaetigen();
+     RespositoryService.newAddressForRoute($stateParams.id, new Adresse(this.strasse, this.hausnummer, this.plz, this.ort, this.lat, this.lon));
 
-    }
+     }
 
-    this.newAdress = () => {
-        this.bestaetigen();
-        RespositoryService.newAddressForRoute($stateParams.id, new Adresse(this.strasse, this.hausnummer, this.plz, this.ort, this.lat, this.lon));
-        $state.reload();
-    }*/
+     this.newAdress = () => {
+     this.bestaetigen();
+     RespositoryService.newAddressForRoute($stateParams.id, new Adresse(this.strasse, this.hausnummer, this.plz, this.ort, this.lat, this.lon));
+     $state.reload();
+     }*/
 
 
     this.bestaetigen = (newAdress) => {
         this.fehlermeldungen = "";
         $http
             .get('https://geocoder.api.here.com/6.2/geocode.json',
-                {params: {app_id: ApiService.getAppId(), app_code: ApiService.getAppCode(),
-                    street: this.strasse + " " + this.hausnummer, city: this.ort}})
+                {
+                    params: {
+                        app_id: ApiService.getAppId(), app_code: ApiService.getAppCode(),
+                        street: this.strasse + " " + this.hausnummer, city: this.ort
+                    }
+                })
             .then(response => {
                 $log.debug(response);
                 this.strasseAPI = response.data.Response.View[0].Result[0].Location.Address.Street;
@@ -64,7 +68,7 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
                 this.lon = response.data.Response.View[0].Result[0].Location.DisplayPosition.Longitude;
                 this.lat = response.data.Response.View[0].Result[0].Location.DisplayPosition.Latitude;
 
-                if(this.plz == this.plzAPI) {
+                if (this.plz == this.plzAPI) {
                     if (this.ort == this.stadtAPI) {
                         console.log("Land: " + this.landAPI + "\nStraße: " + this.strasseAPI + "\nHausnummer: " + this.hausNrAPI + "\nStadt: " + this.stadtAPI +
                             "\nPLZ: " + this.plzAPI + "\nlon: " + this.lon + "\nLat: " + this.lat);
@@ -76,37 +80,39 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
                 }
 
                 $log.debug("response: ", response);
-                if(!this.lon){
-                    this.fehlermeldungen = "<p>Die von Ihnen angegebene Adresse kann nicht gefunden werden.</p>"
-                    this.fehlermeldungen += "<p><b>Bitte prüfen Sie ihre gesamte Eingabe!</b></p>"
-                }else if(this.ort != this.stadtAPI) {
-                    this.fehlermeldungen = "<p>Die von Ihnen eingegebene Straße wurde nicht in dem von Ihnen angegebenen Ort gefunden. </p>"
-                    this.fehlermeldungen += "<p>Meinten Sie den Ort " + this.stadtAPI + "? </p>";
-                    this.fehlermeldungen += "<p>Wenn ja korrigieren Sie Ihre Eingabe und bestätigen Sie erneut!</p>";
-                }else if(this.plz != this.plzAPI) {
+                //diese zwei Ifs konnte ich nicht erreichen, springt bei fehler (ausser bei plz) autmatisch ins catch
+                // if(!this.lon){
+                //     this.fehlermeldungen = "<p>Die von Ihnen angegebene Adresse kann nicht gefunden werden.</p>"
+                //     this.fehlermeldungen += "<p><b>Bitte prüfen Sie ihre gesamte Eingabe!</b></p>"
+                // }else if(this.ort != this.stadtAPI) {
+                //     this.fehlermeldungen = "<p>Die von Ihnen eingegebene Straße wurde nicht in dem von Ihnen angegebenen Ort gefunden. </p>"
+                //     this.fehlermeldungen += "<p>Meinten Sie den Ort " + this.stadtAPI + "? </p>";
+                //     this.fehlermeldungen += "<p>Wenn ja korrigieren Sie Ihre Eingabe und bestätigen Sie erneut!</p>";
+                // }else
+                if (this.plz != this.plzAPI) {
                     this.fehlermeldungen = "<p>Die von Ihnen eingegebene Straße wurde nicht in der von Ihnen angegebenen PLZ gefunden. </p>"
                     this.fehlermeldungen += "<p>Meinten Sie die PLZ " + this.plzAPI + "? </p>";
                     this.fehlermeldungen += "<p>Wenn ja korrigieren Sie Ihre Eingabe und bestätigen Sie erneut!</p>";
-                }else {
+                } else {
                     RespositoryService.newAddressForRoute($stateParams.id, new Adresse(this.strasse, this.hausnummer, this.plz, this.ort, this.lat, this.lon));
 
 
-                    if(newAdress) {
+                    if (newAdress) {
                         //TODO: Toast auf einer anderen Position?
                         $mdToast.show(
                             $mdToast.simple()
                                 .textContent('Ihre Adress-Eingabe wurde gespeichert!')
                                 .position('top right')
                                 .hideDelay(3000))
-                            .then(function() {
+                            .then(function () {
                                 $log.log('Toast dismissed.');
-                            }).catch(function() {
-                                $log.log('Toast failed or was forced to close early by another toast.'
+                            }).catch(function () {
+                            $log.log('Toast failed or was forced to close early by another toast.'
                             );
                         });
 
                         $state.reload();
-                    }else {
+                    } else {
                         $state.go("ausgabe", {id: $stateParams.id});
                     }
 
@@ -120,7 +126,7 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
                 this.fehlermeldungen = "<p>Die von Ihnen angegebene Adresse kann nicht gefunden werden.Wahrscheinlich ist der von Ihnen angegebene Ort nicht korrekt.</p>"
                 this.fehlermeldungen += "<p><b>Bitte prüfen Sie ihre gesamte Eingabe!</b></p>"
             });
-        this.ausgabe= this.strasse + " " + this.plz + " " + this.ort;
+        this.ausgabe = this.strasse + " " + this.plz + " " + this.ort;
     }
 
 });
