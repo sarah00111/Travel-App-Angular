@@ -39,9 +39,11 @@
         </div>
     </md-content>
     <section layout="row" layout-align="end end" layout-wrap >
+        <!--style="background-color:#176CBE; color:white;"-->
         <md-button flex="30"
-                   style="background-color:#176CBE; color:white;"
-                   ng-click="$ctrl.route()">Adresse eingeben</md-button>
+                   class="md-raised md-primary"
+                   ng-disabled="$ctrl.nextStep()"
+                   ng-click="$ctrl.route()">neue Adresse</md-button>
     </section>
 
 </div>

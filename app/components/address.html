@@ -6,7 +6,7 @@
     </md-toolbar>
 
     <div layout-wrap="true" style="font-size: 20px; width: 80%; margin-top:30%; margin-left: 30px;" layout-margin layout-align="center center" >
-        Bitte geben Sie Ihre gewünschte Adresse ein.
+        Bitte geben Sie Ihre {{$ctrl.anzahl}}. Adresse ein.
     </div>
 
     <!--<md-content layout-margin layout="column" layout-align="center center" style="height:100vh;">
@@ -53,7 +53,7 @@
         <md-content layout-margin layout="column" layout-align="center center" style="height:100vh;">
             <div layout="row" layout-margin  layout-align="center center">
                 <md-input-container
-                        style="width: 42%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
+                        style="width: 60%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
                     <label style="padding:10px 0px 0px 20px;">Straße</label>
                     <input ng-model="$ctrl.strasse" name="strasseinput" ng-pattern="/^[a-zA-Z][a-zA-Z0-9äöüÄÖÜß\- ]*$/" required>
                     <div ng-messages="$ctrl.formular.strasseinput.$error">
@@ -62,8 +62,8 @@
                     </div>
                 </md-input-container>
                 <md-input-container
-                        style="width: 40%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
-                    <label style="padding:10px 0px 0px 20px;">Hausnummer</label>
+                        style="width: 20%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
+                    <label style="padding:10px 0px 0px 10px;">Hausnr.</label>
                     <input ng-model="$ctrl.hausnummer" name="hausnrinput" ng-pattern="/^([a-zA-Z0-9]+\/?)+$/" >
                     <div ng-messages="$ctrl.formular.hausnrinput.$error">
                         <div ng-message="pattern">Nur Ziffern, Buchstaben und /</div>

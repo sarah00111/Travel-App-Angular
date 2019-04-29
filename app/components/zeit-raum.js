@@ -24,6 +24,13 @@ app.controller("ZeitRaumController", function ($log, RespositoryService, $state)
 
     this.id;
 
+    this.nextStep = () => {
+        if(this.ende && this.anfang) {
+            return false;
+        }
+        return true;
+    }
+
     this.route = () => {
         this.id = RespositoryService.getId();
         RespositoryService.newRoute(this.id, this.berechneDauer());

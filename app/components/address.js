@@ -20,6 +20,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 
 app.controller("AddressController", function ($log, $http, ApiService, Adresse, $stateParams, $state, RespositoryService, $mdToast) {
 
+    this.anzahl = RespositoryService.getRoute($stateParams.id).waypoints.length + 1;
 
     this.$onInit = () => {
         $log.debug("stateparams zeitraum: ", $stateParams.id);
@@ -95,6 +96,7 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
                         $mdToast.show(
                             $mdToast.simple()
                                 .textContent('Ihre Adress-Eingabe wurde gespeichert!')
+                                .position('top right')
                                 .hideDelay(3000))
                             .then(function() {
                                 $log.log('Toast dismissed.');
