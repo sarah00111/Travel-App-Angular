@@ -10,7 +10,7 @@ app.component("address", {
 app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state({
         name: "address",
-        params: {id: 0},
+        params: {id: null},
         component: "address"
     });
 
@@ -20,11 +20,15 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 
 app.controller("AddressController", function ($log, $http, ApiService, Adresse, $stateParams, $state, RespositoryService, $mdToast) {
 
+    //Dummy Parameter für das Debuggen
+    //TODO: vor der Review löschen
+    this.strasse = "Arsenalstraße";
+    this.hausnummer = "1";
+    this.plz = "1030";
+    this.ort = "Wien";
+
     this.anzahl = RespositoryService.getRoute($stateParams.id).waypoints.length + 1;
 
-    this.$onInit = () => {
-        $log.debug("stateparams zeitraum: ", $stateParams.id);
-    }
 
     this.disableNextStep = () => {
         if(RespositoryService.getRoute($stateParams.id).waypoints.length > 0) {
@@ -35,19 +39,6 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
         return true;
     }
 
-    /*this.paramsVorbereiten = () => {
-        this.bestaetigen();
-        RespositoryService.newAddressForRoute($stateParams.id, new Adresse(this.strasse, this.hausnummer, this.plz, this.ort, this.lat, this.lon));
-
-    }
-
-    this.newAdress = () => {
-        this.bestaetigen();
-        RespositoryService.newAddressForRoute($stateParams.id, new Adresse(this.strasse, this.hausnummer, this.plz, this.ort, this.lat, this.lon));
-        $state.reload();
-    }*/
-
-
     this.bestaetigen = (newAdress) => {
         this.fehlermeldungen = "";
         $http
@@ -55,7 +46,6 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
                 {params: {app_id: ApiService.getAppId(), app_code: ApiService.getAppCode(),
                     street: this.strasse + " " + this.hausnummer, city: this.ort}})
             .then(response => {
-                $log.debug(response);
                 this.strasseAPI = response.data.Response.View[0].Result[0].Location.Address.Street;
                 this.landAPI = response.data.Response.View[0].Result[0].Location.Address.Country;
                 this.stadtAPI = response.data.Response.View[0].Result[0].Location.Address.City;
@@ -64,28 +54,20 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
                 this.lon = response.data.Response.View[0].Result[0].Location.DisplayPosition.Longitude;
                 this.lat = response.data.Response.View[0].Result[0].Location.DisplayPosition.Latitude;
 
-                if(this.plz == this.plzAPI) {
-                    if (this.ort == this.stadtAPI) {
-                        console.log("Land: " + this.landAPI + "\nStraße: " + this.strasseAPI + "\nHausnummer: " + this.hausNrAPI + "\nStadt: " + this.stadtAPI +
-                            "\nPLZ: " + this.plzAPI + "\nlon: " + this.lon + "\nLat: " + this.lat);
-                    } else {
-                        console.log("Ihre Adresse stimmt nicht mit dem angegebenen Ort überein.")
-                    }
-                } else {
-                    console.log("Ihre Adresse stimmt nicht mit der angegebenen PLZ überein");
-                }
-
-                $log.debug("response: ", response);
                 if(!this.lon){
                     this.fehlermeldungen = "<p>Die von Ihnen angegebene Adresse kann nicht gefunden werden.</p>"
                     this.fehlermeldungen += "<p><b>Bitte prüfen Sie ihre gesamte Eingabe!</b></p>"
                 }else if(this.ort != this.stadtAPI) {
                     this.fehlermeldungen = "<p>Die von Ihnen eingegebene Straße wurde nicht in dem von Ihnen angegebenen Ort gefunden. </p>"
-                    this.fehlermeldungen += "<p>Meinten Sie den Ort " + this.stadtAPI + "? </p>";
+                    this.fehlermeldungen += "<p>Meinten Sie den Ort <b>" + this.stadtAPI + "</b>? </p>";
                     this.fehlermeldungen += "<p>Wenn ja korrigieren Sie Ihre Eingabe und bestätigen Sie erneut!</p>";
                 }else if(this.plz != this.plzAPI) {
                     this.fehlermeldungen = "<p>Die von Ihnen eingegebene Straße wurde nicht in der von Ihnen angegebenen PLZ gefunden. </p>"
-                    this.fehlermeldungen += "<p>Meinten Sie die PLZ " + this.plzAPI + "? </p>";
+                    this.fehlermeldungen += "<p>Meinten Sie die PLZ <b>" + this.plzAPI + "</b>? </p>";
+                    this.fehlermeldungen += "<p>Wenn ja korrigieren Sie Ihre Eingabe und bestätigen Sie erneut!</p>";
+                }else if(this.strasse != this.strasseAPI) {
+                    this.fehlermeldungen = "<p>Die von Ihnen eingegebene Straße wurde so nicht gefunden.</p>"
+                    this.fehlermeldungen += "<p>Meinten Sie die Straße <b>" + this.strasseAPI + "</b>? </p>";
                     this.fehlermeldungen += "<p>Wenn ja korrigieren Sie Ihre Eingabe und bestätigen Sie erneut!</p>";
                 }else {
                     RespositoryService.newAddressForRoute($stateParams.id, new Adresse(this.strasse, this.hausnummer, this.plz, this.ort, this.lat, this.lon));
@@ -93,11 +75,12 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
 
                     if(newAdress) {
                         //TODO: Toast auf einer anderen Position?
+                        //TODO: hideDelay wieder auf 3000 setzen
                         $mdToast.show(
                             $mdToast.simple()
                                 .textContent('Ihre Adress-Eingabe wurde gespeichert!')
                                 .position('top right')
-                                .hideDelay(3000))
+                                .hideDelay(1))
                             .then(function() {
                                 $log.log('Toast dismissed.');
                             }).catch(function() {
