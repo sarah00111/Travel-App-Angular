@@ -97,11 +97,19 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
 
                 //console.log(response);
             })
-            .catch(response => {
-                $log.error("Fehler: " + response);
-                console.log("Die Adresse ergibt keine Rückgabe. Bitte kontrollieren sie Ihre eingabe.");
-                this.fehlermeldungen = "<p>Die von Ihnen angegebene Adresse kann nicht gefunden werden.Wahrscheinlich ist der von Ihnen angegebene Ort nicht korrekt.</p>"
-                this.fehlermeldungen += "<p><b>Bitte prüfen Sie ihre gesamte Eingabe!</b></p>"
+            .catch(error => {
+                let falscheAPICredentials = RegExp('.*type="PermissionError".*');
+
+                if(falscheAPICredentials.test(error.data)) {
+                    $log.error("falsche Credentials!");
+                    ApiService.newCredentials();
+                    this.bestaetigen(newAdress);
+                }else {
+                    $log.error("Fehler: ", error);
+                    console.log("Die Adresse ergibt keine Rückgabe. Bitte kontrollieren sie Ihre eingabe.");
+                    this.fehlermeldungen = "<p>Die von Ihnen angegebene Adresse kann nicht gefunden werden.Wahrscheinlich ist der von Ihnen angegebene Ort nicht korrekt.</p>"
+                    this.fehlermeldungen += "<p><b>Bitte prüfen Sie ihre gesamte Eingabe!</b></p>"
+                }
             });
         this.ausgabe= this.strasse + " " + this.plz + " " + this.ort;
     }
