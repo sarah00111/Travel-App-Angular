@@ -11,4 +11,7 @@
     </p>
 
     {{$ctrl.route.minuten  | date: "shortTime" : "UTC"}}
+
+    <md-button ng-click="$ctrl.nextStep()"
+               class="md-primary md-raised">Next Step</md-button>
 </div>
