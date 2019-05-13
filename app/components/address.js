@@ -20,12 +20,21 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 
 app.controller("AddressController", function ($log, $http, ApiService, Adresse, $stateParams, $state, RespositoryService, $mdToast) {
 
-    //Dummy Parameter für das Debuggen
-    //TODO: vor der Review löschen
-    this.strasse = "Arsenalstraße";
-    this.hausnummer = "1";
-    this.plz = "1030";
-    this.ort = "Wien";
+    if($stateParams.editorState == true){
+        this.waypoint = RespositoryService.getRoute($stateParams.id).waypoints[$stateParams.waypointId];
+        console.log(this.waypoint);
+        this.strasse = this.waypoint.strasse;
+        this.hausnummer = this.waypoint.hausnr;
+        this.plz = this.waypoint.plz;
+        this.ort = this.waypoint.ort;
+    }else {
+        //Dummy Parameter für das Debuggen
+        //TODO: vor der Review löschen
+        this.strasse = "Arsenalstraße";
+        this.hausnummer = "1";
+        this.plz = "1030";
+        this.ort = "Wien";
+    }
 
     this.anzahl = RespositoryService.getRoute($stateParams.id).waypoints.length + 1;
 
@@ -33,6 +42,7 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
         $log.debug("stateparams zeitraum: ", $stateParams.id);
         this.waypointId = $stateParams.waypointId;
         this.editorState = $stateParams.editorState;
+
     }
 
 
@@ -45,7 +55,7 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
         return true;
     }
 
-    this.bestaetigen = (newAdress) => {
+    this.bestaetigen = (newAdress, changeAdress) => {
         this.fehlermeldungen = "";
         $http
             .get('https://geocoder.api.here.com/6.2/geocode.json',
@@ -76,8 +86,13 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
                     this.fehlermeldungen += "<p>Meinten Sie die Straße <b>" + this.strasseAPI + "</b>? </p>";
                     this.fehlermeldungen += "<p>Wenn ja korrigieren Sie Ihre Eingabe und bestätigen Sie erneut!</p>";
                 }else {
-                    RespositoryService.newAddressForRoute($stateParams.id, new Adresse(this.strasse, this.hausnummer, this.plz, this.ort, this.lat, this.lon));
 
+                    if(changeAdress){
+                        RespositoryService.getRoute($stateParams.id).waypoints[$stateParams.waypointId] = new Adresse(this.strasse, this.hausnummer, this.plz, this.ort, this.lat, this.lon);
+                        $state.go("uebersicht", {id: $stateParams.id});
+                    }else{
+                        RespositoryService.newAddressForRoute($stateParams.id, new Adresse(this.strasse, this.hausnummer, this.plz, this.ort, this.lat, this.lon));
+                    }
 
                     if(newAdress) {
                         //TODO: Toast auf einer anderen Position?

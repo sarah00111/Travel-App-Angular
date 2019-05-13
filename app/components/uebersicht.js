@@ -37,4 +37,11 @@ app.controller("UebersichtController", function ($log, $stateParams, Adresse, Ro
         RespositoryService.getRoute($stateParams.id).start = new Adresse("Rennweg", "89b", "1030", "Wien", 48.19072, 16.39729);
         RespositoryService.getRoute($stateParams.id).end = new Adresse("Rennweg", "89b", "1030", "Wien", 48.19072, 16.39729);
     }
+
+    this.delete = (index) => {
+        console.log(RespositoryService.getRoute($stateParams.id).waypoints);
+        RespositoryService.getRoute($stateParams.id).waypoints.splice(index, 1);
+        console.log("danach");
+        console.log(RespositoryService.getRoute($stateParams.id).waypoints);
+    }
 });
