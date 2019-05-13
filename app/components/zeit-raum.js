@@ -51,6 +51,10 @@ app.controller("ZeitRaumController", function ($log, RespositoryService, $state)
         this.minDate1.getDate()
     );
 
+
+    this.anfang = new Date(1, 1, 1970, 1);
+    this.ende = new Date(1, 1, 1970, 3, 1);
+
     this.compareDate = () => {
         this.endDate = this.endDate | this.minDate2;
         if (this.startDate >= this.endDate) {

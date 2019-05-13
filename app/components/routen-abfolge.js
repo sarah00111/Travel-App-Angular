@@ -122,7 +122,6 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
                     ApiService.newCredentials();
                     this.bestaetigen(newAdress);
                 }else if(gleicheBP.test(error.data.errors[0])) {
-                    //TODO: in Übersicht verhindern, dass man weitergehen kann, wenn 2 Adressen gleich sind
                     $log.error("zwei gleiche Adressen eingegeben!");
                 }else {
                     $log.error("ein Fehler ist aufgetreten: ", error);
