@@ -8,7 +8,13 @@
     <p ng-repeat="i in $ctrl.route.waypoints track by $index">
         {{i.strasse}} {{i.hausnr}} <br>
         {{i.plz}}, {{i.ort}}
+
+        <md-button ui-sref="address({id: $ctrl.id ,waypointId: i, editorState: true})"
+                   class="md-primary md-raised"></md-button>
     </p>
 
     {{$ctrl.route.minuten  | date: "shortTime" : "UTC"}}
+
+    <md-button ng-click="$ctrl.nextStep()"
+               class="md-primary md-raised">Next Step</md-button>
 </div>

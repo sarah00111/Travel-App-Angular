@@ -11,8 +11,6 @@ app.factory("Adresse", function () {
         this.lat = lat;
         this.lon = lon;
 
-        this.isStart = false;
-        this.isEnd = false;
     }
 
     return Adresse;

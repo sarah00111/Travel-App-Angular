@@ -1,0 +1,42 @@
+<div>
+    TODO: all die Sachen sieht man noch nicht
+    <!--div, wo jegliche Fehlermeldungen, die während den Berechnungen aufgetreten sind dem Benutzer in angebrachter weise erklärt werden-->
+    <div class="warnungen" ng-bind-html="$ctrl.warnungen"></div>
+
+    <div ng-show="$ctrl.noRoute">
+        <!--Situatilon: keine Route wurde berechnet, weil es zu viele BP sind-->
+        <div ng-show="$ctrl.tooManyBP">
+            <h3>Zu viele Besichtigungspunkt!</h3>
+            <p>Es ist nicht möglich all ihre Besichtigungspunkte, in Ihrem Zeitraum zu besichtigen.</p>
+            <p>Gehen Sie zurück zur Übersicht und
+                <ul>
+                    <li>vergrößern den Zeitraum (Anzahl der Stunden) oder</li>
+                    <li>entfernen min 1 Besichtigungspunkt</li>
+                </ul>
+                Anschließend können Sie erneut versuchen Routen auszurechnen.
+            </p>
+            <md-button class="md-raised md-primary" ng-click="$ctrl.zuUebersicht()">Zurück zur Übersicht</md-button>
+        </div>
+
+        <!--Situation: es wurde versucht eine Route zu berechnen, aber die Wege zu allen BP sind zu lang-->
+        <div ng-hide="$ctrl.tooManyBP">
+            <h3>Besichtigungspunkte zu weit entfernt!</h3>
+            <p>Jeder Ihrer Besichtigungspunkte ist so weit von Ihrem Hotel entfernt, dass es sich nicht ausgeht in der Zeitspanne eines Tages
+                dorthin und wieder zurück zu fahren!
+            </p>
+
+        </div>
+    </div>
+
+    <md-whiteframe class="tag" ng-show="$ctrl.oneDayRoute">
+        <p class="eintrag"> {{$ctrl.start.strasse}} {{$ctrl.start.hausnr}}</p>
+        <p ng-repeat="bp in $ctrl.zwischenAry track by $index" class="eintrag">{{bp.strasse}} {{bp.hausnr}}</p>
+        <p class="eintrag"> {{$ctrl.start.strasse}} {{$ctrl.start.hausnr}}</p>
+    </md-whiteframe>
+
+    <md-whiteframe ng-repeat="tag in $ctrl.ergebnis" class="tag" ng-show="$ctrl.manyDaysRoute">
+        <p class="eintrag"> {{$ctrl.start.strasse}} {{$ctrl.start.hausnr}}</p>
+        <p ng-repeat="bp in $ctrl.ergebnis[tag] track by $index" class="eintrag">{{bp.strasse}} {{bp.hausnr}}</p>
+        <p class="eintrag"> {{$ctrl.start.strasse}} {{$ctrl.start.hausnr}}</p>
+    </md-whiteframe>
+</div>
