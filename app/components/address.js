@@ -40,8 +40,7 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
 
 
     this.disableNextStep = () => {
-        //TODO: this.anzahl -1 ?
-        if(RespositoryService.getRoute($stateParams.id).waypoints.length > 0) {
+        if(this.anzahl - 1 > 0) {
             if(!this.formular.$invalid) {
                 return false;
             }
