@@ -32,12 +32,9 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
     this.anzahl = RespositoryService.getRoute($stateParams.id).waypoints.length + 1;
 
     this.$onInit = () => {
-        $log.debug("stateparams zeitraum: ", $stateParams.id);
         this.waypointId = $stateParams.waypointId;
         this.editorState = $stateParams.editorState;
     }
-
-
 
     this.disableNextStep = () => {
         if(this.anzahl - 1 > 0) {
@@ -48,26 +45,10 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
         return true;
     }
 
-    function containsObject(hausnr, strasse) {
-
-        return
-    }
-
-    function addressInWaypoints(hausnr, strasse) {
-        for (let w in route.waypoints) {
-            if(w.hausnr === hausnr) {
-                if(w.strasse == strasse) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
     this.bestaetigen = (newAdress) => {
         this.fehlermeldungen = "";
 
-        let testIfAlreadyExists = route.waypoints.some(obj => {
+        this.testIfAlreadyExists = route.waypoints.some(obj => {
             if(obj.hausnr == this.hausnummer && obj.strasse == this.strasse) {
                 return true;
             }
@@ -75,8 +56,7 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
         });
 
         //Testen, ob diese Adresse bereits eingegeben wurde
-        $log.debug("test ", testIfAlreadyExists);
-        if(!testIfAlreadyExists) {
+        if(!this.testIfAlreadyExists) {
             $http
                 .get('https://geocoder.api.here.com/6.2/geocode.json',
                     {params: {app_id: ApiService.getAppId(), app_code: ApiService.getAppCode(),
@@ -144,7 +124,6 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
                         this.bestaetigen(newAdress);
                     }else {
                         $log.error("Fehler: ", error);
-                        console.log("Die Adresse ergibt keine Rückgabe. Bitte kontrollieren sie Ihre eingabe.");
                         this.fehlermeldungen = "<p>Die von Ihnen angegebene Adresse kann nicht gefunden werden.Wahrscheinlich ist der von Ihnen angegebene Ort nicht korrekt.</p>"
                         this.fehlermeldungen += "<p><b>Bitte prüfen Sie ihre gesamte Eingabe!</b></p>"
                     }

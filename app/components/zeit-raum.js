@@ -25,7 +25,7 @@ app.controller("ZeitRaumController", function ($log, RespositoryService, $state)
     this.id;
 
     this.anfang = new Date(1, 1, 1970, 1);
-    this.ende = new Date(1, 1, 1970, 1, 1);
+    this.ende = new Date(1, 1, 1970, 3, 1);
 
     this.nextStep = () => {
         if(this.ende && this.anfang) {
