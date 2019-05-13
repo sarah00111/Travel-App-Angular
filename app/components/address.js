@@ -10,11 +10,7 @@ app.component("address", {
 app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state({
         name: "address",
-<<<<<<< HEAD
         params: {id: null, waypointId: null, editorState: false},
-=======
-        params: {id: null},
->>>>>>> 4cb6ae92676b9069ef968606bf65a38600cffcd5
         component: "address"
     });
 
