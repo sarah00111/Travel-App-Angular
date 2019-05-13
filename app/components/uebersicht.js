@@ -34,7 +34,12 @@ app.controller("UebersichtController", function ($log, $stateParams, Adresse, Ro
         $log.debug("next step");
         $state.go("routen-abfolge", {id: $stateParams.id});
 
-        RespositoryService.getRoute($stateParams.id).start = new Adresse("Rennweg", "89b", "1030", "Wien", 48.19072, 16.39729);
+        console.log(this.auswahl);
+        RespositoryService.getRoute($stateParams.id).start = RespositoryService.getRoute($stateParams.id).waypoints[this.auswahl];
+        RespositoryService.getRoute($stateParams.id).waypoints.splice(this.auswahl, 1);
+
+        console.log(RespositoryService.getRoute($stateParams.id));
+
         RespositoryService.getRoute($stateParams.id).end = new Adresse("Rennweg", "89b", "1030", "Wien", 48.19072, 16.39729);
     }
 
