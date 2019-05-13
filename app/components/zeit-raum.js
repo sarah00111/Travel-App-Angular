@@ -24,6 +24,9 @@ app.controller("ZeitRaumController", function ($log, RespositoryService, $state)
 
     this.id;
 
+    this.anfang = new Date(1, 1, 1970, 1);
+    this.ende = new Date(1, 1, 1970, 1, 1);
+
     this.nextStep = () => {
         if(this.ende && this.anfang) {
             return false;
@@ -33,7 +36,8 @@ app.controller("ZeitRaumController", function ($log, RespositoryService, $state)
 
     this.route = () => {
         this.id = RespositoryService.getId();
-        RespositoryService.newRoute(this.id, this.berechneDauer());
+        //@Basem TODO: 4 durch Methoden-Auruf der Tage berechnet ersetzen
+        RespositoryService.newRoute(this.id, this.berechneDauer(), 4);
         $state.go("address", {id: this.id});
     }
 
