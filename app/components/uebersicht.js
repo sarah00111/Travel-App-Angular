@@ -1,7 +1,7 @@
 "use strict";
 
 app.component("ausgabe", {
-    templateUrl: "components/ausgabe.html",
+    templateUrl: "components/uebersicht.html",
     controller: "AusgabeController",
     bindings: {}
 });
@@ -24,5 +24,7 @@ app.controller("AusgabeController", function ($log, $stateParams, Adresse, Route
         $log.debug("oninit");
         this.index = RespositoryService.getRouteIndex($stateParams.id);
         this.route = RespositoryService.getRoute(this.index);
+
+        this.id = $stateParams.id;
     }
 });
