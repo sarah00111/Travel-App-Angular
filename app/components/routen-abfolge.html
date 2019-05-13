@@ -1,3 +1,13 @@
+<style>
+    .tag {
+        padding: 20px;
+    }
+    .eintrag {
+        border-bottom: 1px solid black;
+        padding: 10px;
+    }
+</style>
+
 <div>
     TODO: all die Sachen sieht man noch nicht
     <!--div, wo jegliche Fehlermeldungen, die während den Berechnungen aufgetreten sind dem Benutzer in angebrachter weise erklärt werden-->
@@ -28,13 +38,16 @@
         </div>
     </div>
 
-    <md-whiteframe class="tag" ng-show="$ctrl.oneDayRoute">
-        <p class="eintrag"> {{$ctrl.start.strasse}} {{$ctrl.start.hausnr}}</p>
+    <md-whiteframe class="md-whiteframe-3dp tag" layout="column" ng-show="$ctrl.oneDayRoute">
+        <h2>Tag 1</h2>
+        <div class="eintrag">
+            <p> {{$ctrl.start.strasse}} {{$ctrl.start.hausnr}} </p>
+        </div>
         <p ng-repeat="bp in $ctrl.zwischenAry track by $index" class="eintrag">{{bp.strasse}} {{bp.hausnr}}</p>
         <p class="eintrag"> {{$ctrl.start.strasse}} {{$ctrl.start.hausnr}}</p>
     </md-whiteframe>
 
-    <md-whiteframe ng-repeat="tag in $ctrl.ergebnis" class="tag" ng-show="$ctrl.manyDaysRoute">
+    <md-whiteframe ng-repeat="tag in $ctrl.ergebnis" class="md-whiteframe-3dp tag" layout="column" ng-show="$ctrl.manyDaysRoute">
         <p class="eintrag"> {{$ctrl.start.strasse}} {{$ctrl.start.hausnr}}</p>
         <p ng-repeat="bp in $ctrl.ergebnis[tag] track by $index" class="eintrag">{{bp.strasse}} {{bp.hausnr}}</p>
         <p class="eintrag"> {{$ctrl.start.strasse}} {{$ctrl.start.hausnr}}</p>

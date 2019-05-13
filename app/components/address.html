@@ -1,48 +1,97 @@
-<div layout="column" style="height:100vh;">
-    <md-toolbar>
-        <div class="md-toolbar-tools" layout-align="center center" style="background-color:#176CBE; ">
-            <h2 md-truncate style="font-family: 'Segoe UI'; font-size: 20px;">TravelApp</h2>
+<style>
+    #container {
+        height: 100vh;
+    }
+
+    h2 {
+        font-family: 'Segoe UI';
+        font-size: 20px;
+    }
+
+    .hoehe {
+        height: 91vh;
+    }
+
+    #info {
+        font-size: 20px;
+        width: 80%;
+        margin-top: 30%;
+        margin-left: 30px;
+    }
+
+    .adressInput {
+        background-color: #E1E1E1;
+        border-radius: 10px;
+        padding: 0px 20px 0px 20px;
+    }
+
+    #anfang {
+        width: 60%;
+
+    }
+
+    #ziel {
+        width: 20%;
+
+    }
+
+    .inputlabel {
+        padding: 10px 0px 0px 20px;
+    }
+    #plz{
+        width: 42%;
+    }
+    #ort{
+        width:40%;
+    }
+    section{
+        margin-top: 60%;
+    }
+</style>
+
+<div layout="column" id="container">
+    <md-toolbar class="md-primary">
+        <div class="md-toolbar-tools" layout-align="center center">
+            <h2>TravelApp</h2>
         </div>
     </md-toolbar>
 
-    <form name="$ctrl.formular" layout="column" style="height:93vh;">
-        <div layout-wrap="true" style="font-size: 20px; width: 80%; margin-top:30%; margin-left: 30px;" layout-margin layout-align="center center" >
+    <form name="$ctrl.formular" class="hoehe" layout="column">
+        <div id="info" layout-wrap="true" layout-margin
+             layout-align="center center">
             Bitte geben Sie Ihre {{$ctrl.anzahl}}. Adresse ein.
         </div>
-        <md-content layout-margin layout="column" layout-align="center center" style="height:93vh;">
-            <div layout="row" layout-margin  layout-align="center center">
-                <md-input-container
-                        style="width: 60%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
-                    <label style="padding:10px 0px 0px 20px;">Straße</label>
-                    <input ng-model="$ctrl.strasse" name="strasseinput" ng-pattern="/^[a-zA-Z][a-zA-Z0-9äöüÄÖÜß\- ]*$/" required>
+        <md-content class="hoehe" layout-margin layout="column" layout-align="center center">
+            <div layout="row" layout-margin layout-align="center center">
+                <md-input-container class="adressInput" id="anfang">
+                    <label class="inputlabel">Straße</label>
+                    <input ng-model="$ctrl.strasse" name="strasseinput" ng-pattern="/^[a-zA-Z][a-zA-Z0-9äöüÄÖÜß\- ]*$/"
+                           required>
                     <div ng-messages="$ctrl.formular.strasseinput.$error">
                         <div ng-message="pattern">Keine Sonderzeichen<br>Ausnahme: -</div>
                         <div ng-message="required">Sie müssen eine Straße angeben!</div>
                     </div>
                 </md-input-container>
-                <md-input-container
-                        style="width: 20%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
-                    <label style="padding:10px 0px 0px 0px;">Hausnr.</label>
-                    <input ng-model="$ctrl.hausnummer" name="hausnrinput" ng-pattern="/^([a-zA-Z0-9]+\/?)+$/" >
+                <md-input-container class="adressInput" id="ziel">
+                    <label class="inputlabel">Hausnr.</label>
+                    <input ng-model="$ctrl.hausnummer" name="hausnrinput" ng-pattern="/^([a-zA-Z0-9]+\/?)+$/">
                     <div ng-messages="$ctrl.formular.hausnrinput.$error">
                         <div ng-message="pattern">Nur Ziffern, Buchstaben und /</div>
                     </div>
                 </md-input-container>
             </div>
-             <div layout="row" layout-margin  layout-align="center center">
-                <md-input-container
-                        style="width: 42%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
-                    <label style="padding:10px 0px 0px 20px;">PLZ</label>
+            <div layout="row" layout-margin layout-align="center center">
+                <md-input-container class="adressInput" id="plz">
+                    <label class="inputlabel">PLZ</label>
                     <input ng-model="$ctrl.plz" name="plzinput" ng-pattern="/^[a-zA-Z0-9][a-zA-Z0-9\-]+$/" required>
                     <div ng-messages="$ctrl.formular.plzinput.$error">
                         <div ng-message="pattern">Nur Ziffern und Buchstaben</div>
                         <div ng-message="required">Sie müssen eine PLZ angeben!</div>
                     </div>
                 </md-input-container>
-                <md-input-container
-                        style="width: 40%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
-                    <label style="padding:10px 0px 0px 20px;">Ort</label>
-                    <input ng-model="$ctrl.ort"  name="ortinput" ng-pattern="/^[a-zA-Z]+[a-zA-ZäöüÄÖÜß\- ]+$/" required>
+                <md-input-container class="adressInput" id="ort">
+                    <label class="inputlabel">Ort</label>
+                    <input ng-model="$ctrl.ort" name="ortinput" ng-pattern="/^[a-zA-Z]+[a-zA-ZäöüÄÖÜß\- ]+$/" required>
                     <div ng-messages="$ctrl.formular.ortinput.$error">
                         <div ng-message="pattern">Keine Zahlen oder Sonderzeichen</div>
                         <div ng-message="required">Sie müssen einen Ort angeben!</div>
@@ -52,11 +101,11 @@
         </md-content>
         <div ng-bind-html="$ctrl.fehlermeldungen">
         </div>
-        <section layout="row" layout-align="end end" layout-wrap style="margin-top: 60%">
+        <section layout="row" layout-align="end end" layout-wrap >
             <!--style="background-color:white; border:2px solid #E1E1E1; box-shadow: none;"-->
-            <md-button class="md-fab md-mini"
+            <md-button class="md-fab md-mini md-primary"
                        ng-disabled="$ctrl.formular.$invalid"
-                       class="md-raised md-primary"
+                       class="md-primary"
                        ng-show="!($ctrl.editorState)"
                        ng-click="$ctrl.bestaetigen(true, false)">
                 <md-icon md-font-icon="material-icons" >add</md-icon>
@@ -67,6 +116,7 @@
                        ng-show="!($ctrl.editorState)"
                        class="md-raised md-primary"
                        ng-click="$ctrl.bestaetigen(false, false)">Anzeige</md-button>
+
             <md-button flex="30"
                        ng-disabled="$ctrl.disableNextStep()"
                        class="md-primary md-raised"
