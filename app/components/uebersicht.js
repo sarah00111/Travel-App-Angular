@@ -1,28 +1,33 @@
 "use strict";
 
-app.component("ausgabe", {
-    templateUrl: "components/ausgabe.html",
-    controller: "AusgabeController",
+app.component("uebersicht", {
+    templateUrl: "components/uebersicht.html",
+    controller: "UebersichtController",
     bindings: {}
 });
+
+
 app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state({
-        name: "ausgabe",
+        name: "uebersicht",
         params: {id: 0},
-        component: "ausgabe"
+        component: "uebersicht"
     });
 
 });
 
-app.controller("AusgabeController", function ($log, $stateParams, Adresse, Route, RespositoryService, $state) {
 
-    $log.debug("AusgabeController()");
+app.controller("UebersichtController", function ($log, $stateParams, Adresse, Route, RespositoryService, $state) {
+
+    $log.debug("UebersichtController()");
 
     this.index;
     this.route;
     this.$onInit = () => {
         this.index = RespositoryService.getRouteIndex($stateParams.id);
         this.route = RespositoryService.getRoute(this.index);
+
+        this.id = $stateParams.id;
     }
 
     this.nextStep = () => {
