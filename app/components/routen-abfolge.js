@@ -17,7 +17,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 });
 
 
-app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $stateParams, $http, ApiService, $filter, $state) {
+app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $stateParams, $http, ApiService, $filter, $state, $timeout) {
 
     $log.debug("RoutenAbfolgeController()");
 
@@ -52,7 +52,7 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
             .get(`https://wse.api.here.com/2/findsequence.json?${destinations}`,
                 {params: {app_id: ApiService.getAppId(), app_code: ApiService.getAppCode(),
                         start: this.start.strasse + ";" + this.start.lat + "," + this.start.lon,
-                        end: this.end.strasse + this.end.hausnr + ";" + this.end.lat + "," + this.end.lon,
+                        end: this.start.strasse + this.start.hausnr + ";" + this.start.lat + "," + this.start.lon,
                         mode: "pedestrian;fastest"}})
             .then(response => {
                 /*$log.debug("response: ", response);*/
@@ -81,11 +81,11 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
                             wenn nein: der user wird darauf hingewiesen, dass keine Route berechnet werden konnte, weil die Wege vom Hotel zu den BP zu lange für einen Tag sind
                         wenn nein: die gesamte Route wird an einem Tag angezeigt
                  */
-                if(sekunden * tage < zeitraumAPI) {
+                /*if(sekunden * tage < zeitraumAPI) {
                     $log.debug("keine Route kann berechnet werden & toomManyBP");
                     this.noRoute = true;
                     this.tooManyBP = true;
-                }else {
+                }else {*/
                     if(sekunden < zeitraumAPI) {
 
                         let promises = this.getTimeToHotel(this.zwischenAry, this.start);
@@ -96,11 +96,15 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
                                     $log.debug("Route für mehrere Tage berechnet");
                                     $log.debug("Warnungen: ", this.warnungen)
                                     this.manyDaysRoute = true;
+                                    if(this.ergebnis[this.ergebnis.length - 1].length == 0) {
+                                        this.ergebnis.pop();
+                                    }
                                 }else {
                                     $log.debug("keine route konnte berechnet werden & ergebnis leer");
                                     $log.debug("Warnungen: ", this.warnungen)
                                     this.noRoute = true;
                                 }
+                                $timeout();
                             })
                             .catch(error => {
                                 $log.error("oops, da gabs es wohl einen Fehler, " + error);
@@ -110,7 +114,7 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
                     }else {
                         this.oneDayRoute = true;
                     }
-                }
+                /*}*/
 
             })
             .catch(error => {
@@ -120,7 +124,7 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
                 if(falscheAPICredentials.test(error.data)) {
                     $log.error("falsche Credentials!");
                     ApiService.newCredentials();
-                    this.bestaetigen(newAdress);
+                    this.routeBerechnen();
                 }else if(gleicheBP.test(error.data.errors[0])) {
                     $log.error("zwei gleiche Adressen eingegeben!");
                 }else {
@@ -144,10 +148,6 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
         return allePromises;
     }
 
-    /*
-      TODO: Variablen im html irgendwie leer
-     */
-
     this.getRouteForDay =(response, tage, sekunden, bp, start, ic) => {
         var ergebnis = [];
 
@@ -166,6 +166,7 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
             if(i - 1 > -1 && ergebnis[i - 1].length == 0) {
                 i--;
             }
+
             ergebnis[i] = [];
 
             while(sekundenAmTag < sekunden){
@@ -175,6 +176,7 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
                 if(aryIndex > -1 && sekundenAmTag !=0) {
                     sekundenAmTag -= response[aryIndex].data.response.route[0].summary.baseTime;
                     ergebnis[i].push(bp[aryIndex]);
+
                 }
                 aryIndex++;
 
@@ -200,11 +202,12 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
             if(sekundenAmTag != dauer) {
                 aryIndex--;
             }else {
-                this.warnungen += "Folgender Besichtigungspunkt ist zu weit von ihrem Hoten entfernt, um ihn in der gegebenen Zeitspanne zu besuchen: "
-                    + bp[aryIndex].strasse + " " + bp[aryIndex].hausnr;
+                this.warnungen += "Folgender Besichtigungspunkt ist zu weit von ihrem Hoten entfernt, um ihn in der gegebenen Zeitspanne zu besuchen: <b>"
+                    + bp[aryIndex].strasse + " " + bp[aryIndex].hausnr + "</b><br>";
             }
 
         }
+
 
         if(aryIndex < bp.length) {
             this.warnungen += "Folgende BP konnten nicht mehr eingeplant werden, weil nicht genug Zeit war: ";
