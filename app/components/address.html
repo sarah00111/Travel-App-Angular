@@ -98,6 +98,7 @@
             <md-button class="md-fab md-mini"
                        ng-disabled="$ctrl.formular.$invalid"
                        class="md-raised md-primary"
+                       ng-show="!($ctrl.editorState)"
                        ng-click="$ctrl.bestaetigen(true)">
                 <md-icon md-font-icon="material-icons">add</md-icon>
             </md-button>
@@ -105,7 +106,13 @@
             <md-button flex="30"
                        ng-disabled="$ctrl.disableNextStep()"
                        class="md-primary md-raised"
+                       ng-show="!($ctrl.editorState)"
                        ng-click="$ctrl.bestaetigen(false)">Anzeige</md-button>
+            <md-button flex="30"
+                       ng-disabled="$ctrl.disableNextStep()"
+                       class="md-primary md-raised"
+                       ng-show="$ctrl.editorState"
+                       ng-click="$ctrl.bestaetigen(false)"></md-button>
         </section>
     </form>
 </div>

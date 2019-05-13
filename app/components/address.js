@@ -10,7 +10,7 @@ app.component("address", {
 app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state({
         name: "address",
-        params: {id: 0},
+        params: {id: null, waypointId: null, editorState: false},
         component: "address"
     });
 
@@ -24,6 +24,8 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
 
     this.$onInit = () => {
         $log.debug("stateparams zeitraum: ", $stateParams.id);
+        this.waypointId = $stateParams.waypointId;
+        this.editorState = $stateParams.editorState;
     }
 
     this.disableNextStep = () => {
@@ -107,7 +109,7 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
 
                         $state.reload();
                     }else {
-                        $state.go("ausgabe", {id: $stateParams.id});
+                        $state.go("uebersicht", {id: $stateParams.id});
                     }
 
                 }
