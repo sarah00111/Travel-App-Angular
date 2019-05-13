@@ -27,6 +27,12 @@ app.controller("ZeitRaumController", function ($log, RespositoryService, $state)
     this.disableButton = false;
 
     this.$onInit = () => {
+        this.startDate = this.minDate1;
+        this.endDate = this.startDate;
+        if (this.startDate === undefined || this.endDate === undefined) {
+            this.disableButton = true;
+        }
+
         if (this.anfang === undefined || this.ende === undefined) {
             //wenn noch keine Variable eingetragen wurde
             this.disableButton = true;
@@ -63,8 +69,9 @@ app.controller("ZeitRaumController", function ($log, RespositoryService, $state)
 
     this.route = () => {
         this.id = RespositoryService.getId();
+        this.dateDiff = Math.floor((Date.UTC(this.endDate.getFullYear(), this.endDate.getMonth(), this.endDate.getDate()) - Date.UTC(this.startDate.getFullYear(), this.startDate.getMonth(), this.startDate.getDate()) ) /(1000 * 60 * 60 * 24)) + 1;
         //@Basem TODO: 4 durch Methoden-Auruf der Tage berechnet ersetzen
-        RespositoryService.newRoute(this.id, this.berechneDauer(), 4);
+        RespositoryService.newRoute(this.id, this.berechneDauer(), this.dateDiff);
         $state.go("address", {id: this.id});
     }
 
