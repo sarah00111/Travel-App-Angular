@@ -107,22 +107,21 @@
                        ng-disabled="$ctrl.formular.$invalid"
                        class="md-primary"
                        ng-show="!($ctrl.editorState)"
-                       ng-click="$ctrl.bestaetigen(true)">
-                <md-icon md-font-icon="material-icons">add</md-icon>
+                       ng-click="$ctrl.bestaetigen(true, false)">
+                <md-icon md-font-icon="material-icons" >add</md-icon>
             </md-button>
             <!--style="background-color:#176CBE; color:white;"-->
             <md-button flex="30"
                        ng-disabled="$ctrl.disableNextStep()"
                        ng-show="!($ctrl.editorState)"
                        class="md-raised md-primary"
-                       ng-click="$ctrl.bestaetigen(false)">Anzeige
-            </md-button>
+                       ng-click="$ctrl.bestaetigen(false, false)">Anzeige</md-button>
+
             <md-button flex="30"
                        ng-disabled="$ctrl.disableNextStep()"
                        class="md-primary md-raised"
                        ng-show="$ctrl.editorState"
-                       ng-click="$ctrl.bestaetigen(false)">anzeige2
-            </md-button>
+                       ng-click="$ctrl.bestaetigen(false, true)">anzeige2</md-button>
         </section>
     </form>
 </div>
