@@ -6,63 +6,75 @@
     </md-toolbar>
 
     <!--TODO: ng-messages ?!-->
-    <md-content layout-margin layout="column" layout-align="center start" style="height:100vh;">
-        <div style="width: 90%;" layout-margin>
-            <div>
-                <h4>Startdatum</h4>
-                <md-datepicker ng-model="$ctrl.startDate" ng-change="$ctrl.compareDate()" md-min-date="$ctrl.minDate1"></md-datepicker>
+    <form name="$ctrl.formular" layout="column">
+        <md-content layout-margin layout="column" layout-align="center start" style="height:100vh;">
+            <div style="width: 90%;" layout-margin>
+                <div>
+                    <h4>Startdatum</h4>
+                    <md-datepicker ng-model="$ctrl.startDate" ng-change="$ctrl.compareDate()" md-min-date="$ctrl.minDate1"></md-datepicker>
+                </div>
             </div>
-        </div>
 
-        <div style="width: 90%;" layout-margin>
-            <div>
-                <h4>Enddatum</h4>
-                <md-datepicker ng-model="$ctrl.endDate" md-min-date="$ctrl.minDate2"></md-datepicker>
+            <div style="width: 90%;" layout-margin>
+                <div>
+                    <h4>Enddatum</h4>
+                    <md-datepicker ng-model="$ctrl.endDate" md-min-date="$ctrl.minDate2"></md-datepicker>
+                </div>
             </div>
-        </div>
 
-        <div style="width: 90%;" layout-margin>
-            <md-input-container
-                    style="width:80%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
-                <label style="padding:10px 0px 0px 20px;">Anfangszeit</label>
-                <input type="time"
-                       ng-model="$ctrl.anfang"
-                       placeholder="HH:mm:ss"
-                       min="00:00:00"
-                       max="24:00:00"
-                       ng-change="$ctrl.berechneDauer()"
-                       required />
-            </md-input-container>
-        </div>
+            <div style="width: 90%;" layout-margin>
+                <md-input-container
+                        style="width:80%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
+                    <label style="padding:10px 0px 0px 20px;">Anfangszeit</label>
+                    <input type="time"
+                           ng-model="$ctrl.anfang"
+                           placeholder="HH:mm:ss"
+                           min="00:00:00"
+                           max="24:00:00"
+                           ng-change="$ctrl.berechneDauer()"
+                           name="startDate"
+                           required />
 
-        <div style="width: 90%;" layout-margin>
-            <md-input-container
-                    style="width:80%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
-                <label style="padding:10px 0px 0px 20px;">Endzeit</label>
-                <input type="time"
-                       ng-model="$ctrl.ende"
-                       placeholder="HH:mm:ss"
-                       min="00:00:00"
-                       max="24:00:00"
-                       ng-change="$ctrl.berechneDauer()"
-                       required>
-            </md-input-container>
-        </div>
-        <div>
-            {{ $ctrl.timeError }}
-        </div>
+                    <div ng-messages="$ctrl.formular.startDate.$error">
+                        <div ng-message="required">Sie müssen eine Dauer angeben!</div>
+                    </div>
+                </md-input-container>
+            </div>
 
-        <div style="margin-left: 20px;">
-            <!--hier wird die Differenz zwischen der Endzeit und der Anfangszeit wird ausgerechnet und in hier ausgegeben-->
-            <!--{{$ctrl.berechneDauer() | date: "shortTime" : "UTC"}}-->
-        </div>
-    </md-content>
-    <section layout="row" layout-align="end end" layout-wrap >
-        <!--style="background-color:#176CBE; color:white;"-->
-        <md-button flex="30"
-                   class="md-raised md-primary"
-                   ng-disabled="$ctrl.disableButton"
-                   ng-click="$ctrl.route()">neue Adresse</md-button>
-    </section>
+            <div style="width: 90%;" layout-margin>
+                <md-input-container
+                        style="width:80%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
+                    <label style="padding:10px 0px 0px 20px;">Endzeit</label>
+                    <input type="time"
+                           ng-model="$ctrl.ende"
+                           placeholder="HH:mm:ss"
+                           min="{{$ctrl.start | date: 'shortTime' : 'UTC'}}:00"
+                           max="24:00:00"
+                           ng-change="$ctrl.berechneDauer()"
+                           name="endDate"
+                           required>
+                    <div ng-messages="$ctrl.formular.endDate.$error">
+                        <div ng-message="required">Sie müssen eine Dauer angeben!</div>
+                        <div ng-hide="!$ctrl.disableButton">Die Endzeit darf nicht vor der Anfangszeit sein!</div>
+                    </div>
+                </md-input-container>
+            </div>
+            <div>
+                {{ $ctrl.timeError }}
+            </div>
+
+            <div style="margin-left: 20px;">
+                <!--hier wird die Differenz zwischen der Endzeit und der Anfangszeit wird ausgerechnet und in hier ausgegeben-->
+                <!--{{$ctrl.berechneDauer() | date: "shortTime" : "UTC"}}-->
+            </div>
+        </md-content>
+        <section layout="row" layout-align="end end" layout-wrap >
+            <!--style="background-color:#176CBE; color:white;"-->
+            <md-button flex="30"
+                       class="md-raised md-primary"
+                       ng-disabled="$ctrl.disableButton"
+                       ng-click="$ctrl.route()">neue Adresse</md-button>
+        </section>
+    </form>
 
 </div>
