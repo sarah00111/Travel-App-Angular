@@ -96,10 +96,7 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
                         this.fehlermeldungen += "<p>Meinten Sie die Straße <b>" + this.strasseAPI + "</b>? </p>";
                         this.fehlermeldungen += "<p>Wenn ja korrigieren Sie Ihre Eingabe und bestätigen Sie erneut!</p>";
                     }else {
-
-
-                        RespositoryService.newAddressForRoute($stateParams.id, new Adresse(this.strasse, this.hausnummer, this.plz, this.ort, this.lat, this.lon));
-
+                        
                         if(changeAdress){
                             RespositoryService.getRoute($stateParams.id).waypoints[$stateParams.waypointId] = new Adresse(this.strasse, this.hausnummer, this.plz, this.ort, this.lat, this.lon);
                             $state.go("uebersicht", {id: $stateParams.id});
