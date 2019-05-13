@@ -7,6 +7,20 @@
 
     <md-content layout-margin layout="column" layout-align="center start" style="height:100vh;">
         <div style="width: 90%;" layout-margin>
+            <div>
+                <h4>Startdatum</h4>
+                <md-datepicker ng-model="$ctrl.startDate" ng-change="$ctrl.compareDate()" md-min-date="$ctrl.minDate1"></md-datepicker>
+            </div>
+        </div>
+
+        <div style="width: 90%;" layout-margin>
+            <div>
+                <h4>Enddatum</h4>
+                <md-datepicker ng-model="$ctrl.endDate" md-min-date="$ctrl.minDate2"></md-datepicker>
+            </div>
+        </div>
+
+        <div style="width: 90%;" layout-margin>
             <md-input-container
                     style="width:80%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
                 <label style="padding:10px 0px 0px 20px;">Anfangszeit</label>
@@ -33,6 +47,10 @@
                        required>
             </md-input-container>
         </div>
+        <div>
+            {{ $ctrl.timeError }}
+        </div>
+
         <div style="margin-left: 20px;">
             <!--hier wird die Differenz zwischen der Endzeit und der Anfangszeit wird ausgerechnet und in hier ausgegeben-->
             <!--{{$ctrl.berechneDauer() | date: "shortTime" : "UTC"}}-->
@@ -42,7 +60,7 @@
         <!--style="background-color:#176CBE; color:white;"-->
         <md-button flex="30"
                    class="md-raised md-primary"
-                   ng-disabled="$ctrl.nextStep()"
+                   ng-disabled="$ctrl.disableButton"
                    ng-click="$ctrl.route()">neue Adresse</md-button>
     </section>
 
