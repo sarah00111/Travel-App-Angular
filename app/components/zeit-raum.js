@@ -14,7 +14,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         component: "zeitRaum"
     });
 
-    $urlRouterProvider.otherwise("/zeit-raum");
+    //$urlRouterProvider.otherwise("/zeit-raum");
 });
 
 
@@ -50,7 +50,7 @@ app.controller("ZeitRaumController", function ($log, RespositoryService, $state)
         this.minDate1.getMonth(),
         this.minDate1.getDate()
     );
-    
+
     this.compareDate = () => {
         this.endDate = this.endDate | this.minDate2;
         if (this.startDate >= this.endDate) {
@@ -64,7 +64,7 @@ app.controller("ZeitRaumController", function ($log, RespositoryService, $state)
     this.route = () => {
         this.id = RespositoryService.getId();
         this.dateDiff = Math.floor((Date.UTC(this.endDate.getFullYear(), this.endDate.getMonth(), this.endDate.getDate()) - Date.UTC(this.startDate.getFullYear(), this.startDate.getMonth(), this.startDate.getDate()) ) /(1000 * 60 * 60 * 24)) + 1;
-        RespositoryService.newRoute(this.id, this.berechneDauer(), this.dateDiff);
+        RespositoryService.newRoute(this.id, this.berechneDauer(), this.dateDiff, this.anfang);
         $state.go("address", {id: this.id});
     }
 

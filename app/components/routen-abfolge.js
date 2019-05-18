@@ -35,6 +35,7 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
 
     this.$onInit = () => {
         this.routeBerechnen();
+        this.uhrzeit = RespositoryService.getRoute($stateParams.id).uhrzeit;
     }
 
     this.zuUebersicht= () => {
@@ -55,6 +56,7 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
                         end: this.start.strasse + this.start.hausnr + ";" + this.start.lat + "," + this.start.lon,
                         mode: "pedestrian;fastest"}})
             .then(response => {
+                this.ic = response.data.results[0].interconnections;
                 /*$log.debug("response: ", response);*/
 
                 //BP in richtiger Reihenfolge speichern
@@ -91,7 +93,9 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
                         let promises = this.getTimeToHotel(this.zwischenAry, this.start);
                         Promise.all(promises)
                             .then(response2 => {
-                                this.ergebnis = this.getRouteForDay(response2, tage, sekunden,this.zwischenAry, this.start, response.data.results[0].interconnections);
+                                this.ergebnis = this.getRouteForDay(response2, tage, sekunden,this.zwischenAry, this.start, this.ic);
+
+
                                 if(this.ergebnis[0].length > 0) {
                                     $log.debug("Route für mehrere Tage berechnet");
                                     $log.debug("Warnungen: ", this.warnungen)
@@ -99,6 +103,7 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
                                     if(this.ergebnis[this.ergebnis.length - 1].length == 0) {
                                         this.ergebnis.pop();
                                     }
+                                    this.getUhrzeiten();
                                 }else {
                                     $log.debug("keine route konnte berechnet werden & ergebnis leer");
                                     $log.debug("Warnungen: ", this.warnungen)
@@ -112,7 +117,10 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
 
 
                     }else {
+                        $log.debug("oneday Route", this.ic);
                         this.oneDayRoute = true;
+                        this.getUhrzeiten();
+
                     }
                 /*}*/
 
@@ -120,6 +128,7 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
             .catch(error => {
                 let gleicheBP = RegExp('Waypoint id .* is not unique');
                 let falscheAPICredentials = RegExp('.*type="PermissionError".*');
+                let dailyRequests = RegExp('Daily limit of 10 requests has been reached');
 
                 if(falscheAPICredentials.test(error.data)) {
                     $log.error("falsche Credentials!");
@@ -127,11 +136,25 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
                     this.routeBerechnen();
                 }else if(gleicheBP.test(error.data.errors[0])) {
                     $log.error("zwei gleiche Adressen eingegeben!");
+                }else if(dailyRequests.test(error.data.errors[0])) {
+                    $log.error("zu viele Requests!");
+                    ApiService.newCredentials();
+                    this.routeBerechnen();
                 }else {
                     $log.error("ein Fehler ist aufgetreten: ", error);
                 }
             });
 
+
+    }
+
+    this.getUhrzeiten = () => {
+        this.uhrzeiten = [];
+        let summe = this.uhrzeit.getTime();
+        this.ic.forEach(ic => {
+            summe += ic.time * 1000;
+            this.uhrzeiten.push(summe);
+        })
 
     }
 

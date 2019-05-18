@@ -43,7 +43,6 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
     this.$onInit = () => {
         this.waypointId = $stateParams.waypointId;
         this.editorState = $stateParams.editorState;
-
     }
 
     this.disableNextStep = () => {

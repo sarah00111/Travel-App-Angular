@@ -6,24 +6,24 @@
         margin: 20px;
         padding: 20px;
     }
-    .eintrag {
-        border-bottom: 1px solid #E1E1E1;
-        padding: 10px;
-    }
-    .eintrag p {
-        margin: 0px;
-    }
+
 
     h1 {
         font-size: 20px;
         font-weight: normal;
         text-align: center;
     }
+    .warnungen {
+        background-color: orange;
+        padding: 10px;
+        border: 1px solid darkorange;
+    }
 
 </style>
 
 <div id="routenAbfolge">
     <h1>Route</h1>
+
     <!--div, wo jegliche Fehlermeldungen, die während den Berechnungen aufgetreten sind dem Benutzer in angebrachter weise erklärt werden-->
     <div class="warnungen" ng-bind-html="$ctrl.warnungen"></div>
 
@@ -54,27 +54,17 @@
 
     <md-whiteframe class="md-whiteframe-3dp tag" layout="column" ng-show="$ctrl.oneDayRoute">
         <h2>Tag 1</h2>
-        <div class="eintrag">
-            <p> {{$ctrl.start.strasse}} {{$ctrl.start.hausnr}} </p>
-        </div>
-        <div ng-repeat="bp in $ctrl.zwischenAry track by $index" class="eintrag">
-            <p>{{bp.strasse}} {{bp.hausnr}} </p>
-        </div>
-        <div class="eintrag">
-            <p>{{$ctrl.start.strasse}} {{$ctrl.start.hausnr}} </p>
-        </div>
+        <eintrag obj="$ctrl.start" uhrzeit="$ctrl.uhrzeit"></eintrag>
+        <eintrag obj="bp" ng-repeat="bp in $ctrl.zwischenAry track by $index" uhrzeit="$ctrl.uhrzeiten[$index]"></eintrag>
+        <eintrag obj="$ctrl.start" uhrzeit="$ctrl.uhrzeiten[$ctrl.uhrzeiten.length -1]"></eintrag>
     </md-whiteframe>
 
     <md-whiteframe ng-repeat="tag in $ctrl.ergebnis track by $index" class="md-whiteframe-3dp tag" layout="column" ng-show="$ctrl.manyDaysRoute">
         <h2>Tag {{$index + 1}}</h2>
-        <div class="eintrag">
-            <p> {{$ctrl.start.strasse}} {{$ctrl.start.hausnr}} </p>
-        </div>
+        <eintrag obj="$ctrl.start" uhrzeit="$ctrl.uhrzeit"></eintrag>
         <div ng-repeat="bp in $ctrl.ergebnis[$index] track by $index" class="eintrag">
             <p>{{bp.strasse}} {{bp.hausnr}}</p>
         </div>
-        <div class="eintrag">
-            <p> {{$ctrl.start.strasse}} {{$ctrl.start.hausnr}} </p>
-        </div>
+        <eintrag obj="$ctrl.start" uhrzeit="$ctrl.uhrzeiten[$ctrl.uhrzeiten.length -1]"></eintrag>
     </md-whiteframe>
 </div>
