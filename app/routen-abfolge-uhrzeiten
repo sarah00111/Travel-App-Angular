@@ -1,3 +1,78 @@
+HTML:
+
+<style>
+    #routenAbfolge {
+        padding: 10px;
+    }
+    .tag {
+        margin: 20px;
+        padding: 20px;
+    }
+
+
+    h1 {
+        font-size: 20px;
+        font-weight: normal;
+        text-align: center;
+    }
+    .warnung {
+        background-color: orange;
+        padding: 10px;
+        border: 1px solid darkorange;
+    }
+
+
+</style>
+
+<div id="routenAbfolge">
+    <h1>Route</h1>
+
+    <!--div, wo jegliche Fehlermeldungen, die während den Berechnungen aufgetreten sind dem Benutzer in angebrachter weise erklärt werden-->
+    <div ng-class="$ctrl.klasse()" ng-bind-html="$ctrl.warnungen"></div>
+
+    <div ng-show="$ctrl.noRoute">
+        <!--Situatilon: keine Route wurde berechnet, weil es zu viele BP sind-->
+        <div ng-show="$ctrl.tooManyBP">
+            <h3>Zu viele Besichtigungspunkt!</h3>
+            <p>Es ist nicht möglich all ihre Besichtigungspunkte, in Ihrem Zeitraum zu besichtigen.</p>
+            <p>Gehen Sie zurück zur Übersicht und
+                <ul>
+                    <li>vergrößern den Zeitraum (Anzahl der Stunden) oder</li>
+                    <li>entfernen min 1 Besichtigungspunkt</li>
+                </ul>
+                Anschließend können Sie erneut versuchen Routen auszurechnen.
+            </p>
+            <md-button class="md-raised md-primary" ng-click="$ctrl.zuUebersicht()">Zurück zur Übersicht</md-button>
+        </div>
+
+        <!--Situation: es wurde versucht eine Route zu berechnen, aber die Wege zu allen BP sind zu lang-->
+        <div ng-hide="$ctrl.tooManyBP">
+            <h3>Besichtigungspunkte zu weit entfernt!</h3>
+            <p>Jeder Ihrer Besichtigungspunkte ist so weit von Ihrem Hotel entfernt, dass es sich nicht ausgeht in der Zeitspanne eines Tages
+                dorthin und wieder zurück zu fahren!
+            </p>
+
+        </div>
+    </div>
+
+    <md-whiteframe class="md-whiteframe-3dp tag" layout="column" ng-show="$ctrl.oneDayRoute">
+        <h2>Tag 1</h2>
+        <eintrag obj="$ctrl.start" uhrzeit="$ctrl.uhrzeit"></eintrag>
+        <eintrag obj="bp" ng-repeat="bp in $ctrl.zwischenAry track by $index" uhrzeit="$ctrl.uhrzeiten[$index]"></eintrag>
+        <eintrag obj="$ctrl.start" uhrzeit="$ctrl.uhrzeiten[$ctrl.uhrzeiten.length -1]"></eintrag>
+    </md-whiteframe>
+
+    <md-whiteframe ng-repeat="tag in $ctrl.ergebnis track by $index" class="md-whiteframe-3dp tag" layout="column" ng-show="$ctrl.manyDaysRoute">
+        <h2>Tag {{$index + 1}}</h2>
+        <eintrag obj="$ctrl.start" uhrzeit="$ctrl.uhrzeit"></eintrag>
+        <eintrag ng-repeat="bp in $ctrl.ergebnis[$index] track by $index2" obj="bp" uhrzeit="$ctrl.uhrzeiten[$index][$index2]">
+        </eintrag>
+
+    </md-whiteframe>
+</div>
+
+
+JS:
 "use strict";
 
 app.component("routenAbfolge", {
@@ -35,6 +110,7 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
 
     this.$onInit = () => {
         this.routeBerechnen();
+        this.uhrzeit = RespositoryService.getRoute($stateParams.id).uhrzeit;
     }
 
     this.klasse = () => {
@@ -106,10 +182,12 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
 
                                 }else {
                                     if(this.ergebnis[0].length > 0) {
+                                        $log.debug("Uhrzeiten: ", this.uhrzeiten);
                                         this.manyDaysRoute = true;
                                         if (this.ergebnis[this.ergebnis.length - 1].length == 0) {
                                             this.ergebnis.pop();
                                         }
+                                        /*this.getUhrzeiten();*/
                                     }else {
                                         this.noRoute = true;
                                     }
@@ -125,6 +203,7 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
                     }else {
                         $log.debug("oneday Route", this.ic);
                         this.oneDayRoute = true;
+                        this.getUhrzeiten();
 
                     }
                 /*}*/
@@ -153,14 +232,14 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
 
     }
 
-   /* this.getUhrzeiten = () => {
+    this.getUhrzeiten = () => {
         this.uhrzeiten = [];
         let summe = this.uhrzeit.getTime();
         this.ic.forEach(ic => {
             summe += ic.time * 1000;
             this.uhrzeiten.push(summe);
         });
-    }*/
+    }
 
     this.getTimeToHotel = (bp, start) => {
         //prüft wie lang es von jedem Besichtigungspunkt zum Hotel braucht
@@ -177,6 +256,7 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
 
     this.getRouteForDay =(response, tage, sekunden, bp, start, ic) => {
         var ergebnis = [];
+        this.uhrzeiten = [];
 
         /*index für die Arrays: bp, ic & allePromises
             wird am Anfang auf -1 gesetzt, weil es in der loop am Anfang erhöht wird
@@ -195,6 +275,7 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
             }
 
             ergebnis[i] = [];
+            this.uhrzeiten[i] = [];
             while(sekundenAmTag < sekunden){
                 /* zieht von den sekundenAmTag den Weg vom BP zum Hotel ab, weil man ja noch einen BP besuchen will & nicht zum Hotel
                  und fügt den BP zum Array für die Route an diesem Tag hinzu
@@ -202,12 +283,15 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
                 if(aryIndex > -1 && sekundenAmTag !=0) {
                     sekundenAmTag -= response[aryIndex].data.response.route[0].summary.baseTime;
                     ergebnis[i].push(bp[aryIndex]);
+                    this.uhrzeiten[i].push(this.uhrzeit.getTime() + sekundenAmTag);
 
                 }
                 aryIndex++;
 
                 //prüft, wenn alle bp abgearbeitet wurden und liefert das Ergebnis zurück
                 if(aryIndex == bp.length) {
+                    console.log("Uhrzeiten am Ende ", this.uhrzeiten);
+                    this.uhrzeiten[i].push(this.uhrzeit.getTime() + response[aryIndex].data.response.route[0].summary.baseTime);
                     return ergebnis;
                 }
 
@@ -231,6 +315,7 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
                     + bp[aryIndex].strasse + " " + bp[aryIndex].hausnr + "</b><br>";
             }
 
+            //this.uhrzeiten[i].push(response[aryIndex].data.response.route[0].summary.baseTime);
         }
 
 
@@ -241,6 +326,7 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
                 this.warnungen += "<li>" + bp[i].strasse + " " + bp[i].hausnr + "</li>";
             }
             this.warnungen +="</ul>";
+            this.uhrzeiten[this.uhrzeiten.length - 1].push(this.uhrzeit.getTime() + response[aryIndex].data.response.route[0].summary.baseTime);
             return ergebnis;
         }
 
