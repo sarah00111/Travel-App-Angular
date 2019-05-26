@@ -82,6 +82,10 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
                     if(!this.lon){
                         this.fehlermeldungen = "<p>Die von Ihnen angegebene Adresse kann nicht gefunden werden.</p>"
                         this.fehlermeldungen += "<p><b>Bitte prüfen Sie ihre gesamte Eingabe!</b></p>"
+                    }else if(this.strasse != this.strasseAPI) {
+                        this.fehlermeldungen = "<p>Die von Ihnen eingegebene Straße wurde so nicht gefunden.</p>"
+                        this.fehlermeldungen += "<p>Meinten Sie die Straße <b>" + this.strasseAPI + "</b>? </p>";
+                        this.fehlermeldungen += "<p>Wenn ja korrigieren Sie Ihre Eingabe und bestätigen Sie erneut!</p>";
                     }else if(this.ort != this.stadtAPI) {
                         this.fehlermeldungen = "<p>Die von Ihnen eingegebene Straße wurde nicht in dem von Ihnen angegebenen Ort gefunden. </p>"
                         this.fehlermeldungen += "<p>Meinten Sie den Ort <b>" + this.stadtAPI + "</b>? </p>";
@@ -89,10 +93,6 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
                     }else if(this.plz != this.plzAPI) {
                         this.fehlermeldungen = "<p>Die von Ihnen eingegebene Straße wurde nicht in der von Ihnen angegebenen PLZ gefunden. </p>"
                         this.fehlermeldungen += "<p>Meinten Sie die PLZ <b>" + this.plzAPI + "</b>? </p>";
-                        this.fehlermeldungen += "<p>Wenn ja korrigieren Sie Ihre Eingabe und bestätigen Sie erneut!</p>";
-                    }else if(this.strasse != this.strasseAPI) {
-                        this.fehlermeldungen = "<p>Die von Ihnen eingegebene Straße wurde so nicht gefunden.</p>"
-                        this.fehlermeldungen += "<p>Meinten Sie die Straße <b>" + this.strasseAPI + "</b>? </p>";
                         this.fehlermeldungen += "<p>Wenn ja korrigieren Sie Ihre Eingabe und bestätigen Sie erneut!</p>";
                     }else {
 
