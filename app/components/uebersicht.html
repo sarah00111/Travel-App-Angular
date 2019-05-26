@@ -18,7 +18,7 @@
         flex-direction: row;
         justify-content: space-between;
     }
-    #adresse{
+    .adresse{
         font-family: "Segoe UI";
         font-size: 20px;
     }
@@ -34,7 +34,7 @@
             Bearbeiten
         </div>
         <div class="title" layout-margin>
-            <p id="adresse">Adresse</p>
+            <p class="adresse">Adresse</p>
 
             <p>Startadresse</p>
         </div>
@@ -62,9 +62,23 @@
             <input type="radio" name="startWaypoint" ng-model="$ctrl.auswahl" ng-value="$index" layout-margin>
         </div>
 
-        {{$ctrl.route.minuten | date: "shortTime" : "UTC"}}
-        <br>
-        {{$ctrl.route.tage }} Tag(e)
+        <div class="title" layout-margin>
+            <p class="adresse">Zeitraum</p>
+        </div>
+        <div >
+            <div>
+            <md-button ui-sref="zeit-raum({id: $ctrl.id, editorState: true})"
+                       class="md-fab md-mini md-primary">
+                <md-icon md-font-icon="material-icons"> create</md-icon>
+            </md-button>
+            </div>
+
+            {{$ctrl.route.minuten | date: "shortTime" : "UTC"}}
+            <br>
+            {{$ctrl.route.tage }} Tag(e)
+
+        </div>
+
 
 
     </md-content>

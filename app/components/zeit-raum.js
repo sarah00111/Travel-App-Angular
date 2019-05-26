@@ -10,7 +10,7 @@ app.component("zeitRaum", {
 app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state({
         name: "zeit-raum",
-        url: "/zeit-raum",
+        params: {id: null, editorState: false},
         component: "zeitRaum"
     });
 
@@ -18,7 +18,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 });
 
 
-app.controller("ZeitRaumController", function ($log, RespositoryService, $state) {
+app.controller("ZeitRaumController", function ($log, RespositoryService, $state, $stateParams) {
 
     $log.debug("ZeitRaumController()");
     this.Date = new Date();
@@ -62,10 +62,20 @@ app.controller("ZeitRaumController", function ($log, RespositoryService, $state)
     this.id;
 
     this.route = () => {
-        this.id = RespositoryService.getId();
-        this.dateDiff = Math.floor((Date.UTC(this.endDate.getFullYear(), this.endDate.getMonth(), this.endDate.getDate()) - Date.UTC(this.startDate.getFullYear(), this.startDate.getMonth(), this.startDate.getDate()) ) /(1000 * 60 * 60 * 24)) + 1;
-        RespositoryService.newRoute(this.id, this.berechneDauer(), this.dateDiff, this.anfang);
-        $state.go("address", {id: this.id});
+        if($stateParams.id !== null){
+            this.id=$stateParams.id;
+            this.dateDiff = Math.floor((Date.UTC(this.endDate.getFullYear(), this.endDate.getMonth(), this.endDate.getDate()) - Date.UTC(this.startDate.getFullYear(), this.startDate.getMonth(), this.startDate.getDate()) ) /(1000 * 60 * 60 * 24)) + 1;
+            RespositoryService.getRoute(this.id).minuten = this.berechneDauer();
+            RespositoryService.getRoute(this.id).stunden = this.dateDiff;
+            RespositoryService.getRoute(this.id).uhrzeit = this.anfang;
+            $state.go("uebersicht", {id: this.id});
+        }else{
+            this.id = RespositoryService.getId();
+            this.dateDiff = Math.floor((Date.UTC(this.endDate.getFullYear(), this.endDate.getMonth(), this.endDate.getDate()) - Date.UTC(this.startDate.getFullYear(), this.startDate.getMonth(), this.startDate.getDate()) ) /(1000 * 60 * 60 * 24)) + 1;
+            RespositoryService.newRoute(this.id, this.berechneDauer(), this.dateDiff, this.anfang);
+            $state.go("address", {id: this.id});
+        }
+
     }
 
     this.berechneDauer = () => {
