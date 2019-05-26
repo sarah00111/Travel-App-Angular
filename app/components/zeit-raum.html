@@ -1,44 +1,96 @@
-<div layout="column" style="height:100vh;">
-    <md-toolbar>
-        <div class="md-toolbar-tools" layout-align="center center" style="background-color:#176CBE; ">
-            <h2 md-truncate style="font-family: 'Segoe UI'; font-size: 20px;">TravelApp</h2>
+<style>
+    .container {
+        height: 100vh;
+    }
+
+    h2 {
+        font-family: 'Segoe UI';
+        font-size: 25px;
+    }
+
+    #header-container {
+        font-family: "Segoe UI";
+        font-size: 20px;
+        text-align: center;
+        padding: 10px 0px 10px 0px;
+        border-bottom: 1px solid black;
+        width: 100%;
+
+    }
+
+    .date-width {
+        width: 90%;
+    }
+
+    .time-width {
+        width: 90%;
+
+    }
+
+    .input-time {
+        width: 80%;
+        background-color: #E1E1E1;
+        border-radius: 10px;
+        padding: 0px 20px 0px 20px;
+        margin: 20px 10px 5px 10px;
+    }
+
+    .label-padding {
+        padding: 10px 0px 0px 20px;
+    }
+
+    .von-bis {
+        font-size: 12px;
+        padding-bottom: 20px;
+    }
+</style>
+
+<div layout="column" class="container">
+    <md-toolbar class="md-primary">
+        <div class="md-toolbar-tools" layout-align="center center">
+            <h2>TravelApp</h2>
         </div>
     </md-toolbar>
 
+    <div id="header-container">
+        Zeitraum
+    </div>
     <!--TODO: ng-messages ?!-->
-    <md-content layout-margin layout="column" layout-align="center start" style="height:100vh;">
-        <div style="width: 90%;" layout-margin>
+    <md-content class="container" layout="column">
+        <div class="date-width" layout-margin>
+            <p class="head-zeit-datum">Datum:</p>
+
             <div>
-                <h4>Startdatum</h4>
-                <md-datepicker ng-model="$ctrl.startDate" ng-change="$ctrl.compareDate()" md-min-date="$ctrl.minDate1"></md-datepicker>
+                <p class="von-bis">Von: </p>
+                <md-datepicker ng-model="$ctrl.startDate" ng-change="$ctrl.compareDate()"
+                               md-min-date="$ctrl.minDate1"></md-datepicker>
             </div>
         </div>
 
-        <div style="width: 90%;" layout-margin>
+        <div class="date-width" layout-margin>
             <div>
-                <h4>Enddatum</h4>
-                <md-datepicker ng-model="$ctrl.endDate" md-min-date="$ctrl.minDate2"></md-datepicker>
+                <p class="von-bis">Bis:</p>
+                <md-datepicker id="datepick" ng-model="$ctrl.endDate" md-min-date="$ctrl.minDate2"></md-datepicker>
             </div>
         </div>
+        <div class="time-width" layout-margin>
+            <p class="head-zeit-datum">Zeit:</p>
 
-        <div style="width: 90%;" layout-margin>
-            <md-input-container
-                    style="width:80%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
-                <label style="padding:10px 0px 0px 20px;">Anfangszeit</label>
+            <md-input-container class="input-time">
+                <label class="label-padding">Anfangszeit</label>
                 <input type="time"
                        ng-model="$ctrl.anfang"
                        placeholder="HH:mm:ss"
                        min="00:00:00"
                        max="24:00:00"
                        ng-change="$ctrl.berechneDauer()"
-                       required />
+                       required/>
             </md-input-container>
         </div>
 
-        <div style="width: 90%;" layout-margin>
-            <md-input-container
-                    style="width:80%; background-color:#E1E1E1; border-radius: 10px; padding:0px 20px 0px 20px;">
-                <label style="padding:10px 0px 0px 20px;">Endzeit</label>
+        <div class="time-width" layout-margin>
+            <md-input-container class="input-time">
+                <label class="label-padding">Endzeit</label>
                 <input type="time"
                        ng-model="$ctrl.ende"
                        placeholder="HH:mm:ss"
@@ -51,18 +103,14 @@
         <div>
             {{ $ctrl.timeError }}
         </div>
-
-        <div style="margin-left: 20px;">
-            <!--hier wird die Differenz zwischen der Endzeit und der Anfangszeit wird ausgerechnet und in hier ausgegeben-->
-            <!--{{$ctrl.berechneDauer() | date: "shortTime" : "UTC"}}-->
-        </div>
     </md-content>
-    <section layout="row" layout-align="end end" layout-wrap >
+    <section layout="row" layout-align="end end" layout-wrap>
         <!--style="background-color:#176CBE; color:white;"-->
         <md-button flex="30"
                    class="md-raised md-primary"
                    ng-disabled="$ctrl.disableButton"
-                   ng-click="$ctrl.route()">neue Adresse</md-button>
+                   ng-click="$ctrl.route()">neue Adresse
+        </md-button>
     </section>
 
 </div>
