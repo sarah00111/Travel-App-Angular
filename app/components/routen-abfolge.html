@@ -1,18 +1,21 @@
 <style>
-    #routenAbfolge {
-        padding: 10px;
-    }
+
+
     .tag {
         margin: 20px;
         padding: 20px;
     }
 
-
-    h1 {
+    #header-container {
+        font-family: "Segoe UI";
         font-size: 20px;
-        font-weight: normal;
         text-align: center;
+        padding: 10px 0px 10px 0px;
+        border-bottom: 1px solid black;
+        width: 100%;
+
     }
+
     .warnung {
         background-color: orange;
         padding: 10px;
@@ -22,8 +25,15 @@
 
 </style>
 
-<div id="routenAbfolge">
-    <h1>Route</h1>
+<div>
+    <md-toolbar class="md-primary">
+        <div class="md-toolbar-tools" layout-align="center center">
+            <h2>TravelApp</h2>
+        </div>
+    </md-toolbar>
+    <div id="header-container">
+        Route
+    </div>
 
     <!--div, wo jegliche Fehlermeldungen, die während den Berechnungen aufgetreten sind dem Benutzer in angebrachter weise erklärt werden-->
     <div ng-class="$ctrl.klasse()" ng-bind-html="$ctrl.warnungen"></div>
@@ -34,11 +44,11 @@
             <h3>Zu viele Besichtigungspunkt!</h3>
             <p>Es ist nicht möglich all ihre Besichtigungspunkte, in Ihrem Zeitraum zu besichtigen.</p>
             <p>Gehen Sie zurück zur Übersicht und
-                <ul>
-                    <li>vergrößern den Zeitraum (Anzahl der Stunden) oder</li>
-                    <li>entfernen min 1 Besichtigungspunkt</li>
-                </ul>
-                Anschließend können Sie erneut versuchen Routen auszurechnen.
+            <ul>
+                <li>vergrößern den Zeitraum (Anzahl der Stunden) oder</li>
+                <li>entfernen min 1 Besichtigungspunkt</li>
+            </ul>
+            Anschließend können Sie erneut versuchen Routen auszurechnen.
             </p>
             <md-button class="md-raised md-primary" ng-click="$ctrl.zuUebersicht()">Zurück zur Übersicht</md-button>
         </div>
@@ -46,7 +56,8 @@
         <!--Situation: es wurde versucht eine Route zu berechnen, aber die Wege zu allen BP sind zu lang-->
         <div ng-hide="$ctrl.tooManyBP">
             <h3>Besichtigungspunkte zu weit entfernt!</h3>
-            <p>Jeder Ihrer Besichtigungspunkte ist so weit von Ihrem Hotel entfernt, dass es sich nicht ausgeht in der Zeitspanne eines Tages
+            <p>Jeder Ihrer Besichtigungspunkte ist so weit von Ihrem Hotel entfernt, dass es sich nicht ausgeht in der
+                Zeitspanne eines Tages
                 dorthin und wieder zurück zu fahren!
             </p>
 
@@ -55,12 +66,13 @@
 
     <md-whiteframe class="md-whiteframe-3dp tag" layout="column" ng-show="$ctrl.oneDayRoute">
         <h2>Tag 1</h2>
-        <eintrag obj="$ctrl.start" ></eintrag>
+        <eintrag obj="$ctrl.start"></eintrag>
         <eintrag obj="bp" ng-repeat="bp in $ctrl.zwischenAry track by $index"></eintrag>
-        <eintrag obj="$ctrl.start" ></eintrag>
+        <eintrag obj="$ctrl.start"></eintrag>
     </md-whiteframe>
 
-    <md-whiteframe ng-repeat="tag in $ctrl.ergebnis track by $index" class="md-whiteframe-3dp tag" layout="column" ng-show="$ctrl.manyDaysRoute">
+    <md-whiteframe ng-repeat="tag in $ctrl.ergebnis track by $index" class="md-whiteframe-3dp tag" layout="column"
+                   ng-show="$ctrl.manyDaysRoute">
         <h2>Tag {{$index + 1}}</h2>
         <eintrag obj="$ctrl.start"></eintrag>
         <eintrag ng-repeat="bp in $ctrl.ergebnis[$index] track by $index2" obj="bp"></eintrag>
