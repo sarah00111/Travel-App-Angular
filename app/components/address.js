@@ -52,7 +52,7 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
             }
         }
         return true;
-    }
+    };
 
     this.bestaetigen = (newAdress, changeAdress) => {
         this.fehlermeldungen = "";

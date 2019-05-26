@@ -40,29 +40,36 @@ app.controller("UebersichtController", function ($log, $stateParams, Adresse, Ro
 
     };
 
-    this.disableNextStep = () => {
+    this.disableNextStep = (wurdeDeletet) => {
+        this.anzahl = RespositoryService.getRoute($stateParams.id).waypoints.length;
         if(this.auswahl === 0 || this.auswahl > 0) {
-            return false;
+            if(this.anzahl > 1) {
+                return false;
+            }
         }
         return true;
-    }
+    };
+
+    this.addAddress = () => {
+        $state.go("address", {id: this.id});
+    };
 
     this.nextStep = () => {
         $state.go("routen-abfolge", {id: $stateParams.id});
 
-        console.log(this.auswahl);
+        /*console.log(this.auswahl);*/
         RespositoryService.getRoute($stateParams.id).start = RespositoryService.getRoute($stateParams.id).waypoints[this.auswahl];
         RespositoryService.getRoute($stateParams.id).waypoints.splice(this.auswahl, 1);
 
-        console.log(RespositoryService.getRoute($stateParams.id));
+        /*console.log(RespositoryService.getRoute($stateParams.id));*/
 
         RespositoryService.getRoute($stateParams.id).end = new Adresse("Rennweg", "89b", "1030", "Wien", 48.19072, 16.39729);
     }
 
     this.delete = (index) => {
-        console.log(RespositoryService.getRoute($stateParams.id).waypoints);
+        /*console.log(RespositoryService.getRoute($stateParams.id).waypoints);*/
         RespositoryService.getRoute($stateParams.id).waypoints.splice(index, 1);
-        console.log("danach");
-        console.log(RespositoryService.getRoute($stateParams.id).waypoints);
+        /*console.log("danach");
+        console.log(RespositoryService.getRoute($stateParams.id).waypoints);*/
     }
 });
