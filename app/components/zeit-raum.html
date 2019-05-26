@@ -132,10 +132,17 @@
         </div>
     </md-content>
     <section layout="row" layout-align="end end" layout-wrap>
-        <!--style="background-color:#176CBE; color:white;"-->
         <md-button flex="30"
                    class="md-raised md-primary"
                    ng-disabled="$ctrl.disableButton"
+                   ng-show="$ctrl.editorState"
+                   ng-click="$ctrl.toUebersicht()">Übersicht
+        </md-button>
+
+        <md-button flex="30"
+                   class="md-raised md-primary"
+                   ng-disabled="$ctrl.disableButton"
+                   ng-hide="$ctrl.editorState"
                    ng-click="$ctrl.route()">neue Adresse
         </md-button>
     </section>

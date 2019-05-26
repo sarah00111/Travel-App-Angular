@@ -10,7 +10,7 @@ app.component("zeitRaum", {
 app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state({
         name: "zeit-raum",
-        params: {id: null, editorState: false},
+        params: {id: null, startDatum: null, endDatum: null, startUhrzeit: null, endUhrzeit: null},
         component: "zeitRaum"
     });
 
@@ -23,12 +23,26 @@ app.controller("ZeitRaumController", function ($log, RespositoryService, $state,
     $log.debug("ZeitRaumController()");
     this.Date = new Date();
     this.Date2 = new Date();
+
     this.timeError = "";
     this.disableButton = false;
+    this.editorState = false;
 
     this.$onInit = () => {
+
         this.startDate = this.minDate1;
         this.endDate = this.startDate;
+
+        if($stateParams.id !== null) {
+            this.editorState = true;
+            this.startDate = $stateParams.startDatum;
+            this.endDate = $stateParams.endDatum;
+
+            this.anfang = $stateParams.startUhrzeit;
+            this.ende = $stateParams.endUhrzeit;
+        }
+
+
         if (this.startDate === undefined || this.endDate === undefined) {
             this.disableButton = true;
         }
@@ -37,7 +51,7 @@ app.controller("ZeitRaumController", function ($log, RespositoryService, $state,
             //wenn noch keine Variable eingetragen wurde
             this.disableButton = true;
         }
-    }
+    };
 
     this.minDate1 = new Date(
         this.Date.getFullYear(),
@@ -57,26 +71,25 @@ app.controller("ZeitRaumController", function ($log, RespositoryService, $state,
             this.minDate2 = this.startDate;
             this.endDate = this.startDate;
         }
-    }
+    };
 
     this.id;
 
-    this.route = () => {
-        if($stateParams.id !== null){
-            this.id=$stateParams.id;
-            this.dateDiff = Math.floor((Date.UTC(this.endDate.getFullYear(), this.endDate.getMonth(), this.endDate.getDate()) - Date.UTC(this.startDate.getFullYear(), this.startDate.getMonth(), this.startDate.getDate()) ) /(1000 * 60 * 60 * 24)) + 1;
-            RespositoryService.getRoute(this.id).minuten = this.berechneDauer();
-            RespositoryService.getRoute(this.id).stunden = this.dateDiff;
-            RespositoryService.getRoute(this.id).uhrzeit = this.anfang;
-            $state.go("uebersicht", {id: this.id});
-        }else{
-            this.id = RespositoryService.getId();
-            this.dateDiff = Math.floor((Date.UTC(this.endDate.getFullYear(), this.endDate.getMonth(), this.endDate.getDate()) - Date.UTC(this.startDate.getFullYear(), this.startDate.getMonth(), this.startDate.getDate()) ) /(1000 * 60 * 60 * 24)) + 1;
-            RespositoryService.newRoute(this.id, this.berechneDauer(), this.dateDiff, this.anfang);
-            $state.go("address", {id: this.id});
-        }
-
+    this.toUebersicht = () => {
+        this.id = $stateParams.id;
+        this.dateDiff = Math.floor((Date.UTC(this.endDate.getFullYear(), this.endDate.getMonth(), this.endDate.getDate()) - Date.UTC(this.startDate.getFullYear(), this.startDate.getMonth(), this.startDate.getDate()) ) /(1000 * 60 * 60 * 24)) + 1;
+        RespositoryService.getRoute(this.id).minuten = this.berechneDauer();
+        RespositoryService.getRoute(this.id).tage = this.dateDiff;
+        RespositoryService.getRoute(this.id).uhrzeit = this.anfang;
+        $state.go("uebersicht", {id: this.id});
     }
+
+    this.route = () => {
+        this.id = RespositoryService.getId();
+        this.dateDiff = Math.floor((Date.UTC(this.endDate.getFullYear(), this.endDate.getMonth(), this.endDate.getDate()) - Date.UTC(this.startDate.getFullYear(), this.startDate.getMonth(), this.startDate.getDate()) ) /(1000 * 60 * 60 * 24)) + 1;
+        RespositoryService.newRoute(this.id, this.berechneDauer(), this.dateDiff, this.anfang, this.startDate);
+        $state.go("address", {id: this.id});
+    };
 
     this.berechneDauer = () => {
         if (this.ende - this.anfang < 0) {
@@ -91,6 +104,6 @@ app.controller("ZeitRaumController", function ($log, RespositoryService, $state,
         }
 
         return this.ende - this.anfang;
-    }
+    };
 
 });

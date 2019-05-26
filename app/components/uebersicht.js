@@ -17,21 +17,37 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 });
 
 
-app.controller("UebersichtController", function ($log, $stateParams, Adresse, Route, RespositoryService, $state) {
+app.controller("UebersichtController", function ($log, $stateParams, Adresse, Route, RespositoryService, $state, $timeout) {
 
     $log.debug("UebersichtController()");
 
     this.index;
     this.route;
+
     this.$onInit = () => {
         this.index = RespositoryService.getRouteIndex($stateParams.id);
-        this.route = RespositoryService.getRoute(this.index);
 
+        this.route = RespositoryService.getRoute(this.index);
         this.id = $stateParams.id;
+
+        this.endDatum = new Date(
+            this.route.startDatum.getFullYear(),
+            this.route.startDatum.getMonth(),
+            this.route.startDatum.getDate() + this.route.tage - 1
+        );
+
+        this.endUhrzeit = new Date(this.route.uhrzeit.getTime() + this.route.minuten);
+
+    };
+
+    this.disableNextStep = () => {
+        if(this.auswahl === 0 || this.auswahl > 0) {
+            return false;
+        }
+        return true;
     }
 
     this.nextStep = () => {
-        $log.debug("next step");
         $state.go("routen-abfolge", {id: $stateParams.id});
 
         console.log(this.auswahl);

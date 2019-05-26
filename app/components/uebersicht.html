@@ -33,6 +33,39 @@
         <div id="header-container">
             Bearbeiten
         </div>
+
+        <div class="title" layout-margin>
+            <p class="adresse">Zeitraum</p>
+        </div>
+        <div >
+            <p>Datum</p>
+            <div layout="row">
+                <md-button ui-sref="zeit-raum({id: $ctrl.id, startDatum: $ctrl.route.startDatum, endDatum: $ctrl.endDatum, startUhrzeit: $ctrl.route.uhrzeit, endUhrzeit: $ctrl.endUhrzeit})"
+                           class="md-fab md-mini md-primary">
+                    <md-icon md-font-icon="material-icons"> create</md-icon>
+                </md-button>
+
+                <div>
+                    {{$ctrl.route.startDatum | date: 'd.M.yyyy'}} - {{$ctrl.endDatum | date: 'd.M.yyyy'}}
+                </div>
+            </div>
+
+
+            <p>Uhrzeit</p>
+            <div layout="row">
+                <md-button ui-sref="zeit-raum({id: $ctrl.id, startDatum: $ctrl.route.startDatum, endDatum: $ctrl.endDatum, startUhrzeit: $ctrl.route.uhrzeit, endUhrzeit: $ctrl.endUhrzeit})"
+                           class="md-fab md-mini md-primary">
+                    <md-icon md-font-icon="material-icons"> create</md-icon>
+                </md-button>
+
+                <div>
+                    {{$ctrl.route.uhrzeit | date: 'HH:mm'}} - {{$ctrl.endUhrzeit | date: 'HH:mm'}}
+                </div>
+            </div>
+
+        </div>
+
+
         <div class="title" layout-margin>
             <p class="adresse">Adresse</p>
 
@@ -62,29 +95,14 @@
             <input type="radio" name="startWaypoint" ng-model="$ctrl.auswahl" ng-value="$index" layout-margin>
         </div>
 
-        <div class="title" layout-margin>
-            <p class="adresse">Zeitraum</p>
-        </div>
-        <div >
-            <div>
-            <md-button ui-sref="zeit-raum({id: $ctrl.id, editorState: true})"
-                       class="md-fab md-mini md-primary">
-                <md-icon md-font-icon="material-icons"> create</md-icon>
-            </md-button>
-            </div>
 
-            {{$ctrl.route.minuten | date: "shortTime" : "UTC"}}
-            <br>
-            {{$ctrl.route.tage }} Tag(e)
-
-        </div>
 
 
 
     </md-content>
     <section layout="row" layout-align="end end" layout-wrap>
         <!--style="background-color:#176CBE; color:white;"-->
-        <md-button ng-click="$ctrl.nextStep()"
+        <md-button ng-disabled="$ctrl.disableNextStep()" ng-click="$ctrl.nextStep()"
                    class="md-primary md-raised">Next Step
         </md-button>
     </section>

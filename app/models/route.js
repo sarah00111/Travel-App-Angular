@@ -11,11 +11,12 @@ app.factory("Route", function () {
     waypoints: Array mit Einträgen vom Typ Adresse, dass alle Besichtigungspunkte enthält
     uhrzeit: Uhrzeit zu der jeden Tag gestartet wird
      */
-    function Route(id, minuten, tage, uhrzeit) {
+    function Route(id, minuten, tage, uhrzeit, startDatum) {
         this.id = id;
         this.minuten = minuten;
         this.tage = tage;
         this.uhrzeit = uhrzeit;
+        this.startDatum = startDatum;
         this.start = "";
         this.end = "";
         this.waypoints = [];

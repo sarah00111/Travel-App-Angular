@@ -101,7 +101,6 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
                                 this.ergebnis = this.getRouteForDay(response2, tage, sekunden,this.zwischenAry, this.start, this.ic);
 
                                 if (typeof this.ergebnis[0] === 'undefined') {
-                                    $log.debug("keine route konnte berechnet werden & ergebnis leer");
                                     this.noRoute = true;
 
                                 }else {
@@ -123,7 +122,6 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
 
 
                     }else {
-                        $log.debug("oneday Route", this.ic);
                         this.oneDayRoute = true;
 
                     }
