@@ -48,6 +48,11 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
     }
 
     this.routeBerechnen = () => {
+        /*
+        destinations ... Variable in den get-Parameter für die einzelnen BP für die Abfrage zusammen gestellt werden
+        zaehler... Varibale, die in destinations verwendet wird, damit die verschiedenen BP unterschiedliche id's in der Abfrage habe (destination1, destination2,...)
+            weil die API das verlangt
+         */
         let destinations = "";
         let zaehler = 0;
         this.adressen.forEach(function (e) {
@@ -61,10 +66,15 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
                         end: this.start.strasse + this.start.hausnr + ";" + this.start.lat + "," + this.start.lon,
                         mode: "pedestrian;fastest"}})
             .then(response => {
+                /*
+                ic... Array mit den, von der API berechneten, Zwischenstops während der Route
+                    (beinhaltet pro Eintrag: von-bis, Zeit, Abstand)
+                 */
                 this.ic = response.data.results[0].interconnections;
-                /*$log.debug("response: ", response);*/
 
-                //BP in richtiger Reihenfolge speichern
+                /*
+                 zwischenAry... Array, in der die richtige Abfolge der waypoints gespeichert wird
+                 */
                 this.zwischenAry = [];
                 let waypoints = response.data.results[0].waypoints;
 
@@ -76,56 +86,57 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
                 /*RespositoryService.rep()[this.index].waypoints = this.zwischenAry;
                 this.adressen = RespositoryService.rep()[this.index].waypoints;*/
 
+
                 let sekunden = RespositoryService.rep()[this.index].minuten / 1000;
                 let tage = RespositoryService.rep()[this.index].tage;
                 let zeitraumAPI = response.data.results[0].time;
 
-                /*ist die Dauer der ideale Route größer als der zur Verfügung stehende Zeitraum?
-                    wenn ja: der User wird darauf hingewiesen, dass keine Route berechnet wurde, weil zu viele BPangegeben wurden
-                    wenn nein: ist der Zeitraum für einen Tag kleiner als die gesamte Route?
-                        wenn ja: liefert die Funktion zur Berechnung der Routen an mehreren Tagen min eine Route für den ersten Tag?
-                            wenn ja: die Routen für mehrere Tage werden angezeigt
-                            wenn nein: der user wird darauf hingewiesen, dass keine Route berechnet werden konnte, weil die Wege vom Hotel zu den BP zu lange für einen Tag sind
-                        wenn nein: die gesamte Route wird an einem Tag angezeigt
+                /*kann die Route nicht an einem Tag gegangen werden?
+                    wenn ja: Route für mehrere Tage wird berechnet
+                    wenn nein: oneDayRoute... Route für den einen Tag wird dem User angezeigt
                  */
-                /*if(sekunden * tage < zeitraumAPI) {
-                    $log.debug("keine Route kann berechnet werden & toomManyBP");
-                    this.noRoute = true;
-                    this.tooManyBP = true;
-                }else {*/
-                    if(sekunden < zeitraumAPI) {
+                if(sekunden < zeitraumAPI) {
+                    let promises = this.getTimeToHotel(this.zwischenAry, this.start);
+                    Promise.all(promises)
+                        .then(response2 => {
+                            this.ergebnis = this.getRouteForDay(response2, tage, sekunden,this.zwischenAry, this.start, this.ic);
 
-                        let promises = this.getTimeToHotel(this.zwischenAry, this.start);
-                        Promise.all(promises)
-                            .then(response2 => {
-                                this.ergebnis = this.getRouteForDay(response2, tage, sekunden,this.zwischenAry, this.start, this.ic);
-
-                                if (typeof this.ergebnis[0] === 'undefined') {
-                                    this.noRoute = true;
-
-                                }else {
-                                    if(this.ergebnis[0].length > 0) {
-                                        this.manyDaysRoute = true;
-                                        if (this.ergebnis[this.ergebnis.length - 1].length == 0) {
-                                            this.ergebnis.pop();
-                                        }
-                                    }else {
-                                        this.noRoute = true;
+                            /*
+                            ist ergebnis undefined (bedeutet, das keine Route für keinen Tag berechnet wurde)?
+                            wenn ja: noRoute... enabled im HTML einen Bereich, der den User informiert, dass keine Route berechnet werden konnte
+                            wenn nein: gibt es zumindest für den ersten Tag (=ergebnis[0]) min 1 BP?
+                                wenn ja: manyDaysRoute... zeigt eine Route über mehrere Tage an (siehe HTML)
+                                    wurde bei der Erstellung der Route an der letzten Stelle ein leerer Tag eingeplant?
+                                        wenn ja: letzten (=leeren) Tag löschen
+                                wenn nein: noRoute... enabled im HTML einen Bereich, der den User informiert, dass keine Route berechnet werden konnte
+                             */
+                            if (typeof this.ergebnis[0] === 'undefined') {
+                                this.noRoute = true;
+                            }else {
+                                if(this.ergebnis[0].length > 0) {
+                                    this.manyDaysRoute = true;
+                                    if (this.ergebnis[this.ergebnis.length - 1].length == 0) {
+                                        this.ergebnis.pop();
                                     }
-
+                                }else {
+                                    this.noRoute = true;
                                 }
-                                $timeout();
-                            })
-                            .catch(error => {
-                                $log.error("oops, da gabs es wohl einen Fehler, " + error);
-                            });
+
+                            }
+
+                            /*$timeout() nötig, weil das HTML gebildet wurde bevor die response von den ganzen promises da war
+                            --> variablen aktualisieren
+                             */
+                            $timeout();
+                        })
+                        .catch(error => {
+                            $log.error("oops, da gabs es wohl einen Fehler, " + error);
+                        });
 
 
-                    }else {
-                        this.oneDayRoute = true;
-
-                    }
-                /*}*/
+                }else {
+                    this.oneDayRoute = true;
+                }
 
             })
             .catch(error => {
@@ -151,6 +162,10 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
 
     }
 
+    /*
+    Funktion, um die Uhrzeiten aller Zwischenstops für eine Route über 1 Tag auszurechnen
+    FUNKTIONIERT
+     */
    /* this.getUhrzeiten = () => {
         this.uhrzeiten = [];
         let summe = this.uhrzeit.getTime();
@@ -160,8 +175,11 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
         });
     }*/
 
+   /*
+   Funktion, die prüft wie lang es von jedem Besichtigungspunkt zum Hotel braucht und das Ergebnis als Array von Promises zurückliefert
+    */
     this.getTimeToHotel = (bp, start) => {
-        //prüft wie lang es von jedem Besichtigungspunkt zum Hotel braucht
+        //geo!-Schreibweise wird von der API für jeden Waypoint verlangt
         let geoPunkt1 = 'geo!' + start.lat + ',' + start.lon;
         let allePromises = [];
         for (let punkt of bp) {
@@ -173,7 +191,16 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
         return allePromises;
     }
 
+    /*
+    Funktion, die eine Route über mehrere Tage berechnet
+     */
     this.getRouteForDay =(response, tage, sekunden, bp, start, ic) => {
+        /*
+        ergebnis... zweidimensionales Array
+        erste Dimension: entspricht Tag (z.B. ergebnis[0] = ertser Tag)
+        zweite Dimension: entspricht den einzelnen BP pro Tag (z.B. ergebnis[0][0] = erster Besichtigungspunkt am ersten Tag)
+        enthält NICHT Start- & Endpunkte, weil die sowieso immer gleich sind
+         */
         var ergebnis = [];
 
         /*index für die Arrays: bp, ic & allePromises
@@ -193,8 +220,9 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
             }
 
             ergebnis[i] = [];
-            while(sekundenAmTag < sekunden){
-                /* zieht von den sekundenAmTag den Weg vom BP zum Hotel ab, weil man ja noch einen BP besuchen will & nicht zum Hotel
+            while(sekundenAmTag <= sekunden){
+                /* zieht von den sekundenAmTag den Weg vom BP zum Hotel ab, weil man evt noch ein anderen BP besuchen wird
+                    (nicht unbedingt direkt danach zum Hotel fährt)
                  und fügt den BP zum Array für die Route an diesem Tag hinzu
                  */
                 if(aryIndex > -1 && sekundenAmTag !=0) {
@@ -204,11 +232,17 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
                 }
                 aryIndex++;
 
-                //prüft, wenn alle bp abgearbeitet wurden und liefert das Ergebnis zurück
+                //prüft, ob alle BP eingeplant wurden liefert das Ergebnis zurück
                 if(aryIndex == bp.length) {
                     return ergebnis;
                 }
 
+                /*
+                sekundenAmTag = 0 bedeutet, dass es der 1. BP für diesen Tag ist --> Dauer für diesen BP ist also der Weg vom Hotel zum BP
+                    und wieder zum Hotel zurück
+                sekunden != 0 bedeutet, dass die Dauer für diesen BP der Weg vom letzten BP zu diesem (=interconnection time)
+                    + die Zeit zurück zum Hotel ist
+                 */
                 if(sekundenAmTag == 0) {
                     dauer =  2 * response[aryIndex].data.response.route[0].summary.baseTime;
                 }else {
@@ -231,10 +265,16 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
 
         }
 
-
+        /*
+        wenn der aryIndex kleiner als bp.length ist bedeutet das, dass nicht alle BP eingeplant wurden
+        der User wird informiert, dass es zeitlich nicht möglich war diese BP einzuplanen
+         */
         if(aryIndex < bp.length) {
             this.warnungen += "<br> Folgende Besichtigungspunkte konnten nicht mehr eingeplant werden, weil nicht genug Zeit war: ";
             this.warnungen += "<ul>";
+            /*
+            aryIndex + 1, weil der aryIndex angibt, welche BP schon eingeplant wurden (für diese BP braucht man also keine Warnung mehr)
+             */
             for(let i = aryIndex + 1; i < bp.length; i++) {
                 this.warnungen += "<li>" + bp[i].strasse + " " + bp[i].hausnr + "</li>";
             }
