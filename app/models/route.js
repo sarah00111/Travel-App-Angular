@@ -3,7 +3,7 @@
 app.factory("Route", function () {
 
     /*
-    minuten: verfügbare Stunden für die Planung der route
+    minuten: verfügbare ms für die Planung der Route (sind KEINE minuten sondern ms)
     tage: verfügbare Tage (als Anzahl z.B. 4) für die Planung der route
     adressenArray: ein Array mit Adressen laut der adresse-Factory
     start: Objekt vom Typ Adresse, das angibt, wo die Route beginnt
