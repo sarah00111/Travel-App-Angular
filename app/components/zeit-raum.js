@@ -14,7 +14,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         component: "zeitRaum"
     });
 
-    $urlRouterProvider.otherwise("/zeit-raum");
+    //$urlRouterProvider.otherwise("/zeit-raum");
 });
 
 
@@ -27,6 +27,12 @@ app.controller("ZeitRaumController", function ($log, RespositoryService, $state)
     this.disableButton = false;
 
     this.$onInit = () => {
+        this.startDate = this.minDate1;
+        this.endDate = this.startDate;
+        if (this.startDate === undefined || this.endDate === undefined) {
+            this.disableButton = true;
+        }
+
         if (this.anfang === undefined || this.ende === undefined) {
             //wenn noch keine Variable eingetragen wurde
             this.disableButton = true;
@@ -45,21 +51,11 @@ app.controller("ZeitRaumController", function ($log, RespositoryService, $state)
         this.minDate1.getDate()
     );
 
-
-    this.anfang = new Date(1, 1, 1970, 1);
-    this.ende = new Date(1, 1, 1970, 3, 1);
-
     this.compareDate = () => {
         this.endDate = this.endDate | this.minDate2;
         if (this.startDate >= this.endDate) {
-            console.log("Startdatum >= Enddatum");
-            console.log("Startdatum: " + this.startDate);
-            console.log("Enddatum: " + this.endDate);
             this.minDate2 = this.startDate;
             this.endDate = this.startDate;
-        } else {
-            console.log("Alles gut");
-
         }
     }
 
@@ -67,8 +63,8 @@ app.controller("ZeitRaumController", function ($log, RespositoryService, $state)
 
     this.route = () => {
         this.id = RespositoryService.getId();
-        //@Basem TODO: 4 durch Methoden-Auruf der Tage berechnet ersetzen
-        RespositoryService.newRoute(this.id, this.berechneDauer(), 4);
+        this.dateDiff = Math.floor((Date.UTC(this.endDate.getFullYear(), this.endDate.getMonth(), this.endDate.getDate()) - Date.UTC(this.startDate.getFullYear(), this.startDate.getMonth(), this.startDate.getDate()) ) /(1000 * 60 * 60 * 24)) + 1;
+        RespositoryService.newRoute(this.id, this.berechneDauer(), this.dateDiff, this.anfang);
         $state.go("address", {id: this.id});
     }
 

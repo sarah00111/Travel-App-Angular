@@ -1,17 +1,32 @@
 <style>
-    .tag {
-        padding: 20px;
-    }
-    .eintrag {
-        border-bottom: 1px solid black;
+    #routenAbfolge {
         padding: 10px;
     }
+    .tag {
+        margin: 20px;
+        padding: 20px;
+    }
+
+
+    h1 {
+        font-size: 20px;
+        font-weight: normal;
+        text-align: center;
+    }
+    .warnung {
+        background-color: orange;
+        padding: 10px;
+        border: 1px solid darkorange;
+    }
+
+
 </style>
 
-<div>
-    TODO: all die Sachen sieht man noch nicht
+<div id="routenAbfolge">
+    <h1>Route</h1>
+
     <!--div, wo jegliche Fehlermeldungen, die während den Berechnungen aufgetreten sind dem Benutzer in angebrachter weise erklärt werden-->
-    <div class="warnungen" ng-bind-html="$ctrl.warnungen"></div>
+    <div ng-class="$ctrl.klasse()" ng-bind-html="$ctrl.warnungen"></div>
 
     <div ng-show="$ctrl.noRoute">
         <!--Situatilon: keine Route wurde berechnet, weil es zu viele BP sind-->
@@ -40,16 +55,15 @@
 
     <md-whiteframe class="md-whiteframe-3dp tag" layout="column" ng-show="$ctrl.oneDayRoute">
         <h2>Tag 1</h2>
-        <div class="eintrag">
-            <p> {{$ctrl.start.strasse}} {{$ctrl.start.hausnr}} </p>
-        </div>
-        <p ng-repeat="bp in $ctrl.zwischenAry track by $index" class="eintrag">{{bp.strasse}} {{bp.hausnr}}</p>
-        <p class="eintrag"> {{$ctrl.start.strasse}} {{$ctrl.start.hausnr}}</p>
+        <eintrag obj="$ctrl.start" ></eintrag>
+        <eintrag obj="bp" ng-repeat="bp in $ctrl.zwischenAry track by $index"></eintrag>
+        <eintrag obj="$ctrl.start" ></eintrag>
     </md-whiteframe>
 
-    <md-whiteframe ng-repeat="tag in $ctrl.ergebnis" class="md-whiteframe-3dp tag" layout="column" ng-show="$ctrl.manyDaysRoute">
-        <p class="eintrag"> {{$ctrl.start.strasse}} {{$ctrl.start.hausnr}}</p>
-        <p ng-repeat="bp in $ctrl.ergebnis[tag] track by $index" class="eintrag">{{bp.strasse}} {{bp.hausnr}}</p>
-        <p class="eintrag"> {{$ctrl.start.strasse}} {{$ctrl.start.hausnr}}</p>
+    <md-whiteframe ng-repeat="tag in $ctrl.ergebnis track by $index" class="md-whiteframe-3dp tag" layout="column" ng-show="$ctrl.manyDaysRoute">
+        <h2>Tag {{$index + 1}}</h2>
+        <eintrag obj="$ctrl.start"></eintrag>
+        <eintrag ng-repeat="bp in $ctrl.ergebnis[$index] track by $index2" obj="bp"></eintrag>
+        <eintrag obj="$ctrl.start"></eintrag>
     </md-whiteframe>
 </div>

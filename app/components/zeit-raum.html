@@ -19,7 +19,7 @@
     }
 
     .date-width {
-        width: 90%;
+        width: 97%;
     }
 
     .time-width {
@@ -43,6 +43,9 @@
         font-size: 12px;
         padding-bottom: 20px;
     }
+    #abstand{
+        margin-bottom:30px;
+    }
 </style>
 
 <div layout="column" class="container">
@@ -56,52 +59,76 @@
         Zeitraum
     </div>
     <!--TODO: ng-messages ?!-->
+
     <md-content class="container" layout="column">
         <div class="date-width" layout-margin>
-            <p class="head-zeit-datum">Datum:</p>
 
-            <div>
-                <p class="von-bis">Von: </p>
-                <md-datepicker ng-model="$ctrl.startDate" ng-change="$ctrl.compareDate()"
-                               md-min-date="$ctrl.minDate1"></md-datepicker>
-            </div>
-        </div>
 
-        <div class="date-width" layout-margin>
-            <div>
-                <p class="von-bis">Bis:</p>
-                <md-datepicker id="datepick" ng-model="$ctrl.endDate" md-min-date="$ctrl.minDate2"></md-datepicker>
-            </div>
-        </div>
-        <div class="time-width" layout-margin>
-            <p class="head-zeit-datum">Zeit:</p>
+            <form name="$ctrl.formular" layout="column">
+                <!--<md-content class="container" layout-margin layout="column" layout-align=" start">-->
+                <p class="">Datum:</p>
+                <!--<div>-->
+                <!--<h4>Startdatum</h4>-->
+                <!--<md-datepicker ng-model="$ctrl.startDate" ng-change="$ctrl.compareDate()" md-min-date="$ctrl.minDate1"></md-datepicker>-->
+                <!--</div>-->
+                <!--&gt;>>>>>> 3bedc2b0140003fdd2bb74a275c88afeb969af1d-->
+                <div layout-margin>
+                    <p class="von-bis">Von: </p>
+                    <md-datepicker ng-model="$ctrl.startDate" ng-change="$ctrl.compareDate()"
+                                   md-min-date="$ctrl.minDate1"></md-datepicker>
+                </div>
 
-            <md-input-container class="input-time">
-                <label class="label-padding">Anfangszeit</label>
-                <input type="time"
-                       ng-model="$ctrl.anfang"
-                       placeholder="HH:mm:ss"
-                       min="00:00:00"
-                       max="24:00:00"
-                       ng-change="$ctrl.berechneDauer()"
-                       required/>
-            </md-input-container>
-        </div>
+                <div class="date-width" layout-margin>
+                    <div>
+                        <p class="von-bis">Bis:</p>
+                        <md-datepicker id="datepick" ng-model="$ctrl.endDate"
+                                       md-min-date="$ctrl.minDate2"></md-datepicker>
+                    </div>
+                </div>
+                <div class="time-width" id="abstand">
+                    <p class="head-zeit-datum">Zeit:</p>
 
-        <div class="time-width" layout-margin>
-            <md-input-container class="input-time">
-                <label class="label-padding">Endzeit</label>
-                <input type="time"
-                       ng-model="$ctrl.ende"
-                       placeholder="HH:mm:ss"
-                       min="00:00:00"
-                       max="24:00:00"
-                       ng-change="$ctrl.berechneDauer()"
-                       required>
-            </md-input-container>
-        </div>
-        <div>
-            {{ $ctrl.timeError }}
+                    <md-input-container class="input-time">
+                        <label class="label-padding">Anfangszeit</label>
+                        <input
+                                type="time"
+                               ng-model="$ctrl.anfang"
+                               placeholder="HH:mm:ss"
+                               min="00:00:00"
+                               max="24:00:00"
+                               ng-change="$ctrl.berechneDauer()"
+                               name="startDate"
+                               required/>
+
+                        <div ng-messages="$ctrl.formular.startDate.$error">
+                            <div ng-message="required">Sie müssen eine Dauer angeben!</div>
+                        </div>
+                    </md-input-container>
+                </div>
+
+                <div class="time-width">
+                    <md-input-container class="input-time">
+                        <label class="label-padding">Endzeit</label>
+
+                        <input type="time"
+                               ng-model="$ctrl.ende"
+                               placeholder="HH:mm:ss"
+                               min="{{$ctrl.start | date: 'shortTime' : 'UTC'}}:00"
+                               max="24:00:00"
+                               ng-change="$ctrl.berechneDauer()"
+                               name="endDate"
+                               required>
+                        <div ng-messages="$ctrl.formular.endDate.$error">
+                            <div ng-message="required">Sie müssen eine Dauer angeben!</div>
+                            <div ng-hide="!$ctrl.disableButton">Die Endzeit darf nicht vor der Anfangszeit sein!
+                            </div>
+                        </div>
+                    </md-input-container>
+                </div>
+                <div>
+                    {{ $ctrl.timeError }}
+                </div>
+            </form>
         </div>
     </md-content>
     <section layout="row" layout-align="end end" layout-wrap>
@@ -112,5 +139,4 @@
                    ng-click="$ctrl.route()">neue Adresse
         </md-button>
     </section>
-
 </div>

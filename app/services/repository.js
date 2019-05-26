@@ -53,8 +53,8 @@ app.service("RespositoryService", function ($log, Route, Adresse) {
         return index;
     }
 
-    this.newRoute = (id, minuten, tage) => {
-        rep.push(new Route(id, minuten, tage));
+    this.newRoute = (id, minuten, tage, uhrzeit) => {
+        rep.push(new Route(id, minuten, tage, uhrzeit));
     }
 
     //params ... Objekt vom Typ Adresse
