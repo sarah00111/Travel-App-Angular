@@ -126,6 +126,13 @@
     </md-content>
     <section layout="row" layout-align="end end" layout-wrap>
         <!--style="background-color:#176CBE; color:white;"-->
+
+        <md-button class="md-fab md-mini md-primary"
+                   ng-disabled="$ctrl.formular.$invalid"
+                   class="md-primary"
+                   ng-click="$ctrl.addAddress()">
+            <md-icon md-font-icon="material-icons">add</md-icon>
+        </md-button>
         <md-button ng-disabled="$ctrl.disableNextStep()" ng-click="$ctrl.nextStep()"
                    class="md-primary md-raised">Next Step
         </md-button>
