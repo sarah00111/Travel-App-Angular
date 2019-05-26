@@ -18,43 +18,70 @@
         flex-direction: row;
         justify-content: space-between;
     }
-    .adresse{
+
+    .ueberschrift {
         font-family: "Segoe UI";
         font-size: 20px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .padd {
+        padding-top: 5px;
+    }
+
+    .marg {
+        margin-top: 15px;
+        margin-right: 15px;
+    }
+
+    .space {
+        margin: 0px;
+    }
+
+    #startadresse {
+        font-size: 12px;
+        text-align: right;
+    }
+
+    #addr {
+        margin-top: 40px;
     }
 </style>
 <div layout="column" class="container">
     <md-content class="container">
-        <md-toolbar>
-            <div class="md-toolbar-tools" layout-align="center center" style="background-color:#176CBE; ">
-                <h2 md-truncate style="font-family: 'Segoe UI'; font-size: 20px;">TravelApp</h2>
-            </div>
-        </md-toolbar>
+        <md-toolbar class="md-primary">
+        <div class="md-toolbar-tools" layout-align="center center">
+            <h2>TravelApp</h2>
+        </div>
+    </md-toolbar>
         <div id="header-container">
             Bearbeiten
         </div>
 
         <div class="title" layout-margin>
-            <p class="adresse">Zeitraum</p>
+            <p class="ueberschrift">Zeitraum</p>
         </div>
-        <div >
+        <div layout-margin>
             <p>Datum</p>
             <div layout="row">
-                <md-button ui-sref="zeit-raum({id: $ctrl.id, startDatum: $ctrl.route.startDatum, endDatum: $ctrl.endDatum, startUhrzeit: $ctrl.route.uhrzeit, endUhrzeit: $ctrl.endUhrzeit})"
-                           class="md-fab md-mini md-primary">
+                <md-button
+                        ui-sref="zeit-raum({id: $ctrl.id, startDatum: $ctrl.route.startDatum, endDatum: $ctrl.endDatum, startUhrzeit: $ctrl.route.uhrzeit, endUhrzeit: $ctrl.endUhrzeit})"
+                        class="md-fab md-mini md-primary space">
                     <md-icon md-font-icon="material-icons"> create</md-icon>
                 </md-button>
 
-                <div>
+                <div layout-margin class="padd">
                     {{$ctrl.route.startDatum | date: 'd.M.yyyy'}} - {{$ctrl.endDatum | date: 'd.M.yyyy'}}
                 </div>
             </div>
 
 
             <p>Uhrzeit</p>
-            <div layout="row">
-                <md-button ui-sref="zeit-raum({id: $ctrl.id, startDatum: $ctrl.route.startDatum, endDatum: $ctrl.endDatum, startUhrzeit: $ctrl.route.uhrzeit, endUhrzeit: $ctrl.endUhrzeit})"
-                           class="md-fab md-mini md-primary">
+            <div layout="row" layout-margin class="padd">
+                <md-button
+                        ui-sref="zeit-raum({id: $ctrl.id, startDatum: $ctrl.route.startDatum, endDatum: $ctrl.endDatum, startUhrzeit: $ctrl.route.uhrzeit, endUhrzeit: $ctrl.endUhrzeit})"
+                        class="md-fab md-mini md-primary space">
                     <md-icon md-font-icon="material-icons"> create</md-icon>
                 </md-button>
 
@@ -67,10 +94,9 @@
 
 
         <div class="title" layout-margin>
-            <p class="adresse">Adresse</p>
-
-            <p>Startadresse</p>
+            <p class="ueberschrift" id="addr">Adresse</p>
         </div>
+        <p id="startadresse" layout-margin>Startadresse</p>
         <div ng-repeat="i in $ctrl.route.waypoints track by $index" class="title">
             <div>
                 <md-button ui-sref="address({id: $ctrl.id ,waypointId: $index, editorState: true})"
@@ -92,11 +118,9 @@
             <!--</md-button>-->
 
 
-            <input type="radio" name="startWaypoint" ng-model="$ctrl.auswahl" ng-value="$index" layout-margin>
+            <input class="marg" type="radio" name="startWaypoint" ng-model="$ctrl.auswahl" ng-value="$index"
+                   layout-margin>
         </div>
-
-
-
 
 
     </md-content>

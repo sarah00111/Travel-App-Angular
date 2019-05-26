@@ -43,9 +43,18 @@
         font-size: 12px;
         padding-bottom: 20px;
     }
-    #abstand{
-        margin-bottom:30px;
+
+    #abstand {
+        margin-bottom: 30px;
     }
+
+    .ueberschrift {
+        font-family: "Segoe UI";
+        font-size: 20px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
 </style>
 
 <div layout="column" class="container">
@@ -66,7 +75,7 @@
 
             <form name="$ctrl.formular" layout="column">
                 <!--<md-content class="container" layout-margin layout="column" layout-align=" start">-->
-                <p class="">Datum:</p>
+                <p class="ueberschrift">Datum:</p>
                 <!--<div>-->
                 <!--<h4>Startdatum</h4>-->
                 <!--<md-datepicker ng-model="$ctrl.startDate" ng-change="$ctrl.compareDate()" md-min-date="$ctrl.minDate1"></md-datepicker>-->
@@ -86,19 +95,19 @@
                     </div>
                 </div>
                 <div class="time-width" id="abstand">
-                    <p class="head-zeit-datum">Zeit:</p>
+                    <p class="ueberschrift">Zeit:</p>
 
                     <md-input-container class="input-time">
                         <label class="label-padding">Anfangszeit</label>
                         <input
                                 type="time"
-                               ng-model="$ctrl.anfang"
-                               placeholder="HH:mm:ss"
-                               min="00:00:00"
-                               max="24:00:00"
-                               ng-change="$ctrl.berechneDauer()"
-                               name="startDate"
-                               required/>
+                                ng-model="$ctrl.anfang"
+                                placeholder="HH:mm:ss"
+                                min="00:00:00"
+                                max="24:00:00"
+                                ng-change="$ctrl.berechneDauer()"
+                                name="startDate"
+                                required/>
 
                         <div ng-messages="$ctrl.formular.startDate.$error">
                             <div ng-message="required">Sie müssen eine Dauer angeben!</div>
