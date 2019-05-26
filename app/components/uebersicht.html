@@ -1,25 +1,77 @@
-<div layout="column" style="height:100vh;">
-    <md-toolbar>
-        <div class="md-toolbar-tools" layout-align="center center" style="background-color:#176CBE; ">
-            <h2 md-truncate style="font-family: 'Segoe UI'; font-size: 20px;">TravelApp</h2>
+<style>
+    .container {
+        height: 100vh;
+    }
+
+    #header-container {
+        font-family: "Segoe UI";
+        font-size: 20px;
+        text-align: center;
+        padding: 10px 0px 10px 0px;
+        border-bottom: 1px solid black;
+        width: 100%;
+
+    }
+
+    .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #adresse{
+        font-family: "Segoe UI";
+        font-size: 20px;
+    }
+</style>
+<div layout="column" class="container">
+    <md-content class="container">
+        <md-toolbar>
+            <div class="md-toolbar-tools" layout-align="center center" style="background-color:#176CBE; ">
+                <h2 md-truncate style="font-family: 'Segoe UI'; font-size: 20px;">TravelApp</h2>
+            </div>
+        </md-toolbar>
+        <div id="header-container">
+            Bearbeiten
         </div>
-    </md-toolbar>
+        <div class="title" layout-margin>
+            <p id="adresse">Adresse</p>
 
-    <p ng-repeat="i in $ctrl.route.waypoints track by $index">
-        {{i.strasse}} {{i.hausnr}} <br>
-        {{i.plz}}, {{i.ort}}
+            <p>Startadresse</p>
+        </div>
+        <div ng-repeat="i in $ctrl.route.waypoints track by $index" class="title">
+            <div>
+                <md-button ui-sref="address({id: $ctrl.id ,waypointId: $index, editorState: true})"
+                           class="md-fab md-mini md-primary">
+                    <md-icon md-font-icon="material-icons"> create</md-icon>
+                </md-button>
 
-        <md-button ui-sref="address({id: $ctrl.id ,waypointId: $index, editorState: true})"
-                   class="md-primary md-raised">Change</md-button>
-        <md-button ng-click="$ctrl.delete($index)"
-                   class="md-primary md-raised">Delete</md-button>
-        <input type="radio" name="startWaypoint" ng-model="$ctrl.auswahl" ng-value="$index">
-    </p>
+                <md-button ng-click="$ctrl.delete($index)"
+                           class=" md-fab md-mini md-primary ">
+                    <md-icon md-font-icon="material-icons"> delete</md-icon>
+                </md-button>
 
-    {{$ctrl.route.minuten  | date: "shortTime" : "UTC"}}
-    <br>
-    {{$ctrl.route.tage }} Tag(e)
 
-    <md-button ng-click="$ctrl.nextStep()"
-               class="md-primary md-raised">Next Step</md-button>
+                {{i.strasse}} {{i.hausnr}}, {{i.plz}}, {{i.ort}}
+            </div>
+
+            <!--<md-button ui-sref="address({id: $ctrl.id ,waypointId: $index, editorState: true})"-->
+            <!--class="md-primary md-raised">Change-->
+            <!--</md-button>-->
+
+
+            <input type="radio" name="startWaypoint" ng-model="$ctrl.auswahl" ng-value="$index" layout-margin>
+        </div>
+
+        {{$ctrl.route.minuten | date: "shortTime" : "UTC"}}
+        <br>
+        {{$ctrl.route.tage }} Tag(e)
+
+
+    </md-content>
+    <section layout="row" layout-align="end end" layout-wrap>
+        <!--style="background-color:#176CBE; color:white;"-->
+        <md-button ng-click="$ctrl.nextStep()"
+                   class="md-primary md-raised">Next Step
+        </md-button>
+    </section>
 </div>
