@@ -53,6 +53,9 @@
     #ort {
         width: 40%;
     }
+    address{
+        font-style: normal;
+    }
 
 </style>
 <head>
@@ -131,13 +134,13 @@
                        ng-disabled="$ctrl.disableNextStep()"
                        ng-show="!($ctrl.editorState)"
                        class="md-raised md-primary"
-                       ng-click="$ctrl.bestaetigen(false)">Übersicht
+                       ng-click="$ctrl.bestaetigen(false, false)">Übersicht
             </md-button>
             <md-button flex="30"
                        ng-disabled="$ctrl.disableNextStep()"
                        class="md-primary md-raised"
                        ng-show="$ctrl.editorState"
-                       ng-click="$ctrl.bestaetigen(false)">Übersicht
+                       ng-click="$ctrl.bestaetigen(false, true)">Übersicht
             </md-button>
         </section>
     </md-content>
