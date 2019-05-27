@@ -44,7 +44,7 @@
     <div ng-show="$ctrl.noRoute">
         <!--Situatilon: keine Route wurde berechnet, weil es zu viele BP sind-->
         <div ng-show="$ctrl.tooManyBP">
-            <h3>Zu viele Besichtigungspunkt!</h3>
+            <h3>Zu viele Besichtigungspunkte!</h3>
             <p>Es ist nicht möglich all ihre Besichtigungspunkte, in Ihrem Zeitraum zu besichtigen.</p>
             <p>Gehen Sie zurück zur Übersicht und
             <ul>
@@ -53,7 +53,7 @@
             </ul>
             Anschließend können Sie erneut versuchen Routen auszurechnen.
             </p>
-            <md-button class="md-raised md-primary" ng-click="$ctrl.zuUebersicht()">Zurück zur Übersicht</md-button>
+
         </div>
 
         <!--Situation: es wurde versucht eine Route zu berechnen, aber die Wege zu allen BP sind zu lang-->
@@ -63,7 +63,7 @@
                 Zeitspanne eines Tages
                 dorthin und wieder zurück zu fahren!
             </p>
-
+            <!--<md-button class="md-raised md-primary" ng-click="$ctrl.zuUebersicht()">Zurück zur Übersicht</md-button>-->
         </div>
     </div>
 
@@ -80,7 +80,7 @@
                    ng-show="$ctrl.manyDaysRoute">
         <h2>Tag {{$index + 1}}</h2>
         <eintrag obj="$ctrl.start"></eintrag>
-        <eintrag ng-repeat="bp in $ctrl.ergebnis[$index] track by $index2" obj="bp"></eintrag>
+        <eintrag ng-repeat="bp in $ctrl.ergebnis[$index] track by $index" obj="bp"></eintrag>
         <eintrag obj="$ctrl.start"></eintrag>
     </md-whiteframe>
 </div>

@@ -44,7 +44,8 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
     }
 
     this.zuUebersicht= () => {
-        $state.go("ausgabe", {id: $stateParams.id});
+        RespositoryService.rep()[this.index].waypoints.push(RespositoryService.rep()[this.index].waypoints.start);
+        $state.go("uebersicht", {id: $stateParams.id});
     }
 
     this.routeBerechnen = () => {
