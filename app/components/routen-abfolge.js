@@ -44,7 +44,8 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
     }
 
     this.zuUebersicht= () => {
-        RespositoryService.rep()[this.index].waypoints.push(RespositoryService.rep()[this.index].waypoints.start);
+        $log.debug("Start: ", RespositoryService.rep()[this.index].start)
+        RespositoryService.rep()[this.index].waypoints.push(RespositoryService.rep()[this.index].start);
         $state.go("uebersicht", {id: $stateParams.id});
     }
 
@@ -111,6 +112,10 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
                                         wenn ja: letzten (=leeren) Tag löschen
                                 wenn nein: noRoute... enabled im HTML einen Bereich, der den User informiert, dass keine Route berechnet werden konnte
                              */
+                            if(typeof this.ergebnis === 'undefined') {
+                                this.noRoute = true;
+                                return;
+                            }
                             if (typeof this.ergebnis[0] === 'undefined') {
                                 this.noRoute = true;
                             }else {
@@ -262,6 +267,9 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
             }else {
                 this.warnungen += "Folgender Besichtigungspunkt ist zu weit von ihrem Hoten entfernt, um ihn in der gegebenen Zeitspanne zu besuchen: <b>"
                     + bp[aryIndex].strasse + " " + bp[aryIndex].hausnr + "</b><br>";
+                if(i + 1 == tage) {
+                    i--;
+                }
             }
 
         }
@@ -270,7 +278,7 @@ app.controller("RoutenAbfolgeController", function ($log, RespositoryService, $s
         wenn der aryIndex kleiner als bp.length ist bedeutet das, dass nicht alle BP eingeplant wurden
         der User wird informiert, dass es zeitlich nicht möglich war diese BP einzuplanen
          */
-        if(aryIndex < bp.length) {
+        if(aryIndex + 1 < bp.length) {
             this.warnungen += "<br> Folgende Besichtigungspunkte konnten nicht mehr eingeplant werden, weil nicht genug Zeit war: ";
             this.warnungen += "<ul>";
             /*
