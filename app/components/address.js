@@ -27,6 +27,13 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
         this.hausnummer = this.waypoint.hausnr;
         this.plz = this.waypoint.plz;
         this.ort = this.waypoint.ort;
+    }else {
+        //Dummy Parameter für das Debuggen
+        //TODO: vor der Review löschen
+        this.strasse = "Arsenalstraße";
+        this.hausnummer = "1";
+        this.plz = "1030";
+        this.ort = "Wien";
     }
 
     let route = RespositoryService.getRoute($stateParams.id);
