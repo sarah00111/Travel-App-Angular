@@ -1,25 +1,20 @@
 <style>
     .container {
-        height: 100vh;
+        height: 90vh;
     }
 
     h2 {
-        font-family: 'Segoe UI';
+        font-family: "SansSerif";
         font-size: 20px;
     }
 
     #header-container {
-        font-family: "Segoe UI";
+        font-family: "SansSerif";
         font-size: 20px;
         text-align: center;
         padding: 10px 0px 10px 0px;
         border-bottom: 1px solid black;
         width: 100%;
-        font-style: none;
-    }
-
-    .hoehe {
-        height: 87vh;
     }
 
     #info {
@@ -27,7 +22,7 @@
         width: 80%;
         margin: 0px auto;
         padding-bottom: 40px;
-
+        padding-top: 100px;
     }
 
     .adressInput {
@@ -61,17 +56,19 @@
 </style>
 
 <div layout="column" class="container">
-    <md-toolbar class="md-primary">
-        <div class="md-toolbar-tools" layout-align="center center">
-            <h2>TravelApp</h2>
-        </div>
-    </md-toolbar>
-    <div id="header-container">
-        Adresse
-    </div>
-    <form name="$ctrl.formular" class="hoehe" layout="column">
+    <md-content class="container" layout="column">
 
-        <md-content class="hoehe" layout-margin layout="column" layout-align="center center">
+        <md-toolbar class="md-primary">
+            <div class="md-toolbar-tools" layout-align="center center">
+                <h2>TravelApp</h2>
+            </div>
+        </md-toolbar>
+        <div id="header-container">
+            Adresse
+        </div>
+
+        <form name="$ctrl.formular" class="container" layout="column">
+
             <div id="info" layout-wrap="true" layout-margin
                  layout-align="center center">
                 Bitte geben Sie Ihre {{$ctrl.anzahl}}. Adresse ein.
@@ -114,9 +111,9 @@
                     </div>
                 </md-input-container>
             </div>
-        </md-content>
-        <div ng-bind-html="$ctrl.fehlermeldungen">
-        </div>
+            <div ng-bind-html="$ctrl.fehlermeldungen">
+            </div>
+        </form>
         <section layout="row" layout-align="end end" layout-wrap>
             <!--style="background-color:white; border:2px solid #E1E1E1; box-shadow: none;"-->
             <md-button class="md-fab md-mini md-primary"
@@ -140,7 +137,6 @@
                        ng-click="$ctrl.bestaetigen(false)">Übersicht
             </md-button>
         </section>
-    </form>
     </md-content>
-    </form>
+
 </div>
