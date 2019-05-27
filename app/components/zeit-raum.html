@@ -1,15 +1,19 @@
 <style>
+    * {
+        overflow-x: hidden;
+    }
+
     .container {
-        height: 100vh;
+        height: 90vh;
     }
 
     h2 {
-        font-family: 'Segoe UI';
+        font-family: 'PT Sans', sans-serif;
         font-size: 25px;
     }
 
     #header-container {
-        font-family: "Segoe UI";
+        font-family: 'PT Sans', sans-serif;
         font-size: 20px;
         text-align: center;
         padding: 10px 0px 10px 0px;
@@ -18,12 +22,16 @@
 
     }
 
-    .date-width {
-        width: 97%;
+    #date-width {
+        width: 90%;
+        padding-left: 15px;
+    }
+    #datewidth {
+        width: 90%;
     }
 
     .time-width {
-        width: 90%;
+        width: 99%;
 
     }
 
@@ -49,17 +57,18 @@
     }
 
     .ueberschrift {
-        font-family: "Segoe UI";
+        font-family: 'PT Sans', sans-serif;
         font-size: 20px;
         margin-bottom: 20px;
         margin-top: 20px;
     }
 
+
 </style>
-
+<head>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+</head>
 <div layout="column" class="container">
-
-
     <md-content class="container" layout="column">
 
         <md-toolbar class="md-primary">
@@ -71,7 +80,7 @@
         <div id="header-container">
             Zeitraum
         </div>
-        <div class="date-width" layout-margin>
+        <div id="date-width">
 
 
             <form name="$ctrl.formular" layout="column">
@@ -88,7 +97,7 @@
                                    md-min-date="$ctrl.minDate1"></md-datepicker>
                 </div>
 
-                <div class="date-width" layout-margin>
+                <div id="datewidth" layout-margin>
                     <div>
                         <p class="von-bis">Bis:</p>
                         <md-datepicker id="datepick" ng-model="$ctrl.endDate"

@@ -7,7 +7,7 @@
     }
 
     #header-container {
-        font-family: "Segoe UI";
+        font-family: 'PT Sans', sans-serif;
         font-size: 20px;
         text-align: center;
         padding: 10px 0px 10px 0px;
@@ -22,17 +22,11 @@
         border: 1px solid darkorange;
     }
 
-    .dot {
-        height: 7px;
-        width: 7px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: flex;
-        flex-direction: column;
-        margin: 3px;
-    }
 
 </style>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+</head>
 
 <div>
     <md-toolbar class="md-primary">
@@ -76,13 +70,9 @@
     <md-whiteframe class="md-whiteframe-3dp tag" layout="column" ng-show="$ctrl.oneDayRoute">
         <h2>Tag 1</h2>
         <eintrag obj="$ctrl.start"></eintrag>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+
         <eintrag obj="bp" ng-repeat="bp in $ctrl.zwischenAry track by $index"></eintrag>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+
         <eintrag obj="$ctrl.start"></eintrag>
     </md-whiteframe>
 
