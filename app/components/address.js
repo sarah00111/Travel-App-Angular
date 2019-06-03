@@ -20,6 +20,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 
 app.controller("AddressController", function ($log, $http, ApiService, Adresse, $stateParams, $state, RespositoryService, $mdToast) {
 
+    //wenn man aus der Übersicht zurück wechselt, um Eingaben zu korrigieren werden sie default-mäßig gesetzt
     if($stateParams.editorState == true){
         this.waypoint = RespositoryService.getRoute($stateParams.id).waypoints[$stateParams.waypointId];
         console.log(this.waypoint);
@@ -27,24 +28,23 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
         this.hausnummer = this.waypoint.hausnr;
         this.plz = this.waypoint.plz;
         this.ort = this.waypoint.ort;
-    }else {
-        //Dummy Parameter für das Debuggen
-        //TODO: vor der Review löschen
-        this.strasse = "Arsenalstraße";
-        this.hausnummer = "1";
-        this.plz = "1030";
-        this.ort = "Wien";
     }
 
     let route = RespositoryService.getRoute($stateParams.id);
 
+    //anzahl... wie viele Adressen wurden bereits gespeichert?
     this.anzahl = RespositoryService.getRoute($stateParams.id).waypoints.length + 1;
 
     this.$onInit = () => {
+        // stateParams in Controller-Variablen speichern, um im HTML darauf zugreifen zu können
         this.waypointId = $stateParams.waypointId;
         this.editorState = $stateParams.editorState;
     }
 
+    /*
+    Funktion, die bestimmt, ob man zum nächsten Schritt gehen kann (nur okay, wenn es min 2 Adressen gibt, weil es sonst Probleme mit der API im
+    nächsten Schritt gibt)
+     */
     this.disableNextStep = () => {
         if(this.anzahl - 1 > 0) {
             if(!this.formular.$invalid) {
@@ -57,6 +57,9 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
     this.bestaetigen = (newAdress, changeAdress) => {
         this.fehlermeldungen = "";
 
+        /*
+        doppelte Adressen verhindern
+         */
         this.testIfAlreadyExists = route.waypoints.some(obj => {
             if(obj.hausnr == this.hausnummer && obj.strasse == this.strasse) {
                 return true;
@@ -104,8 +107,6 @@ app.controller("AddressController", function ($log, $http, ApiService, Adresse, 
                         }
 
                         if(newAdress) {
-                            //TODO: Toast auf einer anderen Position?
-                            //TODO: hideDelay wieder auf 3000 setzen
                             $mdToast.show(
                                 $mdToast.simple()
                                     .textContent('Ihre Adress-Eingabe wurde gespeichert!')
